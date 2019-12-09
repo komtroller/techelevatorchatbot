@@ -50,7 +50,7 @@ namespace WebApplication.Web
             // For Authentication
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<IAuthProvider, SessionAuthProvider>();
-            services.AddTransient<IUserDAL>(m => new UserSqlDAL(connectionString));
+            services.AddTransient<IChatbotDAO, ChatbotDAO>(dao => new ChatbotDAO(Configuration.GetConnectionString("Default")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
@@ -77,7 +77,7 @@ namespace WebApplication.Web
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Chat}/{action=Index}/{id?}");
             });
         }
     }

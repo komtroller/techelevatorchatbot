@@ -61,27 +61,28 @@ namespace SampleApi
 
             // Enables automatic authentication token.
             // The token is expected to be included as a bearer authentication token.
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(options =>
-                {
-                    // The rules for token validation
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuer = false,                 // issuer not required
-                        ValidateAudience = false,               // audience not required
-                        ValidateLifetime = true,                // token must not have expired
-                        ValidateIssuerSigningKey = true,        // token signature must match so as not to be tampered with
-                        NameClaimType = System.Security.Claims.ClaimTypes.NameIdentifier,   // allows us to use sub for username
-                        RoleClaimType = "rol",                  // allows us to put the role in rol
-                        IssuerSigningKey = new SymmetricSecurityKey(    // each token is signed with a private key so as to ensure its validity
-                            Encoding.UTF8.GetBytes(Configuration["JwtSecret"]))
-                    };
-                });
+            //services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            //    .AddJwtBearer(options =>
+            //    {
+            //        // The rules for token validation
+            //        options.TokenValidationParameters = new TokenValidationParameters
+            //        {
+            //            ValidateIssuer = false,                 // issuer not required
+            //            ValidateAudience = false,               // audience not required
+            //            ValidateLifetime = true,                // token must not have expired
+            //            ValidateIssuerSigningKey = true,        // token signature must match so as not to be tampered with
+            //            NameClaimType = System.Security.Claims.ClaimTypes.NameIdentifier,   // allows us to use sub for username
+            //            RoleClaimType = "rol",                  // allows us to put the role in rol
+            //            IssuerSigningKey = new SymmetricSecurityKey(    // each token is signed with a private key so as to ensure its validity
+            //                Encoding.UTF8.GetBytes(Configuration["JwtSecret"]))
+            //        };
+            //    });
 
             // Dependency Injection configuration
-            services.AddSingleton<ITokenGenerator>(tk => new JwtGenerator(Configuration["JwtSecret"]));
-            services.AddSingleton<IPasswordHasher>(ph => new PasswordHasher());
-            services.AddTransient<IUserDAO>(m => new UserSqlDAO(Configuration.GetConnectionString("Default")));
+            //services.AddSingleton<ITokenGenerator>(tk => new JwtGenerator(Configuration["JwtSecret"]));
+            //services.AddSingleton<IPasswordHasher>(ph => new PasswordHasher());
+            services.AddTransient<IUserDAO>(m => new UserSqlDAO(Configuration.GetConnectionString("Database")));
+            services.AddTransient<IChatbotDAO>(m => new ChatbotDAO(Configuration.GetConnectionString("Database")));
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
@@ -134,7 +135,7 @@ namespace SampleApi
             app.UseCors("CorsPolicy");
 
             // Enables the middleware to check the incoming request headers.
-            app.UseAuthentication();
+            //app.UseAuthentication();
 
             app.UseHttpsRedirection();
             app.UseMvc();

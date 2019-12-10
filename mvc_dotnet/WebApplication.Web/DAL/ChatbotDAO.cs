@@ -30,20 +30,17 @@ namespace WebApplication.Web.DAL
                     conn.Open();
 
 
-                    SqlCommand cmd = conn.CreateCommand();
-                    cmd.CommandText = "Select * from users where keyword = @keyword; ";
-                    cmd.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
+                    SqlCommand cmd = new SqlCommand("Select * from users where keyword = @keyword; ", conn);
+                    cmd.Parameters.AddWithValue("@keyword", keyword);
 
                     SqlDataReader reader = cmd.ExecuteReader();
 
-                    if (reader.Read())
+                    while (reader.Read())
                     {
                         inputs.Keyword = Convert.ToString(reader["keyword"]);
                         inputs.Response = Convert.ToString(reader["response"]);
                     }
                 }
-
-
             }
 
             catch (SqlException ex)

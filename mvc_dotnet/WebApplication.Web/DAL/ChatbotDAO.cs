@@ -31,8 +31,8 @@ namespace WebApplication.Web.DAL
 
 
                     SqlCommand cmd = conn.CreateCommand();
-                    cmd.CommandText = "xxx";
-                    cmd.Parameters.AddWithValue("@keyword", keyword);
+                    cmd.CommandText = "Select * from users where keyword = @keyword; ";
+                    cmd.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
 
                     SqlDataReader reader = cmd.ExecuteReader();
 

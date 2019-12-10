@@ -3,14 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using WebApplication.Web.DAL;
+using WebApplication.Web.Models;
 
 namespace WebApplication.Web.Controllers
 {
-    public class ChatController : Controller
+    [Route("api/chat")]
+    [ApiController]
+    public class ChatController : HomeController
     {
-        public IActionResult Index()
+        IChatbotDAO chatDAO;
+        public ChatController(IChatbotDAO chatDAO)
         {
-            return View();
+            this.chatDAO = chatDAO;
+        }
+
+        [HttpGet("{keyword}", Name = "Get")]
+        public ActionResult<Input> Index(string keyword)
+        {
+            Input input = chatDAO.GetMessage(keyword);
+            if (input != null)
+            {
+                return input;
+            }
+
+            return NotFound();
         }
     }
 }

@@ -21,8 +21,20 @@ namespace SampleApi.Controllers
         [HttpGet("{userInput}", Name = "Get")]
         public string Index(string userInput)
         {
+            string botResponse = "The quote functionality is currently in progress.";
             string keyword = chatDAO.GetKeyword(userInput);
-            string botResponse = chatDAO.GetBotResponse(keyword);
+            if (keyword == "quote")
+            {
+
+            }
+            else if (keyword == "interview questions")
+            {
+                botResponse = "The interview question functionality is currently in progress";
+            }
+            else
+            {
+                botResponse = chatDAO.GetBotResponse(keyword);
+            }
             return botResponse;
         }
     }

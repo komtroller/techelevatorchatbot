@@ -13,8 +13,8 @@
           :class="message.author"
         >
           <p>
-          
-            <span>{{ message.text }}</span>
+        
+            <span v-html="message.text"></span>
           </p>
         </li>
       
@@ -34,11 +34,12 @@
 </template>
 
 <script>
+import { createWriteStream } from 'fs';
 export default {
   name: 'Chatbot',
   data: () => ({
     message: '',
-    messages: [],
+    messages: [{text:"Hello, What is your name?", author: "server"}],
     name: "Chattio",
 
   }),
@@ -50,16 +51,43 @@ export default {
         author: 'client'
       })
       this.message = ''
-      this.$axios.get(`https://www.cleverbot.com/getreply?key=CC8uqcCcSO3VsRFvp5-uW5Nxvow&input=${message}`)
-      .then(res => {
-        this.messages.push({
-          text: res.data.output,
+      // this.$axios.get(`https://localhost:44392/api/chat/${message}`)
+      // .then(res => {
+      //   this.messages.push({
+      //     text: res.data.output,
+      //     author: 'server'
+      //   })
+      let arrayLength = this.messages.length;
+      console.log(arrayLength);
+      if (arrayLength < 3)
+      {  
+          this.messages.push({
+          text: "Hello " + message + ", what can I do for you? ",
+          author: 'server'
+      })
+      }
+      else {
+
+      
+      fetch(`https://localhost:44392/api/chat/${message}`, {
+      method: "GET"
+      }) .then(response => {
+      return response.text();
+      })
+      .then((data) => {
+        let responseArray = data.split("&&&");
+        responseArray.map((response) => {
+          this.messages.push({
+          text: response,
           author: 'server'
         })
+        })
+        
         this.$nextTick(() => {
           this.$refs.chatbox.scrollTop = this.$refs.chatbox.scrollHeight
         })
       })
+      }
     }
   }
 }

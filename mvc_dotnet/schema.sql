@@ -42,24 +42,24 @@ Values ('HELP', 'I can help you. Please insert a question or a topic of interest
 --- PATHWAY COMMANDS
 
 INSERT INTO users (keyword, response)
-Values ('Cover letter', 'Please, find the links below <a href="https://zety.com/blog/how-to-write-a-cover-letter">https://zety.com/blog/how-to-write-a-cover-letter</a>')
+Values ('Cover letter', 'Please, find the links below &&& <a href="https://zety.com/blog/how-to-write-a-cover-letter">https://zety.com/blog/how-to-write-a-cover-letter</a>')
 
 INSERT INTO users (keyword, response)
-Values ('Resume', 'Please, find the links below <a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">https://www.thebalancecareers.com/entry-level-resume-template-2063602</a>')
+Values ('Resume', 'Please, find the links below &&& <a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">https://www.thebalancecareers.com/entry-level-resume-template-2063602</a>')
 
 INSERT INTO users (keyword, response)
-Values ('CV', 'Please, find the links below <a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">https://www.thebalancecareers.com/entry-level-resume-template-2063602</a>')
+Values ('CV', 'Please, find the links below &&& <a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">https://www.thebalancecareers.com/entry-level-resume-template-2063602</a>')
 
 INSERT INTO users (keyword, response)
-Values ('Job', 'Please, find the links below <a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">https://www.glassdoor.com/blog/guide/how-to-get-a-job/</a>')
+Values ('Job', 'Please, find the links below &&& <a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">https://www.glassdoor.com/blog/guide/how-to-get-a-job/</a>')
 
 INSERT INTO users (keyword, response)
-Values ('Hired', 'Please, find the links below <a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">https://www.glassdoor.com/blog/guide/how-to-get-a-job/</a>')
+Values ('Hired', '<a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link</a>')
 
 
 
 INSERT INTO users (keyword, response)
-Values ('Interview Questions', 'Sample Questions: Tell us about yourself? Accomplishments? Strengths? Weaknesses? Find more in this link <a href="https://www.monster.com/career-advice/article/100-potential-interview-questions">https://www.monster.com/career-advice/article/100-potential-interview-questions</a>')
+Values ('Interview Questions', 'Sample Questions: Tell us about yourself? Accomplishments? Strengths? Weaknesses? Find more in this link &&& <a href="https://www.monster.com/career-advice/article/100-potential-interview-questions">https://www.monster.com/career-advice/article/100-potential-interview-questions</a>')
 
 COMMIT TRANSACTION;
 

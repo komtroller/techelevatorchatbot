@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using WebApplication.Web.DAL;
-using WebApplication.Web.Models;
+using SampleApi.DAL;
 
-namespace WebApplication.Web.Controllers
+namespace SampleApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -18,16 +18,12 @@ namespace WebApplication.Web.Controllers
             this.chatDAO = chatDAO;
         }
 
-        [HttpGet("{keyword}", Name = "Get")]
-        public ActionResult<Input> Index(string keyword)
+        [HttpGet("{userInput}", Name = "Get")]
+        public string Index(string userInput)
         {
-            Input input = chatDAO.GetMessage(keyword);
-            if (input != null)
-            {
-                return input;
-            }
-
-            return NotFound();
+            string keyword = chatDAO.GetKeyword(userInput);
+            string botResponse = chatDAO.GetBotResponse(keyword);
+            return botResponse;
         }
     }
 }

@@ -8,7 +8,7 @@ namespace WebApplication.Web.DAL
 {
     public interface IChatbotDAO
     {
-        Input GetMessage(string keyword); 
+        string GetMessage(string keyword); 
         // TODO: method that returns random quote
     }
 }

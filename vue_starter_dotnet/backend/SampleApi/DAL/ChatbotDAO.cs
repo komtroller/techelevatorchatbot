@@ -23,7 +23,7 @@ namespace SampleApi.DAL
         public string GetKeyword(string userInput)
         {
             string userInputToLower = userInput.ToLower();
-            string matchingKeyword= "";
+            string matchingKeyword= "unknown";
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))

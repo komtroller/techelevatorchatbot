@@ -45,6 +45,70 @@ CREATE TABLE interview_questions
 	primary key (questionsid)
 );
 
+CREATE TABLE positions
+(
+	id			int			identity(1,1),
+	position varchar(max)		not null,
+	primary key (id)
+);
+
+
+
+-- Job Positions
+INSERT INTO positions
+VALUES ('software developer')
+ 
+INSERT INTO positions
+VALUES ('UX/IX designer') 
+
+INSERT INTO positions
+VALUES ('data analyst') 
+
+INSERT INTO positions
+VALUES ('business analyst') 
+
+INSERT INTO positions
+VALUES ('project manger') 
+
+INSERT INTO positions
+VALUES ('product owner') 
+
+INSERT INTO positions
+VALUES ('software engineer') 
+
+INSERT INTO positions
+VALUES ('.Net') 
+
+INSERT INTO positions
+VALUES ('Automation') 
+
+INSERT INTO positions
+VALUES ('QA Quality Assurance') 
+
+INSERT INTO positions
+VALUES ('Front end developer') 
+
+INSERT INTO positions
+VALUES ('Back end developer') 
+
+INSERT INTO positions
+VALUES ('SQL Developer') 
+
+INSERT INTO positions
+VALUES ('Programmer Analyst')
+
+INSERT INTO positions
+VALUES ('Java')  
+
+INSERT INTO positions
+VALUES ('Python') 
+
+INSERT INTO positions
+VALUES ('Javascript') 
+
+INSERT INTO positions
+VALUES ('Web Developer') 
+
  
 --- QUOTES
 INSERT INTO motivationalquotes (quote)
@@ -128,7 +192,7 @@ INSERT INTO users (keyword, response)
 Values ('Siri','Very funny!')
 
 INSERT INTO users (keyword, response)
-Values ('Alexa','Cute!That is not my name though')
+Values ('Alexa','Cute! That is not my name though')
 
 INSERT INTO users (keyword, response)
 Values ('Yo','Yoyoyo, How can I help?')
@@ -137,10 +201,10 @@ INSERT INTO users (keyword, response)
 Values ('Ciao','Ciao, Thank you for visiting our site?')
 
 INSERT INTO users (keyword, response)
-Values ('Can you help me?','I sure can!Let us getting started. What would you like to ask?')
+Values ('Can you help me?','I sure can! Let us getting started. What would you like to ask?')
 
 INSERT INTO users (keyword, response)
-Values ('Answer me','I am just a chatbot!I can display answers but you know I can not actually talk!')
+Values ('Answer me','I am just a chatbot! I can display answers but you know I can not actually talk!')
 
 INSERT INTO users (keyword, response)
 Values ('Who are you?','I am a chatbot!')
@@ -255,6 +319,31 @@ Values ('arrays','An array is used to store a collection of data, but it is ofte
 
 INSERT INTO users (keyword, response)
 Values ('mvc','MVC stands for Model (Business logic), View (Presenatation logic), and Controller (Interacts with model to get data for View). MVC is a popular way of organizing your code. Each section of your code has a purpose, and those purposes are different.Here is a more detailed link <a href="https://www.codecademy.com/articles/mvc">https://www.codecademy.com/articles/mvc </a>')
+
+INSERT INTO users (keyword, response)
+Values ('job posting', '?')
+
+INSERT INTO users (keyword, response)
+Values ('listing', '?')
+
+INSERT INTO users (keyword, response)
+Values ('posting', '?')
+
+INSERT INTO users (keyword, response)
+Values ('job listing', '?')
+
+INSERT INTO users (keyword, response)
+Values ('job position', '?')
+
+INSERT INTO users (keyword, response)
+Values ('job opening', '?')
+
+INSERT INTO users (keyword, response)
+Values ('position', '?')
+
+
+
+
 
 --learning sql
 

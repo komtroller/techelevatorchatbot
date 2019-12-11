@@ -29,7 +29,7 @@ namespace SampleApi.Controllers
             }
             else if (keyword == "interview questions")
             {
-                botResponse = "The interview question functionality is currently in progress";
+                botResponse = chatDAO.GetInterviewQuestion();
             }
             else
             {

@@ -13,5 +13,7 @@ namespace SampleApi.DAL
         string GetBotResponse(string keyword);
 
         string GetQuote();
+
+        string GetInterviewQuestion();
     }
 }

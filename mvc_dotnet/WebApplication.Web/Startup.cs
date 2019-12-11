@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WebApplication.Web.DAL;
-using WebApplication.Web.Providers.Auth;
+
 
 namespace WebApplication.Web
 {
@@ -26,6 +26,12 @@ namespace WebApplication.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // help with cross-domain communication, APIs.
+            services.AddCors(options => {
+                options.AddPolicy("CorsPolicy",
+                builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            });
+
             // Session must be configured for our authentication
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -49,7 +55,7 @@ namespace WebApplication.Web
             // Dependency Injection
             // For Authentication
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddScoped<IAuthProvider, SessionAuthProvider>();
+
             services.AddTransient<IChatbotDAO, ChatbotDAO>(dao => new ChatbotDAO(Configuration.GetConnectionString("Default")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
@@ -72,13 +78,17 @@ namespace WebApplication.Web
             app.UseStaticFiles();
             app.UseCookiePolicy();
             app.UseSession();
+            //APIS
 
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Chat}/{action=Index}/{id?}");
-            });
+            app.UseCors("CorsPolicy");
+
+            app.UseMvc();
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute(
+            //        name: "default",
+            //        template: "{controller=Chat}/{action=Index}/{id?}");
+            //});
         }
     }
 }

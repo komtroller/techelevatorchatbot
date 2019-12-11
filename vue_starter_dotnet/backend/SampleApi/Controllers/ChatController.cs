@@ -25,7 +25,7 @@ namespace SampleApi.Controllers
             string keyword = chatDAO.GetKeyword(userInput);
             if (keyword == "quote")
             {
-
+                botResponse = chatDAO.GetQuote();
             }
             else if (keyword == "interview questions")
             {

@@ -32,7 +32,6 @@ CREATE TABLE users
 CREATE TABLE motivationalquotes
 (
 	quoteid			int			identity(1,1),
-	author	varchar(250)	not null,
 	quote varchar(max)		not null,
 	constraint pk_motivationalquotes primary key (quoteid)
 );
@@ -48,35 +47,35 @@ CREATE TABLE interview_questions
 
  
 --- QUOTES
-INSERT INTO motivationalquotes (author, quote)
-Values ('Audrey Hepburn', ' �Nothing is impossible, the word itself says �I�m possible!� ')
+INSERT INTO motivationalquotes (quote)
+Values ('"Nothing is impossible, the word itself says I''m possible!" &&& - Audrey Hepburn')
 
-INSERT INTO motivationalquotes (author, quote)
-Values ('Lao Tzu', '�The journey of a thousand miles begins with a single step.� ')
+INSERT INTO motivationalquotes (quote)
+Values ('"The journey of a thousand miles begins with a single step." &&& - Lao Tzu')
 
-INSERT INTO motivationalquotes (author, quote)
-Values ('Ralph Waldo Emerson', '�Do not follow where the path may lead. Go instead where there is no path and leave a trail.�')
+INSERT INTO motivationalquotes (quote)
+Values ('"Do not follow where the path may lead. &&& Go instead where there is no path and leave a trail." &&& - Ralph Waldo Emerson')
 
-INSERT INTO motivationalquotes (author, quote)
-Values ('Ella Williams', '�Bite off more than you can chew, then chew it.�')
+INSERT INTO motivationalquotes (quote)
+Values ('"Bite off more than you can chew, then chew it." &&& - Ella Williams')
 
-INSERT INTO motivationalquotes (author, quote)
-Values ('Charles R. Swindoll', '�Life is 10% what happens to you and 90% how you react to it.�')
+INSERT INTO motivationalquotes (quote)
+Values ('"Life is 10% what happens to you &&& and 90% how you react to it." &&& - Charles R. Swindoll')
 
-INSERT INTO motivationalquotes (author, quote)
-Values ('Mark Twain', '�The secret of getting ahead is getting started.�')
+INSERT INTO motivationalquotes (quote)
+Values ('"The secret of getting ahead is getting started." &&& - Mark Twain')
 
-INSERT INTO motivationalquotes (author, quote)
-Values ('Ali Bin Abitaleb', '�Do not let your difficulties fill you with anxiety, after all, it is only in the darkest nights that the stars shine more brilliantly.� ')
+INSERT INTO motivationalquotes (quote)
+Values ('"Do not let your difficulties fill you with anxiety, &&& after all, it is only in the darkest nights that &&& the stars shine more brilliantly." &&& - Ali Bin Abitaleb')
 
-INSERT INTO motivationalquotes (author, quote)
-Values ('Stephen Hawking', '�Look up at the stars and not down at your feet. Try to make sense of what you see, and wonder about what makes the universe exist. Be curious.�')
+INSERT INTO motivationalquotes (quote)
+Values ('"Look up at the stars and not down at your feet. &&& Try to make sense of what you see, &&& and wonder about what makes the universe exist. &&& Be curious." &&& - Stephen Hawking')
 
-INSERT INTO motivationalquotes (author, quote)
-Values ('Walt Disney', '�If you can dream it, you can do it.� ')
+INSERT INTO motivationalquotes (quote)
+Values ('"If you can dream it, you can do it." &&& - Walt Disney')
 
-INSERT INTO motivationalquotes (author, quote)
-Values ('Barak H. Obama','�If you�re walking down the right path and you�re willing to keep walking, eventually you�ll make progress.� ')
+INSERT INTO motivationalquotes (quote)
+Values ('"If you''re walking down the right path &&& and you''re willing to keep walking, &&& eventually you''ll make progress." &&& - Barak H. Obama')
 
 
 
@@ -155,6 +154,11 @@ Values ('about you','Best coding bootcamp in the Midwest!')
 INSERT INTO users (keyword, response)
 Values ('tech elevator','I was born at Rev1 in December of 2019!')
 
+INSERT INTO users (keyword, response)
+Values ('unknown','Sorry, I don''t understand. &&& Try wording your question differently.')
+
+INSERT INTO users (keyword, response)
+Values ('quote','Inspirational quote should be here...but it isnt!')
 
 
 --- PATHWAY COMMANDS
@@ -385,35 +389,35 @@ Values ('What are you most proud of? ')
 
 
 --- QUOTES
-INSERT INTO motivationalquotes (author, quote)
-Values ('Audrey Hepburn', ' �Nothing is impossible, the word itself says �I�m possible!� ')
+INSERT INTO motivationalquotes (quote)
+Values ('"Nothing is impossible, &&& the word itself says Im possible!" &&& - Audrey Hepburn')
 
-INSERT INTO motivationalquotes (author, quote)
-Values ('Lao Tzu', '�The journey of a thousand miles begins with a single step.� ')
+INSERT INTO motivationalquotes (quote)
+Values ('"The journey of a thousand miles &&& begins with a single step." &&& - Lao Tzu')
 
-INSERT INTO motivationalquotes (author, quote)
-Values ('Ralph Waldo Emerson', '�Do not follow where the path may lead. Go instead where there is no path and leave a trail.�')
+INSERT INTO motivationalquotes (quote)
+Values ('"Do not follow where the path may lead. &&& Go instead where there is no path and leave a trail." &&& - Ralph Waldo Emerson')
 
-INSERT INTO motivationalquotes (author, quote)
-Values ('Ella Williams', '�Bite off more than you can chew, then chew it.�')
+INSERT INTO motivationalquotes (quote)
+Values ('"Bite off more than you can chew, then chew it." &&& - Ella Williams')
 
-INSERT INTO motivationalquotes (author, quote)
-Values ('Charles R. Swindoll', '�Life is 10% what happens to you and 90% how you react to it.�')
+INSERT INTO motivationalquotes (quote)
+Values ('"Life is 10% what happens to you and 90% how you react to it." &&& - Charles R. Swindoll')
 
-INSERT INTO motivationalquotes (author, quote)
-Values ('Mark Twain', '�The secret of getting ahead is getting started.�')
+INSERT INTO motivationalquotes (quote)
+Values ('"The secret of getting ahead is getting started." &&& - Mark Twain')
 
-INSERT INTO motivationalquotes (author, quote)
-Values ('Ali Bin Abitaleb', '�Do not let your difficulties fill you with anxiety, after all, it is only in the darkest nights that the stars shine more brilliantly.� ')
+INSERT INTO motivationalquotes (quote)
+Values ('"Do not let your difficulties fill you with anxiety, &&& after all, it is only in the darkest nights &&& that the stars shine more brilliantly." &&& - Ali Bin Abitaleb ')
 
-INSERT INTO motivationalquotes (author, quote)
-Values ('Stephen Hawking', '�Look up at the stars and not down at your feet. Try to make sense of what you see, and wonder about what makes the universe exist. Be curious.�')
+INSERT INTO motivationalquotes (quote)
+Values ('"Look up at the stars and not down at your feet. &&& Try to make sense of what you see, &&& and wonder about what makes the universe exist. &&& Be curious." &&& - Stephen Hawking ')
 
-INSERT INTO motivationalquotes (author, quote)
-Values ('Walt Disney', '�If you can dream it, you can do it.� ')
+INSERT INTO motivationalquotes (quote)
+Values ('"If you can dream it, you can do it." &&& - Walt Disney ')
 
-INSERT INTO motivationalquotes (author, quote)
-Values ('Barak H. Obama','�If you�re walking down the right path and you�re willing to keep walking, eventually you�ll make progress.� ')
+INSERT INTO motivationalquotes (quote)
+Values ('"If you''re walking down the right path &&& and you''re willing to keep walking, &&& eventually you''ll make progress." - Barak H. Obama ')
 
 --Hi there. Welcome to our site. Is there anything I can help you with
 

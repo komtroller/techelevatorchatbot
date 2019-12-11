@@ -85,9 +85,9 @@ namespace SampleApi.DAL
 
             return response;
         }
-        public Quote GetQuote()
+        public string GetQuote()
         {
-            Quote randomQuote= new Quote();
+            string randomQuote= "This quote is inspirational.";
 
             try
             {
@@ -95,13 +95,12 @@ namespace SampleApi.DAL
                 {
                     conn.Open();
 
-                    SqlCommand cmd = new SqlCommand("SELECT TOP 1 author,quote FROM motivationalquotes ORDER BY NEWID()", conn);
+                    SqlCommand cmd = new SqlCommand("SELECT TOP 1 quote FROM motivationalquotes ORDER BY NEWID()", conn);
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
                     {
-                        randomQuote.Author = Convert.ToString(reader["author"]);
-                        randomQuote.QuoteText = Convert.ToString(reader["quote"]);
+                        randomQuote = Convert.ToString(reader["quote"]);
                     }
                 }
             }

@@ -37,7 +37,9 @@
 import { createWriteStream } from 'fs';
 export default {
   name: 'Chatbot',
+  
   data: () => ({
+  
     message: '',
     messages: [{text:"Hello, What is your name?", author: "server"}],
     name: "Chattio",

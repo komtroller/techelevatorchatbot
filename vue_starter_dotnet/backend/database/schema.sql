@@ -160,34 +160,34 @@ Values ('tech elevator','I was born at Rev1 in December of 2019!')
 --- PATHWAY COMMANDS
 
 INSERT INTO users (keyword, response)
-Values ('Cover letter','You might or might not need one. It really depends on the industyr culture. Please, find the link below <a href="https://zety.com/blog/how-to-write-a-cover-letter">Here is a link to that!</a>')
+Values ('Cover letter','You might or might not need one. It really depends on the industyr culture. Please, find the link below &&&<a href="https://zety.com/blog/how-to-write-a-cover-letter">Here is a link to that!</a>')
 
 INSERT INTO users (keyword, response)
-Values ('Resume', 'Please, find the link below <a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Here is a link to that!</a>')
+Values ('Resume', 'Please, find the link below &&& <a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Here is a link to that!</a>')
 
 INSERT INTO users (keyword, response)
-Values ('CV', 'Please, find the link below <a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Here is a link to that!</a>')
+Values ('CV', 'Please, find the link below &&& <a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Here is a link to that!</a>')
 
 INSERT INTO users (keyword, response)
-Values ('Curriculum Vitae', 'Please, find the link below <a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Here is a link to that!</a>')
+Values ('Curriculum Vitae', 'Please, find the link below &&& <a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Here is a link to that!</a>')
 
 INSERT INTO users (keyword, response)
-Values ('Job', 'Please, find the link below <a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that!</a>')
+Values ('Job', 'Please, find the link below &&& <a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that!</a>')
 
 INSERT INTO users (keyword, response)
-Values ('Jobs', 'Please, find the link below <a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that!</a>')
+Values ('Jobs', 'Please, find the link below &&& <a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that!</a>')
 
 INSERT INTO users (keyword, response)
-Values ('how get job', 'Please, find the link below <a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that!</a>')
+Values ('how get job', 'Please, find the link below &&& <a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that!</a>')
 
 INSERT INTO users (keyword, response)
-Values ('work', 'If you are looking for a job. Here is a link that might help <a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that!</a>')
+Values ('work', 'If you are looking for a job. Here is a link that might help &&&<a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that!</a>')
 
 INSERT INTO users (keyword, response)
-Values ('Hired', 'Please, find the link below <a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that!</a>')
+Values ('Hired', 'Please, find the link below &&& <a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that!</a>')
 
 INSERT INTO users (keyword, response)
-Values ('Hiring', 'You need help getting hired. Here is a link that might help <a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that!</a>')
+Values ('Hiring', 'You need help getting hired. Here is a link that might help &&& <a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that!</a>')
 
 INSERT INTO users (keyword, response)
 Values ('Interview Questions', 'Sample Questions include Tell us about yourself? Accomplishments? Strengths? Weaknesses? Find more in this link <a href="https://www.monster.com/career-advice/article/100-potential-interview-questions">Here is a link to that!</a>')
@@ -208,19 +208,19 @@ INSERT INTO users (keyword, response)
 Values ('Recruiters', 'There are many way to contact recruiters,I would advise you to go to join a meetup related to your field, and also netowork on LinkedIn. I strongly advise you to add a note with every request to connect with someone on LinkedIn">Network Tips</a>')
 
 INSERT INTO users (keyword, response)
-Values ('Wear', 'Generally, you want to wear professional, or business, attire, here is more information <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364</a>')
+Values ('Wear', 'Generally, you want to wear professional, or business, attire, here is more information &&& <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364</a>')
 
 INSERT INTO users (keyword, response)
 Values ('Outfit', 'It depends on the organization. Generally, you want to wear professional, or business, attire, here is more information <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364</a>')
 
 INSERT INTO users (keyword, response)
-Values ('dresscode', 'Generally, you want to wear professional, or business, attire, here is more information <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364</a>')
+Values ('dresscode', 'Generally, you want to wear professional, or business, attire, here is more information &&& <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364</a>')
 
 INSERT INTO users (keyword, response)
-Values ('Interview fashion', 'Generally, you want to wear professional, or business, attire, here is more information <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364</a>')
+Values ('Interview fashion', 'Generally, you want to wear professional, or business, attire, here is more information &&& <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364</a>')
 
 INSERT INTO users (keyword, response)
-Values ('Casual', 'If the company has a casual dresscode, you still you want to wear professional, or business, attire for the interview, here is more information <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364</a>')
+Values ('Casual', 'If the company has a casual dresscode, you still you want to wear professional, or business, attire for the interview, here is more information &&& <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364</a>')
 
 INSERT INTO users (keyword, response)
 Values ('Salary expectations', 'I would use websites such as glassdoor, Payscale or linkedIn to give you a better idea of industry standards based on your experiance, hope that helps!')
@@ -244,7 +244,7 @@ INSERT INTO users (keyword, response)
 Values ('advice prepare job', 'Research the company and the indivuals. LinkedIn should help with that. Have a few hard copies of your resume or portfolio. Get ready ahead of time,get to the location 30 minutes earlier,get to the office 10m minutes before your meeting. Stay calm, be humble and confident. Regardless of the outcome, send a follow up thank you email within 24hrs. Remember: What is yours is yours!')
 
 INSERT INTO users (keyword, response)
-Values ('applying jobs','Check out these tips from Glassdoor before you apply to any job <a href="https://www.glassdoor.com/blog/5-applying-job/">https://www.glassdoor.com/blog/5-applying-job/</a>')
+Values ('applying jobs','Check out these tips from Glassdoor before you apply to any job &&& <a href="https://www.glassdoor.com/blog/5-applying-job/">https://www.glassdoor.com/blog/5-applying-job/</a>')
 
 INSERT INTO users (keyword, response)
 Values ('arrays','An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type.For a single dimensional array, an analogy I have used before is to think of it as a row of boxes. Each box can store a single value but each value must be of the same type. Hope that helps!')
@@ -270,26 +270,26 @@ INSERT INTO users (keyword, response)
 Values ('create new project SQL microsoft','<a href="https://docs.microsoft.com/en-us/sql/ssms/solution/create-a-project?view=sql-server-ver15">https://docs.microsoft.com/en-us/sql/ssms/solution/create-a-project?view=sql-server-ver15</a>')
 
 INSERT INTO users (keyword, response)
-Values ('tutorial SQL','Here is my favorite tutorial on SQL <a href="https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud">https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud</a>')
+Values ('tutorial SQL','Here is my favorite tutorial on SQL &&& <a href="https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud">https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud</a>')
 
 INSERT INTO users (keyword, response)
-Values (' tutorial mySQL','Here is my favorite tutorial on SQL <a href="https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud">https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud</a>')
+Values (' tutorial mySQL','Here is my favorite tutorial on SQL &&&<a href="https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud">https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud</a>')
 
 INSERT INTO users (keyword, response)
-Values ('Beginners SQL','Here is my favorite tutorial on SQL <a href="https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud">https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud</a>')
+Values ('Beginners SQL','Here is my favorite tutorial on SQL &&& <a href="https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud">https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud</a>')
 
 INSERT INTO users (keyword, response)
-Values ('sql','SQL is a standard language for storing, manipulating and retrieving data in databases.Check this link out for more information <a href="https://www.w3schools.com/sql/default.asp">https://www.w3schools.com/sql/default.asp</a>')
+Values ('sql','SQL is a standard language for storing, manipulating and retrieving data in databases.Check this link out for more information &&&<a href="https://www.w3schools.com/sql/default.asp">https://www.w3schools.com/sql/default.asp</a>')
 
 INSERT INTO users (keyword, response)
-Values ('sql commands','Check out this link for SQL commands<a href="https://www.codecademy.com/articles/sql-commands">https://www.codecademy.com/articles/sql-commands</a>')
+Values ('sql commands','Check out this link for SQL commands &&&<a href="https://www.codecademy.com/articles/sql-commands">https://www.codecademy.com/articles/sql-commands</a>')
 
 INSERT INTO users (keyword, response)
-Values ('what sql commands','Check out this link for SQL commands<a href="https://www.codecademy.com/articles/sql-commands">https://www.codecademy.com/articles/sql-commands</a>')
+Values ('what sql commands','Check out this link for SQL commands &&&<a href="https://www.codecademy.com/articles/sql-commands">https://www.codecademy.com/articles/sql-commands</a>')
 
 
 INSERT INTO users (keyword, response)
-Values ('mssql commands','Check out this link for SQL commands<a href="https://www.codecademy.com/articles/sql-commands">https://www.codecademy.com/articles/sql-commands</a>')
+Values ('mssql commands','Check out this link for SQL commands &&&<a href="https://www.codecademy.com/articles/sql-commands">https://www.codecademy.com/articles/sql-commands</a>')
 
 
 --how to start new projets VISUAL STUDIO OR VISUAL STUDIO CODE 

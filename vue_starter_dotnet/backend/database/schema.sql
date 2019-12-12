@@ -486,10 +486,13 @@ INSERT INTO users (keyword, response)
 Values ('John Fulton','He is awesome, we all know that!')
 
 INSERT INTO users (keyword, response)
-Values ('about you','Best coding bootcamp in the Midwest!')
+Values ('tech elevator','Best coding bootcamp in the Midwest!')
 
 INSERT INTO users (keyword, response)
-Values ('tech elevator','I was born at Rev1 in December of 2019!')
+Values ('about you','I was born at Rev1 in December of 2019!')
+
+INSERT INTO users (keyword, response)
+Values ('unknown','Sorry, I don''t understand what you''re asking. &&& Try rewording your request.')
 
 -----
 --how to start new projets VISUAL STUDIO OR VISUAL STUDIO CODE 

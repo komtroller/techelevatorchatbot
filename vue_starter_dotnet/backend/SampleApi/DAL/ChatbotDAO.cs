@@ -53,6 +53,7 @@ namespace SampleApi.DAL
             }
             return matchingKeyword;
         }
+
         public string GetBotResponse(string keyword)
         {
             string response="";
@@ -85,6 +86,7 @@ namespace SampleApi.DAL
 
             return response;
         }
+
         public string GetQuote()
         {
             string randomQuote= "This quote is inspirational.";
@@ -143,5 +145,78 @@ namespace SampleApi.DAL
 
         }
 
+        public string GetJobTitle(string userInput)
+        {
+            string matchingJobTitle = "Junior Developer";
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    SqlCommand cmd = new SqlCommand("Select position from positions ORDER BY len(position) desc", conn);
+                    //cmd.Parameters.AddWithValue("@keyword", userInput);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string position = Convert.ToString(reader["position"]).ToLower();
+                        if (userInput.ToLower().Contains(position))
+                        {
+                            matchingJobTitle = position;
+                            break;
+
+                        }
+                    }
+                }
+            }
+
+            catch (SqlException ex)
+            {
+
+            }
+
+            return matchingJobTitle;
+
+        }
+
+        public string GetEvents()
+        {
+            List<string> Events = new List<string>();
+            string today = DateTime.Today.ToShortDateString();
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+
+
+                    conn.Open();
+
+
+                    SqlCommand cmd = new SqlCommand($"SELECT eventDescription FROM upcomingevents Where DATEDIFF(dayofyear, '{today}', dateOfEvent) < 8 AND DATEDIFF(dayofyear, '{today}', dateOfEvent) > 0", conn);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string eventListing = Convert.ToString(reader["eventDescription"]);
+                        Events.Add(eventListing);
+                    }
+                }
+            }
+
+            catch (SqlException ex)
+            {
+
+            }
+
+            string events = String.Join(" &&& ", Events);
+
+
+            return events;
+        }
     }
 }

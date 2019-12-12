@@ -288,8 +288,22 @@ INSERT INTO users (keyword, response)
 Values ('job opening', '?')
 
 INSERT INTO users (keyword, response)
-Values ('position', '?')
+Values ('upcoming meetups', '?')
 
+INSERT INTO users (keyword, response)
+Values ('upcoming events', '?')
+
+INSERT INTO users (keyword, response)
+Values ('upcoming meetup', '?')
+
+INSERT INTO users (keyword, response)
+Values ('upcoming event', '?')
+
+INSERT INTO users (keyword, response)
+Values ('meetup', '?')
+
+INSERT INTO users (keyword, response)
+Values ('event', '?')
 
 
 -----

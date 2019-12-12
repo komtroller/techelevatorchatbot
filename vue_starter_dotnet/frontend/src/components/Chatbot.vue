@@ -115,6 +115,7 @@ export default {
   display: flex;
   flex-direction: column;
   list-style-type: none;
+  word-wrap: break-word;
 }
 .chat-box-list-container {
   background-color: white !important;
@@ -181,4 +182,7 @@ export default {
     border-bottom-right-radius: 4px;
   }
 }
+
+
+
 </style>

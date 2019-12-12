@@ -71,10 +71,10 @@ INSERT INTO upcomingevents (dateOfEvent, eventDescription)
 VALUES ('2019-12-18', 'Meetup: Ardino Enthusiasts. Location: Polaris Hub, Time: 7 - 9 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-20', 'Behavioral Mock Interview. Location: Galileo, Time: 1:35 - 2 PM. ')
+VALUES ('2019-12-20', 'Behavioral Mock Interview. Location: Galileo, Time: 1:35 - 2 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-22', 'Meetup: Elixir Columbus. Location: Cover My Meds, Time: 4 - 6 PM')
+VALUES ('2019-12-22', 'Meetup: Elixir Columbus. Location: Cover My Meds, Time: 4 - 6 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
 VALUES ('2019-12-25', 'Elevator Pitch. Location: Elevate space, Time: 1 - 2 PM.')
@@ -213,7 +213,7 @@ INSERT INTO users (keyword, response)
 Values ('Interview Questions', 'Sample Questions include Tell us about yourself? Accomplishments? Strengths? &&& Weaknesses? <a href="https://www.monster.com/career-advice/article/100-potential-interview-questions">Click here to learn more!</a>')
 
 INSERT INTO users (keyword, response)
-Values ('Interview sample', 'Sample Questions include Tell us about yourself? Accomplishments? Strengths? Weaknesses? <a href="https://www.monster.com/career-advice/article/100-potential-interview-questions">Click here to learn more!</a>')
+Values ('Interview sample', 'Sample Questions include Tell us about yourself? &&& Accomplishments? Strengths? Weaknesses? <a href="https://www.monster.com/career-advice/article/100-potential-interview-questions">Click here to learn more!</a>')
 
 INSERT INTO users (keyword, response)
 Values ('Networking', 'I would advise you to join a meetup group related to your field and interests, &&& and to also create a LinkedIn account!')
@@ -246,16 +246,7 @@ INSERT INTO users (keyword, response)
 Values ('Starmethod', 'The STAR interview response is an interview behavioral question. &&& Using this method of answering interview questions allows you to provide concrete examples or &&& proof that you possess the experience and skills for the job at hand. &&& STAR stands for Situation, Task, Action, Result') 
 
 INSERT INTO users (keyword, response)
-Values ('STAR', 'The STAR interview response is an interview behavioral question. &&& Using this method of answering interview questions allows you to provide concrete examples or &&& proof that you possess the experience and skills for the job at hand. &&& STAR stands for Situation, Task, Action, Result') 
-
-INSERT INTO users (keyword, response)
-Values ('Open opportunities','You can search for job openings based on your field on LinkedIn.com or Indeed.com. &&& Use the different filters such as location or industry type for more accurate results.')
-
-INSERT INTO users (keyword, response)
-Values ('Open job opportunities', 'You can search for job openings based on your field on LinkedIn.com or Indeed.com. &&& Use the different filters such as location or industry type for more accurate results.')
-
-INSERT INTO users (keyword, response)
-Values ('job opportunity', 'You can search for job openings based on your field on LinkedIn.com or Indeed.com. &&& Use the different filters such as location or industry type for more accurate results.')
+Values ('STAR', 'The STAR interview response is an interview behavioral question. Using this method of answering interview questions allows you to provide concrete examples or proof that you possess the experience and skills for the job at hand. STAR stands for Situation, Task, Action, Result') 
 
 INSERT INTO users (keyword, response)
 Values ('advice prepare job', 'Research the company and the individuals. LinkedIn should help with that. &&& Have a few hard copies of your resume or portfolio. Arrive early, 20 minutes before your interview is ideal. &&& Stay calm, be humble and confident. Regardless of the outcome, send a follow up thank you email within 24hrs. &&& Remember: What is yours is yours!')
@@ -493,6 +484,9 @@ Values ('about you','I was born at Rev1 in December of 2019!')
 
 INSERT INTO users (keyword, response)
 Values ('unknown','Sorry, I don''t understand what you''re asking. &&& Try rewording your request.')
+
+INSERT INTO users (keyword, response)
+Values ('quote', 'Inspirational quote should be here... but it isnt!')
 
 -----
 --how to start new projets VISUAL STUDIO OR VISUAL STUDIO CODE 

@@ -71,10 +71,10 @@ INSERT INTO upcomingevents (dateOfEvent, eventDescription)
 VALUES ('2019-12-18', 'Meetup: Ardino Enthusiasts. Location: Polaris Hub, Time: 7 - 9 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-20', 'Behavioral Mock Interview. Location: Galileo, Time: 1:35 - 2 PM. ')
+VALUES ('2019-12-20', 'Behavioral Mock Interview. Location: Galileo, Time: 1:35 - 2 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-22', 'Meetup: Elixir Columbus. Location: Cover My Meds, Time: 4 - 6 PM')
+VALUES ('2019-12-22', 'Meetup: Elixir Columbus. Location: Cover My Meds, Time: 4 - 6 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
 VALUES ('2019-12-25', 'Elevator Pitch. Location: Elevate space, Time: 1 - 2 PM.')
@@ -484,6 +484,9 @@ Values ('about you','I was born at Rev1 in December of 2019!')
 
 INSERT INTO users (keyword, response)
 Values ('unknown','Sorry, I don''t understand what you''re asking. &&& Try rewording your request.')
+
+INSERT INTO users (keyword, response)
+Values ('quote', 'Inspirational quote should be here... but it isnt!')
 
 -----
 --how to start new projets VISUAL STUDIO OR VISUAL STUDIO CODE 

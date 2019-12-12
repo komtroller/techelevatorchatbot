@@ -31,7 +31,7 @@ namespace SampleApi.Controllers
             {
                 botResponse = chatDAO.GetInterviewQuestion();
             }
-            else if (keyword.Contains("postion")|| keyword.Contains("listing") || keyword.Contains("posting") || keyword.Contains("opening"))
+            else if (keyword.Contains("position")|| keyword.Contains("listing") || keyword.Contains("posting") || keyword.Contains("opening"))
             {
                 string jobDisplay = chatDAO.GetJobTitle(userInput);
                 string[] jobArray = jobDisplay.Split(" ");

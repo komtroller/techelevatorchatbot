@@ -21,7 +21,7 @@ namespace SampleApi.Controllers
         [HttpGet("{userInput}", Name = "Get")]
         public string Index(string userInput)
         {
-            string botResponse = "The quote functionality is currently in progress.";
+            string botResponse = "";
             string keyword = chatDAO.GetKeyword(userInput);
             if (keyword == "quote")
             {
@@ -30,6 +30,18 @@ namespace SampleApi.Controllers
             else if (keyword == "interview questions")
             {
                 botResponse = chatDAO.GetInterviewQuestion();
+            }
+            else if (keyword.Contains("postion")|| keyword.Contains("listing") || keyword.Contains("posting") || keyword.Contains("opening"))
+            {
+                string jobDisplay = chatDAO.GetJobTitle(userInput);
+                string[] jobArray = jobDisplay.Split(" ");
+                string jobTitle = String.Join("+",jobArray);
+                string jobPostingURL = $"https://www.indeed.com/jobs?q={jobTitle}&l=Columbus,+OH";
+                botResponse = $"Here's a link to some <a href={jobPostingURL} target=_blank>{jobDisplay} job postings</a> in Columbus";
+            }
+            else if (keyword.Contains("event") || keyword.Contains("meetup")) 
+            {
+                botResponse = chatDAO.GetEvents();
             }
             else
             {

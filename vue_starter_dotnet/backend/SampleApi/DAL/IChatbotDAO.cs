@@ -18,6 +18,6 @@ namespace SampleApi.DAL
 
         string GetJobTitle(string userInput);
 
-        public string GetEvents();
+        string GetEvents();
     }
 }

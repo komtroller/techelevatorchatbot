@@ -22,6 +22,15 @@ namespace SampleApi.Controllers
         public string Index(string userInput)
         {
             string botResponse = "";
+            if (userInput.Contains("$"))
+            {
+                userInput = userInput.Replace("$", "#");
+            }
+            if (userInput.Contains("~"))
+            {
+                userInput = userInput.Replace("~", "/");
+            }
+
             string keyword = chatDAO.GetKeyword(userInput);
             if (keyword == "quote")
             {

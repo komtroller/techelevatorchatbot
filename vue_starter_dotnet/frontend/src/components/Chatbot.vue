@@ -47,9 +47,17 @@ export default {
   }),
   methods: {
     sendMessage() {
-      const message = this.message
+      let query = this.message
+            
+      if(query.includes("#")){
+        query= this.message.replace("#","$");
+      }
+      if(query.includes("/")){
+        query= this.message.replace("/","~");
+      }
+      const message = query
       this.messages.push({
-        text: message,
+        text: this.message,
         author: 'client'
       })
       this.message = ''
@@ -70,7 +78,6 @@ export default {
       }
       else {
 
-      
       fetch(`https://localhost:44392/api/chat/${message}`, {
       method: "GET"
       }) .then(response => {

@@ -1,6 +1,7 @@
 <template>
   <section class="chat-box">
-    <div v- class="title">{{name}}</div>
+    <div v- class="title">{{name}}
+      <img src="Logo.png">
     <div class="chat-box-list-container" ref="chatbox">
       <ul class="chat-box-list">
         <li class="message" v-for="(message, idx) in messages" :key="idx" :class="message.author">
@@ -29,18 +30,26 @@ export default {
   }),
   methods: {
     sendMessage() {
-      const message = this.message;
+      let query = this.message;
+
+      if (query.includes("#")) {
+        query = this.message.replace("#", "$");
+      }
+      if (query.includes("/")) {
+        query = this.message.replace("/", "~");
+      }
+      const message = query;
       this.messages.push({
-        text: message,
+        text: this.message,
         author: "client"
       });
       this.message = "";
-      // this.$axios.get(https://localhost:44392/api/chat/${message})
+      // this.$axios.get(`https://localhost:44392/api/chat/${message}`)
       // .then(res => {
-      // this.messages.push({
-      // text: res.data.output,
-      // author: 'server'
-      // })
+      //   this.messages.push({
+      //     text: res.data.output,
+      //     author: 'server'
+      //   })
       let arrayLength = this.messages.length;
       console.log(arrayLength);
       if (arrayLength < 3) {
@@ -86,12 +95,16 @@ export default {
   }
 }
 
-.chat-box,
+title.img{
+
+
+}
 .chat-box-list {
   background-color: white !important;
   display: flex;
   flex-direction: column;
   list-style-type: none;
+  word-wrap: break-word;
 }
 .chat-box-list-container {
   background-color: white !important;

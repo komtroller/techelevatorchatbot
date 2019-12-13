@@ -53,6 +53,7 @@ namespace SampleApi.DAL
             }
             return matchingKeyword;
         }
+
         public string GetBotResponse(string keyword)
         {
             string response="";
@@ -85,9 +86,10 @@ namespace SampleApi.DAL
 
             return response;
         }
-        public Quote GetQuote()
+
+        public string GetQuote()
         {
-            Quote randomQuote= new Quote();
+            string randomQuote= "This quote is inspirational.";
 
             try
             {
@@ -95,13 +97,12 @@ namespace SampleApi.DAL
                 {
                     conn.Open();
 
-                    SqlCommand cmd = new SqlCommand("SELECT TOP 1 author,quote FROM motivationalquotes ORDER BY NEWID()", conn);
+                    SqlCommand cmd = new SqlCommand("SELECT TOP 1 quote FROM motivationalquotes ORDER BY NEWID()", conn);
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
                     {
-                        randomQuote.Author = Convert.ToString(reader["author"]);
-                        randomQuote.QuoteText = Convert.ToString(reader["quote"]);
+                        randomQuote = Convert.ToString(reader["quote"]);
                     }
                 }
             }
@@ -115,5 +116,107 @@ namespace SampleApi.DAL
             
         }
 
+        public string GetInterviewQuestion()
+        {
+            string randomQuestion = "Oops...looks like we're out of interview questions.";
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    SqlCommand cmd = new SqlCommand("SELECT TOP 1 question FROM interview_questions ORDER BY NEWID()", conn);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        randomQuestion = Convert.ToString(reader["question"]);
+                    }
+                }
+            }
+
+            catch (SqlException ex)
+            {
+
+            }
+
+            return randomQuestion;
+
+        }
+
+        public string GetJobTitle(string userInput)
+        {
+            string matchingJobTitle = "Junior Developer";
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    SqlCommand cmd = new SqlCommand("Select position from positions ORDER BY len(position) desc", conn);
+                    //cmd.Parameters.AddWithValue("@keyword", userInput);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string position = Convert.ToString(reader["position"]).ToLower();
+                        if (userInput.ToLower().Contains(position))
+                        {
+                            matchingJobTitle = position;
+                            break;
+
+                        }
+                    }
+                }
+            }
+
+            catch (SqlException ex)
+            {
+
+            }
+
+            return matchingJobTitle;
+
+        }
+
+        public string GetEvents()
+        {
+            List<string> Events = new List<string>();
+            string today = DateTime.Today.ToShortDateString();
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+
+
+                    conn.Open();
+
+
+                    SqlCommand cmd = new SqlCommand($"SELECT eventDescription FROM upcomingevents Where DATEDIFF(dayofyear, '{today}', dateOfEvent) < 8 AND DATEDIFF(dayofyear, '{today}', dateOfEvent) > 0", conn);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string eventListing = Convert.ToString(reader["eventDescription"]);
+                        Events.Add(eventListing);
+                    }
+                }
+            }
+
+            catch (SqlException ex)
+            {
+
+            }
+
+            string events = String.Join(" &&& ", Events);
+
+
+            return events;
+        }
     }
 }

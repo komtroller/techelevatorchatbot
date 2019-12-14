@@ -24,7 +24,6 @@ namespace SampleApi.Controllers
             string botResponse = "";
             if (userInput.Contains("$"))
             {
-                //return input where $ is replaced with #
                 userInput = userInput.Replace("$", "#");
             }
             if (userInput.Contains("~"))
@@ -33,16 +32,19 @@ namespace SampleApi.Controllers
             }
 
             string keyword = chatDAO.GetKeyword(userInput);
+            //to get more quotes
             if (keyword == "quote")
             {
                 botResponse = chatDAO.GetQuote();
                 botResponse += ". Enter qo to get a new quote.";
             }
+            //to get more interview questions
             else if (keyword == "interview questions" || keyword == "int")
             {
                 botResponse = chatDAO.GetInterviewQuestion();
                 botResponse += ". Enter int to get another question";
             }
+            //job is based on a list of a series of values related to job in DB called mykeywords
             else if (keyword=="job")
             {
                 string jobDisplay = chatDAO.GetJobTitle(userInput);
@@ -52,6 +54,7 @@ namespace SampleApi.Controllers
                 string jobPostingURL = $"https://www.indeed.com/jobs?q={jobTitle}&l=Columbus,+OH";
                 botResponse = $"Here's a link to some <a href=\"{jobPostingURL}\" target=\"_blank\">{jobDisplay} job postings</a> in Columbus";
             }
+            //event is based on a list of a series of values related to events in DB called mykeywords
             else if (keyword=="event") 
             {
                 botResponse = chatDAO.GetEvents();
@@ -65,7 +68,7 @@ namespace SampleApi.Controllers
             }
             else
             {
-                botResponse = chatDAO.GetBotResponse(keyword);
+                botResponse = chatDAO.GetBotResponse(userInput);
             }
             return botResponse;
         }

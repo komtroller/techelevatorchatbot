@@ -57,6 +57,7 @@ namespace SampleApi.DAL
         public string GetBotResponse(string keyword)
         {
             string response = "";
+            string unknownResponse = "";
 
             try
             {
@@ -66,15 +67,25 @@ namespace SampleApi.DAL
              
                     conn.Open();
 
-
-                    SqlCommand cmd = new SqlCommand("Select * from users where keyword = @keyword; ", conn);
-                    cmd.Parameters.AddWithValue("@keyword", keyword);
+                    //get all and filter by keyword
+                    SqlCommand cmd = new SqlCommand("Select keyword, response from users", conn);
 
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
                     {
-                        response = Convert.ToString(reader["response"]);
+                        string keywordTemp = Convert.ToString(reader["keyword"]).ToLower();
+
+                        if(keywordTemp == "unknown")
+                        {
+                            unknownResponse = Convert.ToString(reader["response"]);
+                        }
+                        //
+                        if (keyword.Contains(keywordTemp))
+                        {
+                            response = Convert.ToString(reader["response"]);
+                            break;
+                        }
                     }
                 }
             }
@@ -83,8 +94,8 @@ namespace SampleApi.DAL
             {
                 Console.Write(ex.Message);
             }
-
-            return response;
+            //if keyword was not found ..response so empty therefore - return unknown otherwise return response
+            return string.IsNullOrEmpty(response) ? unknownResponse : response;
         }
 
         public string GetQuote()

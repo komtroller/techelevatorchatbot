@@ -19,6 +19,11 @@ GO
 
 BEGIN TRANSACTION;
 
+
+
+
+
+
 CREATE TABLE users
 (
 	id			int			identity(1,1),
@@ -37,7 +42,6 @@ CREATE TABLE motivationalquotes
 );
 
 
-
 CREATE TABLE interview_questions
 (
 	questionsid			int			identity(1,1),
@@ -52,6 +56,13 @@ CREATE TABLE positions
 	primary key (id)
 );
 
+CREATE TABLE companyinformation
+(
+	id			int			identity(1,1),
+	company varchar(max)		not null,
+	primary key (id)
+);
+
 CREATE TABLE upcomingevents
 (
 	id			int			identity(1,1),
@@ -59,6 +70,27 @@ CREATE TABLE upcomingevents
 	eventDescription varchar(max)		not null,
 	primary key (id)
 );
+
+--KEYWORD TABLE (all keys narrowed to a single key)
+CREATE TABLE mykeywords
+(
+	keyid			int			identity(1,1),
+	keywords varchar(max)		not null,
+	keyword varchar(100)		not null,
+	primary key (keyid)
+);
+
+--KEYWORDS IN MYKEYWORDS TABLE
+--if keyword is int then i get interview questions ...etc
+INSERT INTO mykeywords (keywords , keyword)
+VALUES 
+(' interview questions interview question int ', 'int'),
+(' job listing job posting  job opening position job position po ', 'job'),
+(' upcoming meetups upcoming meetup upcoming event pathway events ', 'event'),
+(' inspirational quote motivational quotes quote qo ', 'quote'),
+(' company information company rating company reviews number of employee company ', 'company');
+
+--DELETE FROM mykeywords
 -- Upcoming Events
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
@@ -144,6 +176,25 @@ VALUES ('Javascript')
 INSERT INTO positions
 VALUES ('Web Developer') 
 
+--COMPANY TABLE
+INSERT INTO companyinformation
+VALUES ('company information')
+
+INSERT INTO companyinformation
+VALUES ('company rating')  
+
+INSERT INTO companyinformation
+VALUES ('company reviews')  
+
+INSERT INTO companyinformation
+VALUES ('of employees') 
+
+INSERT INTO companyinformation
+VALUES ('number of employees') 
+
+INSERT INTO companyinformation
+VALUES ('company') 
+
  -------
 --- QUOTES
 INSERT INTO motivationalquotes (quote)
@@ -177,37 +228,9 @@ INSERT INTO motivationalquotes (quote)
 Values ('"If you''re walking down the right path &&& and you''re willing to keep walking, &&& eventually you''ll make progress." &&& - Barak H. Obama')
 
 
-<<<<<<< HEAD
-INSERT INTO users (keyword, response)
-Values ('Cover letter','You might or might not need one. It really depends on the industyr culture. Please, find the link below &&&<a href="https://zety.com/blog/how-to-write-a-cover-letter">Here is a link to that!</a>')
 
-INSERT INTO users (keyword, response)
-Values ('Resume', 'Please, find the link below &&& <a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Here is a link to that!</a>')
 
-INSERT INTO users (keyword, response)
-Values ('CV', 'Please, find the link below &&& <a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Here is a link to that!</a>')
 
-INSERT INTO users (keyword, response)
-Values ('Curriculum Vitae', 'Please, find the link below &&& <a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Here is a link to that!</a>')
-
-INSERT INTO users (keyword, response)
-Values ('Job', 'Please, find the link below &&& <a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that!</a>')
-
-INSERT INTO users (keyword, response)
-Values ('Jobs', 'Please, find the link below &&& <a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that!</a>')
-
-INSERT INTO users (keyword, response)
-Values ('how get job', 'Please, find the link below &&& <a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that!</a>')
-
-INSERT INTO users (keyword, response)
-Values ('work', 'If you are looking for a job. Here is a link that might help &&&<a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that!</a>')
-
-INSERT INTO users (keyword, response)
-Values ('Hired', 'Please, find the link below &&& <a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that!</a>')
-
-INSERT INTO users (keyword, response)
-Values ('Hiring', 'You need help getting hired. Here is a link that might help &&& <a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that!</a>')
-=======
 ----- PATHWAY
 
 INSERT INTO users (keyword, response)
@@ -236,16 +259,10 @@ Values ('work', '<a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/
 
 INSERT INTO users (keyword, response)
 Values ('Hired', '<a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that!</a>')
->>>>>>> 3f8daf2ddb103395bd6e4def733e3a7b118936e9
 
 INSERT INTO users (keyword, response)
 Values ('Hiring', '<a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that might help with that!</a>')
 
-INSERT INTO users (keyword, response)
-Values ('Interview Questions', 'Sample Questions include Tell us about yourself? Accomplishments? Strengths? &&& Weaknesses? <a href="https://www.monster.com/career-advice/article/100-potential-interview-questions">Click here to learn more!</a>')
-
-INSERT INTO users (keyword, response)
-Values ('Interview sample', 'Sample Questions include Tell us about yourself? &&& Accomplishments? Strengths? Weaknesses? <a href="https://www.monster.com/career-advice/article/100-potential-interview-questions">Click here to learn more!</a>')
 
 INSERT INTO users (keyword, response)
 Values ('Networking', 'I would advise you to join a meetup group related to your field and interests, &&& and to also create a LinkedIn account!')
@@ -256,34 +273,26 @@ Values ('Network', 'I would advise you to join a meetup group related to your fi
 INSERT INTO users (keyword, response)
 Values ('Recruiter', 'There are many way to contact a recruiter, &&& I would advise you to go to join a meetup related to your field, and to also network on LinkedIn. &&& I strongly advise you to add a note with every request you send on LinkedIn')
 
+
 INSERT INTO users (keyword, response)
-<<<<<<< HEAD
-Values ('Wear', 'Generally, you want to wear professional, or business, attire, here is more information &&& <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364</a>')
-=======
 Values ('Recruiters', 'There are many way to contact a recruiter, &&& I would advise you to go to join a meetup related to your field, and to also network on LinkedIn. &&& I strongly advise you to add a note with every request you send on LinkedIn')
->>>>>>> 3f8daf2ddb103395bd6e4def733e3a7b118936e9
 
 INSERT INTO users (keyword, response)
 Values ('Wear', 'Generally, you want to wear professional or business attire! &&& <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">here is more information on that!</a>')
 
 INSERT INTO users (keyword, response)
-<<<<<<< HEAD
 Values ('dresscode', 'Generally, you want to wear professional, or business, attire, here is more information &&& <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364</a>')
 
 INSERT INTO users (keyword, response)
-Values ('Interview fashion', 'Generally, you want to wear professional, or business, attire, here is more information &&& <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364</a>')
+Values ('Casual', 'If the company has a casual dresscode, you still you want to wear professional, or business, attire for the interview, here is more information &&& <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364</a>')
 
 INSERT INTO users (keyword, response)
-Values ('Casual', 'If the company has a casual dresscode, you still you want to wear professional, or business, attire for the interview, here is more information &&& <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364</a>')
-=======
 Values ('Outfit', 'It depends on the organization. Generally, you want to wear professional or business attire! &&& <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">here is more information on that!</a>')
 
 INSERT INTO users (keyword, response)
 Values ('dresscode', 'It depends on the organization. Generally, you want to wear professional or business attire! &&& <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">here is more information on that!</a>')
 
-INSERT INTO users (keyword, response)
-Values ('Interview fashion', 'It depends on the organization. Generally, you want to wear professional or business attire! &&& <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">here is more information on that!</a>')
->>>>>>> 3f8daf2ddb103395bd6e4def733e3a7b118936e9
+
 
 INSERT INTO users (keyword, response)
 Values ('Salary expectations', 'I would use websites such as Glassdoor, Payscale or LinkedIn &&& to give you a better idea of industry standards based on your experience, hope that helps!')
@@ -301,45 +310,24 @@ INSERT INTO users (keyword, response)
 Values ('applying jobs','Check out these tips from Glassdoor before you apply to any job. &&& <a href="https://www.glassdoor.com/blog/5-applying-job/">Click me!</a>')
 
 INSERT INTO users (keyword, response)
-Values ('arrays','An array is used to store a collection of data, &&& but it is often more useful to think of an array as a collection of variables of the same type. &&& For a single dimensional array, a good analogy is to think of it as a row of boxes. &&& Each box can store a single value but each value must be of the same type. Hope that helps!')
+Values ('arrays','An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type. &&& For a single dimensional array, a good analogy is to think of it as a row of boxes. &&& Each box can store a single value but each value must be of the same type. Hope that helps!')
 
 INSERT INTO users (keyword, response)
-Values ('mvc','MVC stands for Model (Business logic), View (Presenatation logic), and Controller (Interacts with model to get data for View). &&& MVC is a popular way of organizing your code. Each section of your code has a purpose, &&& and those purposes are different. Here is a more detailed link <a href="https://www.codecademy.com/articles/mvc">Click me!</a>')
+Values ('mvc','MVC stands for Model (Business logic), View (Presenatation logic), and Controller (Interacts with model to get data for View). MVC is a popular way of organizing your code. Each section of your code has a purpose, and those purposes are different. Here is a more detailed link <a href="https://www.codecademy.com/articles/mvc">Click me!</a>')
+
+
+
+
+
+
+
+--learning sql
 
 INSERT INTO users (keyword, response)
-<<<<<<< HEAD
-Values ('applying jobs','Check out these tips from Glassdoor before you apply to any job &&& <a href="https://www.glassdoor.com/blog/5-applying-job/">https://www.glassdoor.com/blog/5-applying-job/</a>')
-=======
-Values ('job posting', '?')
->>>>>>> 3f8daf2ddb103395bd6e4def733e3a7b118936e9
-
-INSERT INTO users (keyword, response)
-Values ('listing', '?')
-
-INSERT INTO users (keyword, response)
-Values ('posting', '?')
-
-INSERT INTO users (keyword, response)
-Values ('job listing', '?')
-
-INSERT INTO users (keyword, response)
-Values ('job position', '?')
-
-INSERT INTO users (keyword, response)
-Values ('job opening', '?')
-
-INSERT INTO users (keyword, response)
-Values ('upcoming meetups', '?')
-
-INSERT INTO users (keyword, response)
-Values ('upcoming events', '?')
-
-INSERT INTO users (keyword, response)
-<<<<<<< HEAD
 Values ('tutorial SQL','Here is my favorite tutorial on SQL &&& <a href="https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud">https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud</a>')
 
 INSERT INTO users (keyword, response)
-Values (' tutorial mySQL','Here is my favorite tutorial on SQL &&&<a href="https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud">https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud</a>')
+Values ('tutorial mySQL','Here is my favorite tutorial on SQL &&&<a href="https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud">https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud</a>')
 
 INSERT INTO users (keyword, response)
 Values ('Beginners SQL','Here is my favorite tutorial on SQL &&& <a href="https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud">https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud</a>')
@@ -351,37 +339,10 @@ INSERT INTO users (keyword, response)
 Values ('sql commands','Check out this link for SQL commands &&&<a href="https://www.codecademy.com/articles/sql-commands">https://www.codecademy.com/articles/sql-commands</a>')
 
 INSERT INTO users (keyword, response)
-Values ('what sql commands','Check out this link for SQL commands &&&<a href="https://www.codecademy.com/articles/sql-commands">https://www.codecademy.com/articles/sql-commands</a>')
-=======
-Values ('upcoming meetup', '?')
-
-INSERT INTO users (keyword, response)
-Values ('upcoming event', '?')
-
-INSERT INTO users (keyword, response)
-Values ('meetup', '?')
-
-INSERT INTO users (keyword, response)
-Values ('event', '?')
-
-
------
-
---learning sql
-
-INSERT INTO users (keyword, response)
 Values ('New project MSSQL','<a href="https://docs.microsoft.com/en-us/sql/ssms/solution/create-a-project?view=sql-server-ver15</a>">Click here to learn about that!</a>')
->>>>>>> 3f8daf2ddb103395bd6e4def733e3a7b118936e9
 
 INSERT INTO users (keyword, response)
-Values ('project MSSQL','<a href="https://docs.microsoft.com/en-us/sql/ssms/solution/create-a-project?view=sql-server-ver15">Click me to learn more!</a>')
-
-INSERT INTO users (keyword, response)
-<<<<<<< HEAD
 Values ('mssql commands','Check out this link for SQL commands &&&<a href="https://www.codecademy.com/articles/sql-commands">https://www.codecademy.com/articles/sql-commands</a>')
-=======
-Values ('create new project SQL','<a href="https://docs.microsoft.com/en-us/sql/ssms/solution/create-a-project?view=sql-server-ver15">Click here for more info!</a>')
->>>>>>> 3f8daf2ddb103395bd6e4def733e3a7b118936e9
 
 INSERT INTO users (keyword, response)
 Values ('create project SQL','<a href="https://docs.microsoft.com/en-us/sql/ssms/solution/create-a-project?view=sql-server-ver15">Click here for more info!</a>')
@@ -426,10 +387,9 @@ INSERT INTO users (keyword, response)
 Values ('C# study','<a href="https://www.youtube.com/watch?v=gfkTfcpWqAY</a>">Click me to learn more!</a>')
 
 
+
+
 --interview questions
-
-
-
 
 INSERT INTO interview_questions (question)
 Values ('Tell me about yourself')
@@ -480,14 +440,15 @@ INSERT INTO interview_questions (question)
 Values ('What are you most proud of? ')
 
 
---Hi there. Welcome to our site. Is there anything I can help you with
----- 
+
+
+
 --- GREETINGS AND NATURAL LANGUAGE UNDERSTANDING 
 INSERT INTO users (keyword, response)
 Values ('How are you', 'I am good thank you! How can I help you?')
 
 INSERT INTO users (keyword, response)
-Values ('HELP', 'I can help you. Please insert a question or a topic of interest.')
+Values ('HELP', 'I can help you. Please insert a question or a topic of interest.(ex interview, posting')
 
 INSERT INTO users (keyword, response)
 Values ('Hi', 'Hi, How can I help you?')
@@ -558,8 +519,8 @@ Values ('about you','I was born at Rev1 in December of 2019!')
 INSERT INTO users (keyword, response)
 Values ('unknown','Sorry, I don''t understand what you''re asking. &&& Try rewording your request.')
 
-INSERT INTO users (keyword, response)
-Values ('quote', 'Inspirational quote should be here... but it isnt!')
+
+
 
 -----
 --how to start new projets VISUAL STUDIO OR VISUAL STUDIO CODE 
@@ -567,17 +528,9 @@ Values ('quote', 'Inspirational quote should be here... but it isnt!')
 INSERT INTO users (keyword, response)
 Values ('New project','I can help you. Can you specificy what program will you be using for your project. &&& Ex (new project in visual studio,new project in Javascript')
 
-INSERT INTO users (keyword, response)
-Values ('New project in Visual Studio','<a href="https://docs.microsoft.com/en-us/visualstudio/ide/create-new-project?view=vs-2019">Here is a link for that!</a>')
 
 INSERT INTO users (keyword, response)
 Values ('New project Visual Studio Microsoft','<a href="https://docs.microsoft.com/en-us/visualstudio/ide/create-new-project?view=vs-2019">Click me to learn more!</a>')
-
-INSERT INTO users (keyword, response)
-Values ('New project Visual Studio Code Microsoft','<a href="https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code</a>">Click me to learn more!</a>')
-
-INSERT INTO users (keyword, response)
-Values ('New project Visual Studio Code','<a href="https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code</a>">Read me!</a>')
 
 
 

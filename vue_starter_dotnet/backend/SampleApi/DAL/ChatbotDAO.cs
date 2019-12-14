@@ -23,24 +23,24 @@ namespace SampleApi.DAL
         public string GetKeyword(string userInput)
         {
             string userInputToLower = userInput.ToLower();
-            string matchingKeyword= "unknown";
+            string matchingKeyword = "unknown";
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-
-                    SqlCommand cmd = new SqlCommand("Select keyword from users ORDER BY len(keyword) desc", conn);
-                    //cmd.Parameters.AddWithValue("@keyword", userInput);
-
+                    //look through records with the table mykeywords 
+                    SqlCommand cmd = new SqlCommand("Select keywords, keyword from mykeywords", conn);
+                    
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
                     {
-                        string keyword = Convert.ToString(reader["keyword"]).ToLower();
-                        if (userInput.ToLower().Contains(keyword))
+                        string keywords = Convert.ToString(reader["keywords"]).ToLower();
+                        //Concatnate and ADD leading and trailing space to match a full word
+                        if (keywords.Contains(" " + userInputToLower +" "))
                         {
-                            matchingKeyword = keyword;
+                            matchingKeyword = Convert.ToString(reader["keyword"]);
                             break;
                         }
                     }
@@ -49,21 +49,21 @@ namespace SampleApi.DAL
 
             catch (SqlException ex)
             {
-
+                Console.Write(ex.Message);
             }
             return matchingKeyword;
         }
 
         public string GetBotResponse(string keyword)
         {
-            string response="";
+            string response = "";
 
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
 
-
+             
                     conn.Open();
 
 
@@ -81,7 +81,7 @@ namespace SampleApi.DAL
 
             catch (SqlException ex)
             {
-
+                Console.Write(ex.Message);
             }
 
             return response;
@@ -89,7 +89,7 @@ namespace SampleApi.DAL
 
         public string GetQuote()
         {
-            string randomQuote= "This quote is inspirational.";
+            string randomQuote = "This quote is inspirational.";
 
             try
             {
@@ -109,11 +109,11 @@ namespace SampleApi.DAL
 
             catch (SqlException ex)
             {
-
+                Console.Write(ex.Message);
             }
 
             return randomQuote;
-            
+
         }
 
         public string GetInterviewQuestion()
@@ -138,7 +138,7 @@ namespace SampleApi.DAL
 
             catch (SqlException ex)
             {
-
+                Console.Write(ex.Message);
             }
 
             return randomQuestion;
@@ -175,7 +175,7 @@ namespace SampleApi.DAL
 
             catch (SqlException ex)
             {
-
+                Console.Write(ex.Message);
             }
 
             return matchingJobTitle;
@@ -210,7 +210,7 @@ namespace SampleApi.DAL
 
             catch (SqlException ex)
             {
-
+                Console.Write(ex.Message);
             }
 
             string events = String.Join(" &&& ", Events);
@@ -220,3 +220,4 @@ namespace SampleApi.DAL
         }
     }
 }
+

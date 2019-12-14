@@ -1,32 +1,34 @@
 <template>
   <section class="chat-box">
-    <div v- class="title">{{name}}
-      <img src="Logo.png">
+    <img src= "../Logo.png" height="50px" padding-top="15px" >
+    <div class="title">{{name}}</div>
+    <div class="botinformation">{{Information}}</div>
     <div class="chat-box-list-container" ref="chatbox">
       <ul class="chat-box-list">
         <li class="message" v-for="(message, idx) in messages" :key="idx" :class="message.author">
           <p>
             <span v-html="message.text"></span>
           </p>
+        
         </li>
       </ul>
     </div>
     <div class="chat-inputs">
-      <input type="text" v-model="message" @keyup.enter="sendMessage" />
+      <input id='chat-input' type="text"  maxlength='100' placeholder='Type a message' v-model="message" @keyup.enter="sendMessage"/>
       <button @click="sendMessage">Send</button>
     </div>
   </section>
 </template>
 
 <script>
-import { createWriteStream } from "fs";
 export default {
   name: "Chatbot",
 
   data: () => ({
     message: "",
     messages: [{ text: "Hello, What is your name?", author: "server" }],
-    name: "Chattio"
+    name: "Chattio",
+    Information: "Tech Elevator Student Bot"
   }),
   methods: {
     sendMessage() {
@@ -44,12 +46,7 @@ export default {
         author: "client"
       });
       this.message = "";
-      // this.$axios.get(`https://localhost:44392/api/chat/${message}`)
-      // .then(res => {
-      //   this.messages.push({
-      //     text: res.data.output,
-      //     author: 'server'
-      //   })
+    
       let arrayLength = this.messages.length;
       console.log(arrayLength);
       if (arrayLength < 3) {
@@ -72,7 +69,7 @@ export default {
                 author: "server"
               });
             });
-
+          // nextTick: execute a function after the data has been set, and the DOM has been updated.
             this.$nextTick(() => {
               this.$refs.chatbox.scrollTop = this.$refs.chatbox.scrollHeight;
             });
@@ -84,52 +81,53 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.title {
+.title { 
   font-family: "Arial";
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
+  width: 55px;
   transition: {
     property: font-size;
     duration: 4s;
     delay: 2s;
   }
-}
-
-title.img{
-
 
 }
 .chat-box-list {
-  background-color: white !important;
+  background-color: white;
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  word-wrap: break-word;
+  // word-wrap: break-word;
 }
 .chat-box-list-container {
-  background-color: white !important;
+  background-color: whitesmoke !important;
   overflow: scroll;
-  margin-bottom: 1px;
+  margin-bottom: 5px;
 }
 .chat-box-list {
   padding-left: 10px;
   padding-right: 10px;
-  span {
-    padding: 8px;
+  .span {
+    padding: 3px;
     color: white;
     border-radius: 4px;
+    box-shadow: 3px 3px 3px green;
+  
   }
   .server {
-    span {
-      background: #99cc00;
+    .span {
+      background: #99cc00 !important;
+      box-shadow: 3px 3px 3px green;
     }
     p {
       float: right;
     }
   }
   .client {
-    span {
-      background: #0070c8;
+    .span {
+      background: #0070c8 !important;
+      box-shadow: 3px 3px 3px blue;
     }
     p {
       float: left;
@@ -137,18 +135,27 @@ title.img{
   }
 }
 .chat-box {
-  margin: 10px;
+  margin: 50px;
   border: 1px solid #999;
   width: 50vw;
   height: 50vh;
-  border-radius: 4px;
+  border-radius: 6px;
+  padding-left:6px;
+  padding-top:6px;
+  padding-bottom: 3px;
   margin-left: auto;
   margin-right: auto;
   align-items: space-between;
   justify-content: space-between;
+ 
+  
 }
 .chat-inputs {
   display: flex;
+    ::placeholder{
+    font-size: 1em; 
+    color: gray; 
+    }
 
   input {
     line-height: 3;

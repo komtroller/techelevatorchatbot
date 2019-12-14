@@ -19,5 +19,7 @@ namespace SampleApi.DAL
         string GetJobTitle(string userInput);
 
         string GetEvents();
+
+        //string GetCompanyInformation(string companyInformation);
     }
 }

@@ -182,77 +182,79 @@ VALUES ('Web Developer')
 --	employee_no int			not null
 --);
 
+SELECT * FROM co_information
+
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
 VALUES ('Accenture',1,'Columbus',10,4,10500)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('Pillar',2,'Columbus',10,4,10500)
+VALUES ('Pillar',2,'Columbus',10,4,9400)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('Battelle',3,'Columbus',10,4,10500)
+VALUES ('Battelle',3,'Columbus',10,4,10550)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('NBBJ',4,'Columbus,0,4,800)
+VALUES ('NBBJ',4,'Columbus',0,4,800)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('Fusion Alliance ',5,'Columbus',1,3,560)
+VALUES ('WSP',5,'Columbus',0,4,970)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
 VALUES ('JPMorgan Chase',6,'Columbus',98,4,13600)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('Willow Tree',7,'Columbus',10,4,10500)
+VALUES ('Willow Tree',7,'Columbus',10,4,420)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('BYBE',8,'Columbus',10,4,10500)
+VALUES ('BYBE',8,'Columbus',0,4,7)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('Nationwide',9,'Columbus',10,4,10500)
+VALUES ('Nationwide',9,'Columbus',3,4,16500)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('REDBUD',10,'Columbus',10,4,10500)
+VALUES ('RED HAT',10,'Columbus',2,4,18563)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('Olive',11,'Columbus',10,4,10500)
+VALUES ('Olive',11,'Columbus',8,5,110)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('Safelite',12,'Columbus',1,3,500)
+VALUES ('Safelite AutoGlass',12,'Columbus',0,3,14500)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('AWH',13,'Columbus',10,4,10500)
+VALUES ('AWH',13,'Columbus',1,5,103)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
 VALUES ('T-CETRA',14,'Columbus',10,4,10500)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('OPERS',15,'Columbus',10,4,200)
+VALUES ('OPERS',15,'Columbus',10,4,603)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
 VALUES ('McGraw-Hill',16,'Columbus',10,4,10500)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('Avanade',17,'Columbus',10,4,10500)
+VALUES ('Avanade',17,'Columbus',2,5,18340)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('FCDC',18,'Columbus',10,5,14)
+VALUES ('FCDC',18,'Columbus',1,5,14)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('TEK SYSTEMS',19,'Columbus',10,4,10500)
+VALUES ('TEK SYSTEMS',19,'Columbus',1,3,10500)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('OPERS',20,'Columbus',10,2,10500)
+VALUES ('OPERS',20,'Columbus',1,2,10500)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('McGraw-Hill',21,'Columbus',10,4,10500)
+VALUES ('McGraw-Hill',21,'Columbus',1,4,10500)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('OCLC',22,'Columbus',10,5,10500)
+VALUES ('OCLC',22,'Columbus',4,5,10500)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('L-BRANDS',23,'Columbus',10,5,10500)
+VALUES ('L-BRANDS',23,'Columbus',10,5,16570)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('Brooksource',24,'Columbus',10,3,1540)
+VALUES ('Brooksource',24,'Columbus',4,3,1540)
 
 
  -------

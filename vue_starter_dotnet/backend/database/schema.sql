@@ -71,26 +71,7 @@ CREATE TABLE upcomingevents
 	primary key (id)
 );
 
---KEYWORD TABLE (all keys narrowed to a single key)
-CREATE TABLE mykeywords
-(
-	keyid			int			identity(1,1),
-	keywords varchar(max)		not null,
-	keyword varchar(100)		not null,
-	primary key (keyid)
-);
 
---KEYWORDS IN MYKEYWORDS TABLE
---if keyword is int then i get interview questions ...etc
-INSERT INTO mykeywords (keywords , keyword)
-VALUES 
-(' interview questions interview question int ', 'int'),
-(' job listing job posting  job opening position job position po ', 'job'),
-(' upcoming meetups upcoming meetup upcoming event pathway events ', 'event'),
-(' inspirational quote motivational quotes quote qo ', 'quote'),
-(' company information company rating company reviews number of employee company ', 'company');
-
---DELETE FROM mykeywords
 -- Upcoming Events
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
@@ -316,10 +297,57 @@ INSERT INTO users (keyword, response)
 Values ('mvc','MVC stands for Model (Business logic), View (Presenatation logic), and Controller (Interacts with model to get data for View). MVC is a popular way of organizing your code. Each section of your code has a purpose, and those purposes are different. Here is a more detailed link <a href="https://www.codecademy.com/articles/mvc">Click me!</a>')
 
 
+----- JOB POSTING KEYWORDS
+
+INSERT INTO users (keyword, response)
+Values ('posting','?')
+INSERT INTO users (keyword, response)
+Values ('listing','?')
+INSERT INTO users (keyword, response)
+Values ('position','?')
+INSERT INTO users (keyword, response)
+Values ('job opening','?')
+INSERT INTO users (keyword, response)
+Values ('job posting','?')
+INSERT INTO users (keyword, response)
+Values ('job listing','?')
+INSERT INTO users (keyword, response)
+Values ('open position','?')
+INSERT INTO users (keyword, response)
+Values ('job opening','?')
 
 
+----- INSPIRATIONAL QUOTE KEYWORDS
+INSERT INTO users (keyword, response)
+Values ('quote','?')
+INSERT INTO users (keyword, response)
+Values ('inspirational quote','?')
+INSERT INTO users (keyword, response)
+Values ('inspire me','?')
+INSERT INTO users (keyword, response)
+Values ('inspirational','?')
 
+----- Interview Quesions
+INSERT INTO users (keyword, response)
+Values ('interview question','?')
+INSERT INTO users (keyword, response)
+Values ('sample question','?')
+INSERT INTO users (keyword, response)
+Values ('iq','?')
 
+----- Event Keywords
+INSERT INTO users (keyword, response)
+Values ('upcoming events','?')
+INSERT INTO users (keyword, response)
+Values ('pathway events','?')
+INSERT INTO users (keyword, response)
+Values ('upcoming meetups','?')
+INSERT INTO users (keyword, response)
+Values ('events','?')
+INSERT INTO users (keyword, response)
+Values ('meetup','?')
+INSERT INTO users (keyword, response)
+Values ('pathway meetings','?')
 
 --learning sql
 

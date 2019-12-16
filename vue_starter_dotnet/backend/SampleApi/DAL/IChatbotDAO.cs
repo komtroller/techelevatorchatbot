@@ -16,6 +16,8 @@ namespace SampleApi.DAL
 
         string GetInterviewQuestion();
 
+        string GetTechnicalInterviewQuestion();
+
         string GetJobTitle(string userInput);
 
         string GetEvents();

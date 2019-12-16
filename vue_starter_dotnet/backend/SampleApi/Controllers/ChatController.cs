@@ -44,7 +44,11 @@ namespace SampleApi.Controllers
                 botResponse = chatDAO.GetInterviewQuestion();
                 botResponse += "&&& Enter 'IQ' to get another interview question";
             }
-            
+            else if (keyword.Contains("technical") || keyword=="tq")
+            {
+                botResponse = chatDAO.GetTechnicalInterviewQuestion();
+                botResponse += "&&& Enter 'TQ' to get another technical interview question";
+            }
             else if (keyword.Contains("posting")|| keyword.Contains("listing") || keyword.Contains("opening") || keyword.Contains("position"))
             {
                 string jobDisplay = chatDAO.GetJobTitle(userInput);

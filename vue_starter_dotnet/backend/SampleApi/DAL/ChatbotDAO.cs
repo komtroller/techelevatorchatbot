@@ -145,6 +145,35 @@ namespace SampleApi.DAL
 
         }
 
+        public string GetTechnicalInterviewQuestion()
+        {
+            string randomQuestion = "Oops...looks like we're out of interview questions.";
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    SqlCommand cmd = new SqlCommand("SELECT TOP 1 question FROM technical_questions ORDER BY NEWID()", conn);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        randomQuestion = Convert.ToString(reader["question"]);
+                    }
+                }
+            }
+
+            catch (SqlException ex)
+            {
+                Console.Write(ex.Message);
+            }
+
+            return randomQuestion;
+
+        }
+
         public string GetJobTitle(string userInput)
         {
             string matchingJobTitle = "Junior Developer";

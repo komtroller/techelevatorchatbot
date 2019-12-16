@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import { createWriteStream } from 'fs';
+//import { createWriteStream } from 'fs';
 export default {
 name: 'Chatbot',
 blank: ' fasfsf',

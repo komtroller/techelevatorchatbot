@@ -40,7 +40,12 @@ CREATE TABLE motivationalquotes
 	quote varchar(max)		not null,
 	constraint pk_motivationalquotes primary key (quoteid)
 );
-
+CREATE TABLE tech_questions
+(
+	questionsid			int			identity(1,1),
+	question varchar(max)		not null,
+	primary key (questionsid)
+);
 
 CREATE TABLE interview_questions
 (
@@ -56,12 +61,19 @@ CREATE TABLE positions
 	primary key (id)
 );
 
-CREATE TABLE companyinformation
+CREATE TABLE co_information
 (
-	id			int			identity(1,1),
+	
 	company varchar(max)		not null,
-	primary key (id)
+	primary key (id),
+	id int,
+	location varchar(max)		not null,
+	grads_placed int		not null,
+	rating int			not null,
+	employee_no int			not null
 );
+
+
 
 CREATE TABLE upcomingevents
 (
@@ -71,26 +83,7 @@ CREATE TABLE upcomingevents
 	primary key (id)
 );
 
---KEYWORD TABLE (all keys narrowed to a single key)
-CREATE TABLE mykeywords
-(
-	keyid			int			identity(1,1),
-	keywords varchar(max)		not null,
-	keyword varchar(100)		not null,
-	primary key (keyid)
-);
 
---KEYWORDS IN MYKEYWORDS TABLE
---if keyword is int then i get interview questions ...etc
-INSERT INTO mykeywords (keywords , keyword)
-VALUES 
-(' interview questions interview question int ', 'int'),
-(' job listing job posting  job opening position job position po ', 'job'),
-(' upcoming meetups upcoming meetup upcoming event pathway events ', 'event'),
-(' inspirational quote motivational quotes quote qo ', 'quote'),
-(' company information company rating company reviews number of employee company ', 'company');
-
---DELETE FROM mykeywords
 -- Upcoming Events
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
@@ -176,24 +169,91 @@ VALUES ('Javascript')
 INSERT INTO positions
 VALUES ('Web Developer') 
 
---COMPANY TABLE
-INSERT INTO companyinformation
-VALUES ('company information')
 
-INSERT INTO companyinformation
-VALUES ('company rating')  
+--CREATE TABLE co_information
+--(
+	
+--	company varchar(max)		not null,
+--	primary key (id),
+--	id int,
+--	location varchar(max)		not null,
+--	grads_placed int		not null,
+--	rating int			not null,
+--	employee_no int			not null
+--);
 
-INSERT INTO companyinformation
-VALUES ('company reviews')  
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('Accenture',1,'Columbus',10,4,10500)
 
-INSERT INTO companyinformation
-VALUES ('of employees') 
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('Pillar',2,'Columbus',10,4,10500)
 
-INSERT INTO companyinformation
-VALUES ('number of employees') 
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('Battelle',3,'Columbus',10,4,10500)
 
-INSERT INTO companyinformation
-VALUES ('company') 
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('NBBJ',4,'Columbus,0,4,800')
+
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('Fusion Alliance ',5,'Columbus',1,3,560)
+
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('JPMorgan Chase',6,'Columbus',98,4,13600)
+
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('Willow Tree',7,'Columbus',10,4,10500)
+
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('BYBE',8,'Columbus',10,4,10500)
+
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('Nationwide',9,'Columbus',10,4,10500)
+
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('REDBUD',10,'Columbus',10,4,10500)
+
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('Olive',11,'Columbus',10,4,10500)
+
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('Safelite',12,'Columbus',1,3,500)
+
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('AWH',13,'Columbus',10,4,10500)
+
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('T-CETRA',14,'Columbus',10,4,10500)
+
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('OPERS',15,'Columbus',10,4,200)
+
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('McGraw-Hill',16,'Columbus',10,4,10500)
+
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('Avanade',17,'Columbus',10,4,10500)
+
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('FCDC',18,'Columbus',10,5,14)
+
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('TEK SYSTEMS',19,'Columbus',10,4,10500)
+
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('OPERS',20,'Columbus',10,2,10500)
+
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('McGraw-Hill',21,'Columbus',10,4,10500)
+
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('OCLC',22,'Columbus',10,5,10500)
+
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('L-BRANDS',23,'Columbus',10,5,10500)
+
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
+VALUES ('Brooksource',24,'Columbus',10,3,1540)
+
 
  -------
 --- QUOTES
@@ -316,10 +376,57 @@ INSERT INTO users (keyword, response)
 Values ('mvc','MVC stands for Model (Business logic), View (Presenatation logic), and Controller (Interacts with model to get data for View). MVC is a popular way of organizing your code. Each section of your code has a purpose, and those purposes are different. Here is a more detailed link <a href="https://www.codecademy.com/articles/mvc">Click me!</a>')
 
 
+----- JOB POSTING KEYWORDS
+
+INSERT INTO users (keyword, response)
+Values ('posting','?')
+INSERT INTO users (keyword, response)
+Values ('listing','?')
+INSERT INTO users (keyword, response)
+Values ('position','?')
+INSERT INTO users (keyword, response)
+Values ('job opening','?')
+INSERT INTO users (keyword, response)
+Values ('job posting','?')
+INSERT INTO users (keyword, response)
+Values ('job listing','?')
+INSERT INTO users (keyword, response)
+Values ('open position','?')
+INSERT INTO users (keyword, response)
+Values ('job opening','?')
 
 
+----- INSPIRATIONAL QUOTE KEYWORDS
+INSERT INTO users (keyword, response)
+Values ('quote','?')
+INSERT INTO users (keyword, response)
+Values ('inspirational quote','?')
+INSERT INTO users (keyword, response)
+Values ('inspire me','?')
+INSERT INTO users (keyword, response)
+Values ('inspirational','?')
 
+----- Interview Quesions
+INSERT INTO users (keyword, response)
+Values ('interview question','?')
+INSERT INTO users (keyword, response)
+Values ('sample question','?')
+INSERT INTO users (keyword, response)
+Values ('iq','?')
 
+----- Event Keywords
+INSERT INTO users (keyword, response)
+Values ('upcoming events','?')
+INSERT INTO users (keyword, response)
+Values ('pathway events','?')
+INSERT INTO users (keyword, response)
+Values ('upcoming meetups','?')
+INSERT INTO users (keyword, response)
+Values ('events','?')
+INSERT INTO users (keyword, response)
+Values ('meetup','?')
+INSERT INTO users (keyword, response)
+Values ('pathway meetings','?')
 
 --learning sql
 
@@ -439,9 +546,175 @@ Values ('How would you feel about working for someone who knows less than you? '
 INSERT INTO interview_questions (question)
 Values ('What are you most proud of? ')
 
+--TECHNICAL QUESTIONS 
 
+INSERT INTO tech_questions (question)
+Values (' Where and when do you use an Assert.AreEqual statement?')
 
+INSERT INTO tech_questions (question)
+Values (' When and how do you use reflection in your projects? ')
 
+INSERT INTO tech_questions (question)
+Values ('What’s the difference between a base class and an interface? ')
+
+INSERT INTO tech_questions (question)
+Values ('When is it beneficial to use an IoC Container ')
+
+INSERT INTO tech_questions (question)
+Values ('When and how do you use an interface? ')
+
+INSERT INTO tech_questions (question)
+Values ('What is difference between constants and readonly? ')
+
+INSERT INTO tech_questions (question)
+Values ('Why do you want to become a programmer? ')
+
+INSERT INTO tech_questions (question)
+Values (' What is object oriented programming? ')
+
+INSERT INTO tech_questions (question)
+Values (' What is unit testing? ')
+
+INSERT INTO tech_questions (question)
+Values (' What is abstraction? ')
+
+INSERT INTO tech_questions (question)
+Values (' What is polymorphism? ')
+
+INSERT INTO tech_questions (question)
+Values (' What is better composition or inheritance? ')
+
+INSERT INTO tech_questions (question)
+Values ('Name three different types of loops? ')
+
+INSERT INTO tech_questions (question)
+Values ('What are primitives and provide some examples? ')
+
+INSERT INTO tech_questions (question)
+Values ('What is the difference between a List and an Array in C#? ')
+
+INSERT INTO tech_questions (question)
+Values ('What is a Dictionary in C# and what is a use case for them? ')
+
+INSERT INTO tech_questions (question)
+Values ('What is method overloading and method overriding? (Hint: Mention difference in paramters,run-time etc) ')
+
+INSERT INTO tech_questions (question)
+Values ('How does JavaScript compare to C#? ')
+
+INSERT INTO tech_questions (question)
+Values (' What is meant by the term immutable? ')
+
+INSERT INTO tech_questions (question)
+Values ('What is string interpolation? ')
+
+INSERT INTO tech_questions (question)
+Values ('In CSS what is an element? ')
+
+INSERT INTO tech_questions (question)
+Values ('What is the DOM? ')
+
+INSERT INTO tech_questions (question)
+Values ('What is AJAX? ')
+
+INSERT INTO tech_questions (question)
+Values ('What is a cookie? ')
+
+INSERT INTO tech_questions (question)
+Values ('Explain Json and XML? When do would you either one (Json or XML)? ')
+
+INSERT INTO tech_questions (question)
+Values ('What is the difference between authentication and authorization? ')
+
+INSERT INTO tech_questions (question)
+Values ('What data structure would you use to process items as they arrive? ')
+
+INSERT INTO tech_questions (question)
+Values ('Explain dependency injection.')
+
+INSERT INTO tech_questions (question)
+Values (' What is a CORS vulnerability?')
+
+INSERT INTO tech_questions (question)
+Values ('What is the difference between ExecuteScalar, ExecuteReader and ExecuteNonQuery? (Hint one takes in a single value, one takes in multiple rows/columns ')
+
+INSERT INTO tech_questions (question)
+Values ('What is JWT? ')
+
+INSERT INTO tech_questions (question)
+Values ('What is a hashset?')
+
+INSERT INTO tech_questions (question)
+Values (' How do you create a new tab when linking the controller to URL?')
+
+INSERT INTO tech_questions (question)
+Values ('What is a moustache and when would you use it? ')
+
+INSERT INTO tech_questions (question)
+Values ('What is managed and unmanaged code? ')
+
+INSERT INTO tech_questions (question)
+Values ('What are C# I/O classes? Which are the classes that are commonly used? ')
+
+INSERT INTO tech_questions (question)
+Values ('What is a stream? (Hint: think River of Data ')
+
+INSERT INTO tech_questions (question)
+Values ('What are Get and Set Accessor properties? ')
+
+INSERT INTO tech_questions (question)
+Values ('Explain the 3 layers present in a webpage. How CSS plays its role in it? ')
+
+INSERT INTO tech_questions (question)
+Values ('W3C stands for World Wide Web Consortium. What can you tell me about it? ')
+
+INSERT INTO tech_questions (question)
+Values ('As a developer what ways are applied to reduce the load time of any given website? ')
+
+INSERT INTO tech_questions (question)
+Values ('How will you declare a 3-dimensional array in Javascript? Use syntax. ')
+
+INSERT INTO tech_questions (question)
+Values ('Explain the CSS box model? ')
+
+INSERT INTO tech_questions (question)
+Values ('Explain the different between waterfall and agile? ')
+
+INSERT INTO tech_questions (question)
+Values ('When would you not use Agile? (Explain a general example of a project)')
+
+INSERT INTO tech_questions (question)
+Values (' What is Git? ')
+
+INSERT INTO tech_questions (question)
+Values ('What language is used in Git? ')
+
+INSERT INTO tech_questions (question)
+Values ('In Git.How can you fix a broken commit? ')
+
+INSERT INTO tech_questions (question)
+Values ('What is a repository in Git? ')
+
+INSERT INTO tech_questions (question)
+Values ('Explain the binary tree conceptually? You can draw a diagram ')
+
+INSERT INTO tech_questions (question)
+Values ('What is the difference between git pull and git fetch?')
+
+INSERT INTO tech_questions (question)
+Values ('What is the difference between ‘git remote’ and ‘git clone’? ')
+
+INSERT INTO tech_questions (question)
+Values (' What are some of the common lists that can be used when designing a page? ')
+
+INSERT INTO tech_questions (question)
+Values (' List out few different return types of a controller action method?')
+
+INSERT INTO tech_questions (question)
+Values ('  What is Data Integrity?  ')
+
+INSERT INTO tech_questions (question)
+Values (' What is a Subquery? What are its types? ')
 
 --- GREETINGS AND NATURAL LANGUAGE UNDERSTANDING 
 INSERT INTO users (keyword, response)
@@ -505,16 +778,26 @@ INSERT INTO users (keyword, response)
 Values ('Answer me','I am just a chatbot! I can display answers but you know I can not actually talk!')
 
 INSERT INTO users (keyword, response)
-Values ('Who are you?','I am a chatbot!')
+Values ('Who are you?','I am a Chattio, your tech elevator chatbot!')
 
 INSERT INTO users (keyword, response)
 Values ('John Fulton','He is awesome, we all know that!')
 
 INSERT INTO users (keyword, response)
-Values ('tech elevator','Best coding bootcamp in the Midwest!')
+Values ('Program details','Here is the link <a href=https://www.techelevator.com/program-details>">Click me to learn more!</a>')
 
 INSERT INTO users (keyword, response)
-Values ('about you','I was born at Rev1 in December of 2019!')
+Values ('FAQ tech elevator','Here is the link <a href=https://www.techelevator.com/faqs">Click me to learn more about Tech Elevator FAQ!</a>')
+
+
+INSERT INTO users (keyword, response)
+Values ('tech elevator','Best coding bootcamp in the Midwest! It will help you elevate your career in 14 weeks')
+
+INSERT INTO users (keyword, response)
+Values ('about you','I was born at Rev1 in December of 2019! Created by the super awesome trio from Cohort 9: Hala Shiblaq, Kael OMalley, and Basal Ali')
+
+INSERT INTO users (keyword, response)
+Values ('created Chattio','I was born at Rev1 in December of 2019! Created by the super awesome trio from Cohort 9: Hala Shiblaq, Kael OMalley, and Basal Ali')
 
 INSERT INTO users (keyword, response)
 Values ('unknown','Sorry, I don''t understand what you''re asking. &&& Try rewording your request.')

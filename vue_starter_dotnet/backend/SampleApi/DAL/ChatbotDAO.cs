@@ -29,18 +29,18 @@ namespace SampleApi.DAL
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    //look through records with the table mykeywords 
-                    SqlCommand cmd = new SqlCommand("Select keywords, keyword from mykeywords", conn);
-                    
+
+                    SqlCommand cmd = new SqlCommand("Select keyword from users ORDER BY len(keyword) desc", conn);
+                    //cmd.Parameters.AddWithValue("@keyword", userInput);
+
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
                     {
-                        string keywords = Convert.ToString(reader["keywords"]).ToLower();
-                        //Concatnate and ADD leading and trailing space to match a full word
-                        if (keywords.Contains(" " + userInputToLower +" "))
+                        string keyword = Convert.ToString(reader["keyword"]).ToLower();
+                        if (userInput.ToLower().Contains(keyword))
                         {
-                            matchingKeyword = Convert.ToString(reader["keyword"]);
+                            matchingKeyword = keyword;
                             break;
                         }
                     }
@@ -49,7 +49,7 @@ namespace SampleApi.DAL
 
             catch (SqlException ex)
             {
-                Console.Write(ex.Message);
+
             }
             return matchingKeyword;
         }
@@ -57,45 +57,34 @@ namespace SampleApi.DAL
         public string GetBotResponse(string keyword)
         {
             string response = "";
-            string unknownResponse = "";
 
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
 
-             
+
                     conn.Open();
 
-                    //get all and filter by keyword
-                    SqlCommand cmd = new SqlCommand("Select keyword, response from users", conn);
+
+                    SqlCommand cmd = new SqlCommand("Select * from users where keyword = @keyword; ", conn);
+                    cmd.Parameters.AddWithValue("@keyword", keyword);
 
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
                     {
-                        string keywordTemp = Convert.ToString(reader["keyword"]).ToLower();
-
-                        if(keywordTemp == "unknown")
-                        {
-                            unknownResponse = Convert.ToString(reader["response"]);
-                        }
-                        //
-                        if (keyword.Contains(keywordTemp))
-                        {
-                            response = Convert.ToString(reader["response"]);
-                            break;
-                        }
+                        response = Convert.ToString(reader["response"]);
                     }
                 }
             }
 
             catch (SqlException ex)
             {
-                Console.Write(ex.Message);
+
             }
-            //if keyword was not found ..response so empty therefore - return unknown otherwise return response
-            return string.IsNullOrEmpty(response) ? unknownResponse : response;
+
+            return response;
         }
 
         public string GetQuote()

@@ -33,19 +33,19 @@ namespace SampleApi.Controllers
 
             string keyword = chatDAO.GetKeyword(userInput);
             //to get more quotes
-            if (keyword == "quote")
+            if (keyword.Contains("quote") || keyword.Contains("inspir"))
             {
                 botResponse = chatDAO.GetQuote();
-                botResponse += ". Enter qo to get a new quote.";
+                botResponse += "&&& You can enter 'quote' to get another quote if you'd like";
             }
             //to get more interview questions
-            else if (keyword == "interview questions" || keyword == "int")
+            else if (keyword == "interview question" || keyword == "sample question" || keyword == "iq")
             {
                 botResponse = chatDAO.GetInterviewQuestion();
-                botResponse += ". Enter int to get another question";
+                botResponse += "&&& Enter 'IQ' to get another interview question";
             }
-            //job is based on a list of a series of values related to job in DB called mykeywords
-            else if (keyword=="job")
+            
+            else if (keyword.Contains("posting")|| keyword.Contains("listing") || keyword.Contains("opening") || keyword.Contains("position"))
             {
                 string jobDisplay = chatDAO.GetJobTitle(userInput);
                 string[] jobArray = jobDisplay.Split(" ");
@@ -55,20 +55,21 @@ namespace SampleApi.Controllers
                 botResponse = $"Here's a link to some <a href=\"{jobPostingURL}\" target=\"_blank\">{jobDisplay} job postings</a> in Columbus";
             }
             //event is based on a list of a series of values related to events in DB called mykeywords
-            else if (keyword=="event") 
+            else if (keyword.Contains("event") || keyword.Contains("meetup") || keyword == "pathway meetings" || keyword == "pathway events") 
             {
-                botResponse = chatDAO.GetEvents();
+                botResponse = "Here is a list of upcoming events during the next 7 days: &&&";
+                botResponse += chatDAO.GetEvents();
             }
-            else if (keyword.Contains("company"))
-            {
+            //else if (keyword.Contains("company"))
+            //{
                 
-                string companyInfoURL = $"https://www.glassdoor.com/Reviews/index.htm";
-                //target to open a new tab
-                botResponse = $"Here's a link to glassdoor that may help <a href=\"{companyInfoURL}\" target=\"_blank\">Glassdoor link</a>";
-            }
+            //    string companyInfoURL = $"https://www.glassdoor.com/Reviews/index.htm";
+            //    //target to open a new tab
+            //    botResponse = $"Here's a link to glassdoor that may help <a href=\"{companyInfoURL}\" target=\"_blank\">Glassdoor link</a>";
+            //}
             else
             {
-                botResponse = chatDAO.GetBotResponse(userInput);
+                botResponse = chatDAO.GetBotResponse(keyword);
             }
             return botResponse;
         }

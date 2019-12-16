@@ -98,7 +98,7 @@ export default {
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  // word-wrap: break-word;
+  word-wrap: break-word;
 }
 .chat-box-list-container {
   background-color: whitesmoke !important;
@@ -117,7 +117,7 @@ export default {
   }
   .server {
     .span {
-      background: #99cc00 !important;
+      background: #99cc00;
       box-shadow: 3px 3px 3px green;
     }
     p {
@@ -126,7 +126,7 @@ export default {
   }
   .client {
     .span {
-      background: #0070c8 !important;
+      background: #0070c8;
       box-shadow: 3px 3px 3px blue;
     }
     p {

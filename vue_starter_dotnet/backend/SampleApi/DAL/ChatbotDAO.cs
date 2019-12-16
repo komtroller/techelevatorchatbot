@@ -81,7 +81,7 @@ namespace SampleApi.DAL
 
             catch (SqlException ex)
             {
-
+                Console.Write(ex.Message);
             }
 
             return response;

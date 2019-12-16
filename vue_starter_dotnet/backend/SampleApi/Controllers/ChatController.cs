@@ -36,18 +36,18 @@ namespace SampleApi.Controllers
             if (keyword.Contains("quote") || keyword.Contains("inspir"))
             {
                 botResponse = chatDAO.GetQuote();
-                botResponse += "&&& You can enter 'quote' to get another quote if you'd like";
+                botResponse += "You can enter 'quote' to get another quote if you'd like";
             }
             //to get more interview questions
             else if (keyword == "interview question" || keyword == "sample question" || keyword == "iq")
             {
                 botResponse = chatDAO.GetInterviewQuestion();
-                botResponse += "&&& Enter 'IQ' to get another interview question";
+                botResponse += "Enter 'IQ' to get another interview question";
             }
             else if (keyword.Contains("technical") || keyword=="tq")
             {
                 botResponse = chatDAO.GetTechnicalInterviewQuestion();
-                botResponse += "&&& Enter 'TQ' to get another technical interview question";
+                botResponse += "Enter 'TQ' to get another technical interview question";
             }
             else if (keyword.Contains("posting")|| keyword.Contains("listing") || keyword.Contains("opening") || keyword.Contains("position"))
             {
@@ -61,7 +61,7 @@ namespace SampleApi.Controllers
             //event is based on a list of a series of values related to events in DB called mykeywords
             else if (keyword.Contains("event") || keyword.Contains("meetup") || keyword == "pathway meetings" || keyword == "pathway events") 
             {
-                botResponse = "Here is a list of upcoming events during the next 7 days: &&&";
+                botResponse = "Here is a list of upcoming events during the next 7 days: ";
                 botResponse += chatDAO.GetEvents();
             }
             //else if (keyword.Contains("company"))

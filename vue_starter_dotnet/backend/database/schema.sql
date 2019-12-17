@@ -76,7 +76,7 @@ CREATE TABLE co_information
 
 
 
-CREATE TABLE upcomingevents
+CREATE TABLE upcomingevent
 (
 	id			int			identity(1,1),
 	dateOfEvent DATE not null, 
@@ -310,6 +310,9 @@ INSERT INTO users (keyword, response)
 Values ('Network', 'I would advise you to join a meetup group related to your field and interests, and to also create a LinkedIn account!')
 INSERT INTO users (keyword, response)
 Values ('Recruiter', 'There are many way to contact a recruiter, I would advise you to go to join a meetup related to your field, and to also network on LinkedIn. I strongly advise you to add a note with every request you send on LinkedIn')
+INSERT INTO users (keyword, response)
+Values ('technical questions', '?')
+
 
 
 INSERT INTO users (keyword, response)
@@ -696,7 +699,7 @@ INSERT INTO users (keyword, response)
 Values ('Hi', 'Hi, How can I help you?')
 
 INSERT INTO users (keyword, response)
-Values ('Question', 'Ask away, How can I help you?')
+Values ('have Question', 'Ask away, How can I help you?')
 
 INSERT INTO users (keyword, response)
 Values ('Hey there',  'Hi, How can I help you?')

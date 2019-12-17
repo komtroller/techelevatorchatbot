@@ -66,10 +66,7 @@ namespace SampleApi.Controllers
             }
             else if (keyword.Contains("company"))
             {
-
-                string companyInfoURL = $"https://www.glassdoor.com/Reviews/index.htm";
-                //target to open a new tab
-                botResponse = $"Here's a link to glassdoor that may help <a href=\"{companyInfoURL}\" target=\"_blank\">Glassdoor link</a>";
+                botResponse = chatDAO.GetCompanyInfo(userInput);
             }
             else
             {

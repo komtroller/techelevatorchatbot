@@ -272,7 +272,7 @@ namespace SampleApi.DAL
                             companyName = "Company: " + Convert.ToString(reader["company"]);
                             string companyLocation = "Location: " + Convert.ToString(reader["location"]);
                             string teGradsPlaced = "Tech Elevator Grads Placed: " + Convert.ToString(reader["grads_placed"]);
-                            string teGradNames = "LinkedIn Profiles of Grads Placed: " + Convert.ToString(reader["linkedin"]);
+                            string teGradNames = "LinkedIn Profiles of Grads Placed: <a href=" + Convert.ToString(reader["linkedin"])+ "> Click Here </a>";
                             string numberOfEmployees = "Number of Total Employees: " + Convert.ToString(reader["employee_no"]);
                             string GlassDoorRating = "Glassdoor Rating: " + Convert.ToString(reader["rating"]);
                             companyInfoList.Add(companyName);

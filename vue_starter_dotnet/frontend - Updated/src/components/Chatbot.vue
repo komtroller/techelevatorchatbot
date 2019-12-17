@@ -1,7 +1,7 @@
 <template>
 
 <section class="chat-box">
- <br/><br/><br/>
+ <br/>
 
 <div class="chat-box-list-container" ref="chatbox">
 <ul class="chat-box-list">
@@ -107,6 +107,7 @@ word-wrap: break-word;
 background-color: white !important;
 overflow: scroll;
 margin-bottom: 1px;
+
 }
 
 // This styling displays the look of the messages;
@@ -121,8 +122,8 @@ border-radius: 6px;
 }
 .server {
     span {
-        background: #0c8d51;
-        box-shadow: 4px 4px 4px rgba(8, 95, 8, 0.486);
+        background: gray;
+        box-shadow: 4px 4px 4px gray;
          }
      p  {
           float: right;
@@ -131,7 +132,7 @@ border-radius: 6px;
 .client {
      span {
          background: #0070C8;
-         box-shadow: 4px 4px 4px blue;
+         box-shadow: 4px 4px 4px #0070C8;
 
         }
       p {
@@ -146,10 +147,11 @@ border-radius: 6px;
 .chat-box {
 
 margin: 10px;
-border: 1px solid #999;
-width: 50vw;
-height: 50vh;
-border-radius: 4px;
+border: 1px solid rgb(116, 91, 91);
+width: 40vw;
+height: 60vh;
+border-radius: 10px;
+ border-width: thick;
 margin-left: auto;
 margin-right: auto;
 align-items: space-between;
@@ -175,7 +177,7 @@ display: flex;
        button {
        width: 145px;
        color: white;
-       background: #0c8d51;
+       background:linear-gradient(to right, #0e7ba3 0%, #0fb4b4 100%);
        border-color: #999;
        border-bottom: none;
        border-right:none;

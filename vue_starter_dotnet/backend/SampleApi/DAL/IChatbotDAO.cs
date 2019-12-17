@@ -22,6 +22,6 @@ namespace SampleApi.DAL
 
         string GetEvents();
 
-        //string GetCompanyInformation(string companyInformation);
+        string GetCompanyInfo(string userInput);
     }
 }

@@ -64,13 +64,15 @@ CREATE TABLE positions
 CREATE TABLE co_information
 (
 	
-	company varchar(max)		not null,
+	
 	primary key (id),
 	id int,
+	company varchar(max)		not null,
 	location varchar(max)		not null,
 	grads_placed int		not null,
 	rating int			not null,
-	employee_no int			not null
+	employee_no int			not null,
+	linkedin varchar(max)	
 );
 
 
@@ -171,33 +173,29 @@ VALUES ('Web Developer')
 
 
 ------ Information Table
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('Accenture',1,'Columbus',10,4,10500)
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('Accenture',1,'Columbus',10,4,10500, 'https://www.linkedin.com/company/accenture/people/?facetGeoRegion=us%3A184&keywords=tech%20elevator')
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('Pillar',2,'Columbus',10,4,9400)
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('Pillar',2,'Columbus',10,4,9400, 'https://www.linkedin.com/company/pillar-technology/people/?keywords=Tech%20Elevator')
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('Battelle',3,'Columbus',10,4,10550)
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('JPMorgan Chase',6,'Columbus',98,4,13600, 'https://www.linkedin.com/company/jpmorganchase/people/')
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('NBBJ',4,'Columbus',0,4,800)
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('Chase',6,'Columbus',98,4,13600, 'https://www.linkedin.com/company/jpmorganchase/people/')
 
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('JPMorgan',6,'Columbus',98,4,13600, 'https://www.linkedin.com/company/jpmorganchase/people/')
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('WSP',5,'Columbus',0,4,970)
-
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('JPMorgan Chase',6,'Columbus',98,4,13600)
-
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('Willow Tree',7,'Columbus',10,4,420)
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('Willow Tree',7,'Columbus',10,4,420, 'https://www.linkedin.com/search/results/people/?facetCurrentCompany=%5B%221099749%22%5D&facetNetwork=%5B%22F%22%5D')
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
 VALUES ('BYBE',8,'Columbus',0,4,7)
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('Nationwide',9,'Columbus',3,4,16500)
+INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('Nationwide',9,'Columbus',3,4,16500, 'https://www.linkedin.com/company/nationwide/people/?facetSchool=372014&keywords=TECH%20ELEVATOR')
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
 VALUES ('RED HAT',10,'Columbus',2,4,18563)

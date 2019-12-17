@@ -247,6 +247,53 @@ namespace SampleApi.DAL
 
             return events;
         }
+
+        public string GetCompanyInfo(string userInput)
+        {
+            string userInputToLower = userInput.ToLower();
+            string companyInfo = "I'm sorry, I don't have any information for that company.";
+            List<string> companyInfoList = new List<string>();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM co_information", conn);
+                    //cmd.Parameters.AddWithValue("@keyword", userInput);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string companyName = Convert.ToString(reader["company"]).ToLower();
+                        if (userInput.ToLower().Contains(companyName))
+                        {
+                            companyName = "Company: " + Convert.ToString(reader["company"]);
+                            string companyLocation = "Location: " + Convert.ToString(reader["location"]);
+                            string teGradsPlaced = "Tech Elevator Grads Placed: " + Convert.ToString(reader["grads_placed"]);
+                            string teGradNames = "LinkedIn Profiles of Grads Placed: " + Convert.ToString(reader["linkedin"]);
+                            string numberOfEmployees = "Number of Total Employees: " + Convert.ToString(reader["employee_no"]);
+                            string GlassDoorRating = "Glassdoor Rating: " + Convert.ToString(reader["rating"]);
+                            companyInfoList.Add(companyName);
+                            companyInfoList.Add(companyLocation);
+                            companyInfoList.Add(teGradsPlaced);
+                            companyInfoList.Add(teGradNames);
+                            companyInfoList.Add(numberOfEmployees);
+                            companyInfoList.Add(GlassDoorRating);
+                            companyInfo = String.Join(" &&& ", companyInfoList);
+                            break;
+                        }
+                    }
+                }
+            }
+
+            catch (SqlException ex)
+            {
+
+            }
+            return companyInfo;
+        }
     }
 }
 

@@ -36,7 +36,7 @@ namespace SampleApi.Controllers
             if (keyword.Contains("quote") || keyword.Contains("inspir"))
             {
                 botResponse = chatDAO.GetQuote();
-                botResponse += "You can enter 'quote' to get another quote if you'd like";
+                botResponse += "&&& You can enter 'quote' to get another quote if you'd like";
             }
             //to get more interview questions
             else if (keyword == "interview question" || keyword == "sample question" || keyword == "iq")
@@ -64,13 +64,13 @@ namespace SampleApi.Controllers
                 botResponse = "Here is a list of upcoming events during the next 7 days: ";
                 botResponse += chatDAO.GetEvents();
             }
-            //else if (keyword.Contains("company"))
-            //{
-                
-            //    string companyInfoURL = $"https://www.glassdoor.com/Reviews/index.htm";
-            //    //target to open a new tab
-            //    botResponse = $"Here's a link to glassdoor that may help <a href=\"{companyInfoURL}\" target=\"_blank\">Glassdoor link</a>";
-            //}
+            else if (keyword.Contains("company"))
+            {
+
+                string companyInfoURL = $"https://www.glassdoor.com/Reviews/index.htm";
+                //target to open a new tab
+                botResponse = $"Here's a link to glassdoor that may help <a href=\"{companyInfoURL}\" target=\"_blank\">Glassdoor link</a>";
+            }
             else
             {
                 botResponse = chatDAO.GetBotResponse(keyword);

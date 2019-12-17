@@ -18,13 +18,13 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: left; 
   color: #2c3e50;
-  margin-top: 80px;
-  padding-left: 10px;
-  padding-bottom: 10px;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  
 }
 </style>

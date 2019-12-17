@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <title>Tech Elevator Student Chatbot</title>
   </head>
   <body>
@@ -19,33 +20,50 @@
     </noscript>
    
     <a a href="https://www.techelevator.com/" target="_blank"><img class="techyimg" src= "TechElly.png"></a>
-    <p class="description">Student Chatbot</p>
+  
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    </div>
     <label class="dropdown">
 
       <div class="dd-button">
-        Helpful Chatbot Guide
+        KEYWORD SHORTCUTS
       </div>
     
       <input type="checkbox" class="dd-input" id="test">
     
-      <ul class="dd-menu">
-        <li>Upcoming events/meetups.</li>
-        <li>Interview questions.</li>
-        <li>Technical questions.</li>
-        <li>Job listings.</li>
-        <li>Companies.</li>
-        <li>Find Quotes to get inspired!</li>
-        <li>Study guide</li>
-        <li class="divider"></li>
-      </ul>
+      <table class="dd-menu">
+        <tr class="header">
+          <th class="shortcut">Shortcut</th>
+          <th class="result">Result</th>
+        </tr>
+        <tr>
+          <td class="shortcut">Events</td>
+          <td class="result">Returns a list of upcoming meetups & Pathway events</td>
+        </tr>
+        <tr class="odd">
+          <td class="shortcut">IQ</td>
+          <td class="result">Returns a random behavioral interview questions</td>
+        </tr>
+        <tr>
+          <td class="shortcut">TQ</td>
+          <td class="result">Returns a random technical interview questions</td>
+        </tr>
+        <tr class="odd">
+          <td class="shortcut">Quote</td>
+          <td class="result">Returns a random inspirtional quote</td>
+        </tr>
+        <tr>
+          <td class="shortcut">[insert company name] company info</td>
+          <td class="result">Returns the company information for a specific Tech Elevator hiring partner</td>
+        </tr>
+        <tr class="odd">
+          <td class="shortcut">[insert job title] job postings</td>
+          <td class="result">Returns a link to job postings for a specified development position</td>
+        </tr>
+      </table>
       
     </label>
-  
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-    
-
-    </div>
   </body>
 
 </html>

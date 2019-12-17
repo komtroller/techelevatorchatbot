@@ -37,7 +37,7 @@ blank: ' fasfsf',
 data: () => ({
 
 message: '',
-messages: [{text:"Hello, What is your name?", author: "server"}],
+messages: [{text:"Hello, what is your name?", author: "server"}],
 }),
 methods: {
 sendMessage() {
@@ -121,9 +121,13 @@ color: white;
 border-radius: 6px;
 }
 .server {
+    margin-left: 15%;
     span {
-        background: gray;
+        background: #8fc74a;
         box-shadow: 4px 4px 4px gray;
+        float: right;
+        padding: 10px;
+        
          }
      p  {
           float: right;
@@ -131,12 +135,15 @@ border-radius: 6px;
 }
 .client {
      span {
-         background: #0070C8;
-         box-shadow: 4px 4px 4px #0070C8;
-
+         background: #00afef;
+         box-shadow: 4px 4px 4px gray;
+         float: left;
+         text-align: right;
+         padding: 10px;
         }
       p {
         float: left;
+        text-align: right;
         }
       }
 }
@@ -147,9 +154,9 @@ border-radius: 6px;
 .chat-box {
 
 margin: 10px;
-border: 1px solid rgb(116, 91, 91);
-width: 40vw;
-height: 60vh;
+border: 5px solid #60686b;
+width: 70vw;
+height: 65vh;
 border-radius: 10px;
  border-width: thick;
 margin-left: auto;
@@ -177,7 +184,7 @@ display: flex;
        button {
        width: 145px;
        color: white;
-       background:linear-gradient(to right, #0e7ba3 0%, #0fb4b4 100%);
+       background:linear-gradient(to right, #0fb4b4 0%, #0e7ba3 100%);
        border-color: #999;
        border-bottom: none;
        border-right:none;

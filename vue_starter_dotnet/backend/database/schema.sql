@@ -88,28 +88,28 @@ CREATE TABLE upcomingevents
 -- Upcoming Events
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-18', 'Meetup: Tech Holiday Party! An end of the year holiday event where we mingle and remember the highlights of the year! Location: Pillar Accenture, Time: 6 - 8 PM.')
+VALUES ('2019-12-18', 'Meetup: Tech Holiday Party! An end of the year holiday event where we mingle and remember the highlights of the year! Location: Pillar Accenture, Time: 6:00 - 8:00 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-19', 'Pathway: Employer Showcase: Olive. Location: Elevate Space, Time: 1 - 2 PM.')
+VALUES ('2019-12-19', 'Pathway: Employer Showcase: Olive. Location: Elevate Space, Time: 1:00 - 2:00 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-20', 'Meetup: Ardino Enthusiasts. Location: Polaris Hub, Time: 7 - 9 PM.')
+VALUES ('2019-12-20', 'Meetup: Ardino Enthusiasts. Location: Polaris Hub, Time: 7:00 - 9:00 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-21', 'Pathway: Behavioral Mock Interview. Location: Galileo, Time: 1:35 - 2 PM.')
+VALUES ('2019-12-21', 'Pathway: Behavioral Mock Interview. Location: Galileo, Time: 1:35 - 2:00 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-22', 'Meetup: Elixir Columbus. Location: Cover My Meds, Time: 4 - 6 PM.')
+VALUES ('2019-12-22', 'Meetup: Elixir Columbus. Location: Cover My Meds, Time: 4:00 - 6:00 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-25', 'Pathway: Elevator Pitch. Location: Elevate space, Time: 1 - 2 PM.')
+VALUES ('2019-12-25', 'Pathway: Elevator Pitch. Location: Elevate space, Time: 1:00 - 2:00 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
 VALUES ('2019-12-27', 'Pathway: Employer Showcase: OCLC. Location: Elevate Space, Time: 12:30 - 1:30 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-30', 'Meetup: R-Ladies Columbus is part of a worldwide organization to promote gender diversity in the R community! Location: Rev1, Time: 4 - 6 PM.')
+VALUES ('2019-12-30', 'Meetup: R-Ladies Columbus is part of a worldwide organization to promote gender diversity in the R community! Location: Rev1, Time: 4:00 - 6:00 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
 VALUES ('2019-12-31', 'Pathway: Employer Matchmaking. Location: Main Hall, Time: 11:45 AM - 4:30 PM.')
@@ -435,6 +435,8 @@ Values ('interview question','?')
 INSERT INTO users (keyword, response)
 Values ('sample question','?')
 INSERT INTO users (keyword, response)
+Values ('sample questoin','?')
+INSERT INTO users (keyword, response)
 Values ('iq','?')
 
 ----- Event Keywords
@@ -450,6 +452,19 @@ INSERT INTO users (keyword, response)
 Values ('meetup','?')
 INSERT INTO users (keyword, response)
 Values ('pathway meetings','?')
+INSERT INTO users (keyword, response)
+
+
+--FOR KAEL TO ADD TO BACKEND - PATHWAY EVENTS AND MEETUPS
+
+
+Values ('calen','?')
+INSERT INTO users (keyword, response)
+Values ('SCHEDULE','?')
+INSERT INTO users (keyword, response)
+Values ('SCEDULE','?')
+
+
 
 --learning sql
 
@@ -704,7 +719,7 @@ INSERT INTO tech_questions (question)
 Values ('Explain the CSS box model? ')
 
 INSERT INTO tech_questions (question)
-Values ('Explain the different between waterfall and agile? ')
+Values ('Explain the difference between waterfall and agile? ')
 
 INSERT INTO tech_questions (question)
 Values ('When would you not use Agile? (Explain a general example of a project)')
@@ -783,7 +798,7 @@ INSERT INTO users (keyword, response)
 Values ('No,Thank you','You are welcome, Goodbye!')
 
 INSERT INTO users (keyword, response)
-Values ('Who are you?','I am a chatbot!')
+Values ('Who are you?','I am a Tech Elevator chatbot! I can help you with many things')
 
 INSERT INTO users (keyword, response)
 Values ('Siri','Very funny!')
@@ -798,16 +813,25 @@ INSERT INTO users (keyword, response)
 Values ('Ciao','Ciao, Thank you for visiting our site?')
 
 INSERT INTO users (keyword, response)
-Values ('Can you help me?','I sure can! Let us getting started. What would you like to ask?')
+Values ('Can you help me?','I sure can! Let us get started. What would you like to ask?')
 
 INSERT INTO users (keyword, response)
 Values ('Answer me','I am just a chatbot! I can display answers but you know I can not actually talk!')
 
 INSERT INTO users (keyword, response)
-Values ('Who are you?','I am a Chattio, your tech elevator chatbot!')
+Values ('Who are you?','I am your tech elevator chatbot!')
 
 INSERT INTO users (keyword, response)
 Values ('John Fulton','He is awesome, we all know that!')
+
+INSERT INTO users (keyword, response)
+Values ('Funny','No you are')
+
+INSERT INTO users (keyword, response)
+Values ('OH','IO')
+
+INSERT INTO users (keyword, response)
+Values ('GO BUCKS','BUT OF COURSE! ')
 
 INSERT INTO users (keyword, response)
 Values ('Program details','Here is the link <a href=https://www.techelevator.com/program-details>">Click me to learn more!</a>')
@@ -823,7 +847,7 @@ INSERT INTO users (keyword, response)
 Values ('about you','I was born at Rev1 in December of 2019! Created by the super awesome trio from Cohort 9: Hala Shiblaq, Kael OMalley, and Basal Ali')
 
 INSERT INTO users (keyword, response)
-Values ('created Chattio','I was born at Rev1 in December of 2019! Created by the super awesome trio from Cohort 9: Hala Shiblaq, Kael OMalley, and Basal Ali')
+Values ('created Chatbot','I was born at Rev1 in December of 2019! Created by the super awesome trio from Cohort 9: Hala Shiblaq, Kael OMalley, and Basal Ali')
 
 INSERT INTO users (keyword, response)
 Values ('unknown','Sorry, I don''t understand what you''re asking. Try rewording your request.')

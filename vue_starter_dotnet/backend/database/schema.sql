@@ -170,20 +170,6 @@ INSERT INTO positions
 VALUES ('Web Developer') 
 
 
---CREATE TABLE co_information
---(
-	
---	company varchar(max)		not null,
---	primary key (id),
---	id int,
---	location varchar(max)		not null,
---	grads_placed int		not null,
---	rating int			not null,
---	employee_no int			not null
---);
-
-SELECT * FROM co_information
-
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
 VALUES ('Accenture',1,'Columbus',10,4,10500)
 

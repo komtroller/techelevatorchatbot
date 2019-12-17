@@ -170,6 +170,10 @@ INSERT INTO positions
 VALUES ('Web Developer') 
 
 
+<<<<<<< HEAD
+=======
+------ Information Table
+>>>>>>> 985d925d7daa759f50869daddae764f36c9855de
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
 VALUES ('Accenture',1,'Columbus',10,4,10500)
 
@@ -181,6 +185,7 @@ VALUES ('Battelle',3,'Columbus',10,4,10550)
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
 VALUES ('NBBJ',4,'Columbus',0,4,800)
+
 
 INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
 VALUES ('WSP',5,'Columbus',0,4,970)

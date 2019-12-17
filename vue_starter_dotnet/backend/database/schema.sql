@@ -88,31 +88,37 @@ CREATE TABLE upcomingevents
 -- Upcoming Events
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-18', 'Tech Holiday Party! An end of the year holiday event where we mingle and remember the highlights of the year! Location: Pillar Accenture, Time: 6 - 8 PM.')
+VALUES ('2019-12-18', 'Meetup: Tech Holiday Party! An end of the year holiday event where we mingle and remember the highlights of the year! Location: Pillar Accenture, Time: 6:00 - 8:00 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-19', 'Employer Showcase: Olive. Location: Elevate Space, Time: 1 - 2 PM.')
+VALUES ('2019-12-19', 'Pathway: Employer Showcase Olive. Location: Elevate Space, Time: 1:00 - 2:00 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-20', 'Meetup: Ardino Enthusiasts. Location: Polaris Hub, Time: 7 - 9 PM.')
+VALUES ('2019-12-20', 'Meetup: Ardino Enthusiasts. Location: Polaris Hub, Time: 7:00 - 9:00 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-21', 'Behavioral Mock Interview. Location: Galileo, Time: 1:35 - 2 PM.')
+VALUES ('2019-12-21', 'Pathway: Behavioral Mock Interview. Location: Galileo, Time: 1:35 - 2:00 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-22', 'Meetup: Elixir Columbus. Location: Cover My Meds, Time: 4 - 6 PM.')
+VALUES ('2019-12-22', 'Meetup: Elixir Columbus. Location: Cover My Meds, Time: 4:30 - 6:30 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-25', 'Elevator Pitch. Location: Elevate space, Time: 1 - 2 PM.')
+VALUES ('2019-12-25', 'Pathway: Elevator Pitch. Location: Elevate space, Time: 1:30 - 2:30 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-27', 'Employer Showcase: OCLC. Location: Elevate Space, Time: 12:30 - 1:30 PM.')
+VALUES ('2019-12-27', 'Pathway: Employer Showcase OCLC. Location: Elevate Space, Time: 12:30 - 1:30 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-30', 'R-Ladies Columbus is part of a worldwide organization to promote gender diversity in the R community! Location: Rev1, Time: 4 - 6 PM.')
+VALUES ('2019-12-30', 'Meetup: R-Ladies Columbus is part of a worldwide organization to promote gender diversity in the R community! Location: Rev1, Time: 4:00 - 6:00 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-31', 'Employer Matchmaking. Location: Main Hall, Time: 11:45 AM - 4:30 PM.')
+VALUES ('2019-12-24', 'Pathway: Employer Matchmaking. Location: Main Hall, Time: 11:00 AM - 4:30 PM.')
+
+INSERT INTO upcomingevents (dateOfEvent, eventDescription)
+VALUES ('2019-12-23', 'Pathway: Career Panels. Location: Elevate Space, Time: 5:30 PM - 6:30 PM.')
+
+INSERT INTO upcomingevents (dateOfEvent, eventDescription)
+VALUES ('2019-12-22', 'Pathway: Employer Matchmaking. Location: Elevate Space, Time: 8:30 AM - 11:30 PM.')
 
 
 -- Job Positions

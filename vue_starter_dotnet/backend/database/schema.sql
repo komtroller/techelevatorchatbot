@@ -290,57 +290,38 @@ Values ('"If you''re walking down the right path and you''re willing to keep wal
 
 INSERT INTO users (keyword, response)
 Values ('Cover letter','You might or might not need one. It really depends on the company. <a href="https://zety.com/blog/how-to-write-a-cover-letter">Here is a link to that!</a>')
-
 INSERT INTO users (keyword, response)
 Values ('Resume', '<a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Here is a link to that!</a>')
-
 INSERT INTO users (keyword, response)
 Values ('CV', '<a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Click here!</a>')
-
 INSERT INTO users (keyword, response)
 Values ('Curriculum Vitae', '<a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Here is a link to that!</a>')
-
-INSERT INTO users (keyword, response)
-Values ('Job', '<a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Click me!</a>')
-
 INSERT INTO users (keyword, response)
 Values ('how get job', '<a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Follow this link!</a>')
-
 INSERT INTO users (keyword, response)
 Values ('work', '<a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Click here to find out more!</a>')
-
 INSERT INTO users (keyword, response)
 Values ('Hired', '<a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that!</a>')
-
 INSERT INTO users (keyword, response)
 Values ('Hiring', '<a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that might help with that!</a>')
-
-
 INSERT INTO users (keyword, response)
 Values ('Networking', 'I would advise you to join a meetup group related to your field and interests, and to also create a LinkedIn account!')
-
 INSERT INTO users (keyword, response)
 Values ('Network', 'I would advise you to join a meetup group related to your field and interests, and to also create a LinkedIn account!')
-
 INSERT INTO users (keyword, response)
 Values ('Recruiter', 'There are many way to contact a recruiter, I would advise you to go to join a meetup related to your field, and to also network on LinkedIn. I strongly advise you to add a note with every request you send on LinkedIn')
 
 
 INSERT INTO users (keyword, response)
 Values ('Recruiters', 'There are many way to contact a recruiter, I would advise you to go to join a meetup related to your field, and to also network on LinkedIn. I strongly advise you to add a note with every request you send on LinkedIn')
-
 INSERT INTO users (keyword, response)
 Values ('Wear', 'Generally, you want to wear professional or business attire! <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">Here is more information on that!</a>')
-
 INSERT INTO users (keyword, response)
 Values ('dresscode', 'Generally, you want to wear professional, or business, attire! <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">Here is more information on that!</a>')
-
 INSERT INTO users (keyword, response)
 Values ('Casual', 'If the company has a casual dresscode, you still you want to wear professional, or business, attire for the interview. <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">This link maybe able to help with that.</a>')
-
 INSERT INTO users (keyword, response)
 Values ('Outfit', 'It depends on the organization. Generally, you want to wear professional or business attire! <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">Here is more information on that!</a>')
-
 INSERT INTO users (keyword, response)
 Values ('dresscode', 'It depends on the organization. Generally, you want to wear professional or business attire! <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">Here is more information on that!</a>')
 
@@ -348,25 +329,18 @@ Values ('dresscode', 'It depends on the organization. Generally, you want to wea
 
 INSERT INTO users (keyword, response)
 Values ('Salary expectations', 'I would use websites such as Glassdoor, Payscale or LinkedIn to give you a better idea of industry standards based on your experience, hope that helps!')
-
 INSERT INTO users (keyword, response)
 Values ('Starmethod', 'The STAR interview response is an interview behavioral question. Using this method of answering interview questions allows you to provide concrete examples or proof that you possess the experience and skills for the job at hand. STAR stands for Situation, Task, Action, Result') 
-
 INSERT INTO users (keyword, response)
 Values ('STAR', 'The STAR interview response is an interview behavioral question. Using this method of answering interview questions allows you to provide concrete examples or proof that you possess the experience and skills for the job at hand. STAR stands for Situation, Task, Action, Result') 
-
 INSERT INTO users (keyword, response)
 Values ('advice prepare job', 'Research the company and the individuals. LinkedIn should help with that. Have a few hard copies of your resume or portfolio. Arrive early, 20 minutes before your interview is ideal. Stay calm, be humble and confident. Regardless of the outcome, send a follow up thank you email within 24hrs. Remember: What is yours is yours!')
-
 INSERT INTO users (keyword, response)
 Values ('arrays','An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type. For a single dimensional array, a good analogy is to think of it as a row of boxes. Each box can store a single value but each value must be of the same type. Hope that helps!')
-
 INSERT INTO users (keyword, response)
 Values ('mvc','MVC stands for Model (Business logic), View (Presenatation logic), and Controller (Interacts with model to get data for View). MVC is a popular way of organizing your code. Each section of your code has a purpose, and those purposes are different. Here is a more detailed link: <a href="https://www.codecademy.com/articles/mvc">Click me!</a>')
-
 INSERT INTO users (keyword, response)
 Values ('company','?')
-
 INSERT INTO users (keyword, response)
 Values ('company info','?')
 

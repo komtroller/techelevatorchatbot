@@ -20,6 +20,8 @@ namespace SampleApi.DAL
             this.connectionString = connectionString;
         }
 
+        //GetKeyword checks the user's input to see if it contains any keywords from the DB. 
+        //If it does, it returns that keyword, otherwise it returns "unknown"
         public string GetKeyword(string userInput)
         {
             string userInputToLower = userInput.ToLower();
@@ -30,8 +32,8 @@ namespace SampleApi.DAL
                 {
                     conn.Open();
 
+                    //SQL is sorted by length, so that longer keywords are checked first, as they are more specific
                     SqlCommand cmd = new SqlCommand("Select keyword from users ORDER BY len(keyword) desc", conn);
-                    //cmd.Parameters.AddWithValue("@keyword", userInput);
 
                     SqlDataReader reader = cmd.ExecuteReader();
 
@@ -54,6 +56,7 @@ namespace SampleApi.DAL
             return matchingKeyword;
         }
 
+        //GetBotResponse takes in a keyword and returns the response associated with that keyword
         public string GetBotResponse(string keyword)
         {
             string response = "";
@@ -87,6 +90,7 @@ namespace SampleApi.DAL
             return response;
         }
 
+        //GetQuote pulls a randome quote from the db. 
         public string GetQuote()
         {
             string randomQuote = "This quote is inspirational.";
@@ -97,6 +101,7 @@ namespace SampleApi.DAL
                 {
                     conn.Open();
 
+                    //ORDER BY NEWID() selects a random entry
                     SqlCommand cmd = new SqlCommand("SELECT TOP 1 quote FROM motivationalquotes ORDER BY NEWID()", conn);
                     SqlDataReader reader = cmd.ExecuteReader();
 
@@ -116,6 +121,7 @@ namespace SampleApi.DAL
 
         }
 
+        //GetInterviewQuestion randomly selects one entry from the interview_question table
         public string GetInterviewQuestion()
         {
             string randomQuestion = "Oops...looks like we're out of interview questions.";
@@ -126,6 +132,7 @@ namespace SampleApi.DAL
                 {
                     conn.Open();
 
+                    //ORDER BY NEWID() selects a random entry
                     SqlCommand cmd = new SqlCommand("SELECT TOP 1 question FROM interview_questions ORDER BY NEWID()", conn);
                     SqlDataReader reader = cmd.ExecuteReader();
 
@@ -145,6 +152,7 @@ namespace SampleApi.DAL
 
         }
 
+        //GetTechnicalInterviewQuestion selects one random entry for the tech_questions table
         public string GetTechnicalInterviewQuestion()
         {
             string randomQuestion = "Oops...looks like we're out of interview questions.";
@@ -155,7 +163,8 @@ namespace SampleApi.DAL
                 {
                     conn.Open();
 
-                    SqlCommand cmd = new SqlCommand("SELECT TOP 1 question FROM technical_questions ORDER BY NEWID()", conn);
+                    //ORDER BY NEWID() selects a random entry
+                    SqlCommand cmd = new SqlCommand("SELECT TOP 1 question FROM tech_questions ORDER BY NEWID()", conn);
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
@@ -174,6 +183,8 @@ namespace SampleApi.DAL
 
         }
 
+        //GetJobTitle checks to see if the user input contains any of the job titles included in the position DB.
+        //If it doesn't, the default value (Junior Developer) is returned
         public string GetJobTitle(string userInput)
         {
             string matchingJobTitle = "Junior Developer";
@@ -211,6 +222,8 @@ namespace SampleApi.DAL
 
         }
 
+        //GetEvents returns a string containing all the events listed in 
+        //the upcomingevents table that occur within 7 days from now
         public string GetEvents()
         {
             List<string> Events = new List<string>();
@@ -248,6 +261,8 @@ namespace SampleApi.DAL
             return events;
         }
 
+        //Checks to see if the user input contains any of the companies listed in the co_information db, then pulls the associated info for that company;
+        //If no company is found, it returns "I'm sorry, I don't have any information for that company."
         public string GetCompanyInfo(string userInput)
         {
             string userInputToLower = userInput.ToLower();

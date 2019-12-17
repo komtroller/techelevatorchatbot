@@ -76,7 +76,7 @@ CREATE TABLE co_information
 
 
 
-CREATE TABLE upcomingevent
+CREATE TABLE upcomingevents
 (
 	id			int			identity(1,1),
 	dateOfEvent DATE not null, 
@@ -86,6 +86,33 @@ CREATE TABLE upcomingevent
 
 
 -- Upcoming Events
+
+INSERT INTO upcomingevents (dateOfEvent, eventDescription)
+VALUES ('2019-12-18', 'Meetup: Tech Holiday Party! An end of the year holiday event where we mingle and remember the highlights of the year! Location: Pillar Accenture, Time: 6 - 8 PM.')
+
+INSERT INTO upcomingevents (dateOfEvent, eventDescription)
+VALUES ('2019-12-19', 'Pathway: Employer Showcase: Olive. Location: Elevate Space, Time: 1 - 2 PM.')
+
+INSERT INTO upcomingevents (dateOfEvent, eventDescription)
+VALUES ('2019-12-20', 'Meetup: Ardino Enthusiasts. Location: Polaris Hub, Time: 7 - 9 PM.')
+
+INSERT INTO upcomingevents (dateOfEvent, eventDescription)
+VALUES ('2019-12-21', 'Pathway: Behavioral Mock Interview. Location: Galileo, Time: 1:35 - 2 PM.')
+
+INSERT INTO upcomingevents (dateOfEvent, eventDescription)
+VALUES ('2019-12-22', 'Meetup: Elixir Columbus. Location: Cover My Meds, Time: 4 - 6 PM.')
+
+INSERT INTO upcomingevents (dateOfEvent, eventDescription)
+VALUES ('2019-12-25', 'Pathway: Elevator Pitch. Location: Elevate space, Time: 1 - 2 PM.')
+
+INSERT INTO upcomingevents (dateOfEvent, eventDescription)
+VALUES ('2019-12-27', 'Pathway: Employer Showcase: OCLC. Location: Elevate Space, Time: 12:30 - 1:30 PM.')
+
+INSERT INTO upcomingevents (dateOfEvent, eventDescription)
+VALUES ('2019-12-30', 'Meetup: R-Ladies Columbus is part of a worldwide organization to promote gender diversity in the R community! Location: Rev1, Time: 4 - 6 PM.')
+
+INSERT INTO upcomingevents (dateOfEvent, eventDescription)
+VALUES ('2019-12-31', 'Pathway: Employer Matchmaking. Location: Main Hall, Time: 11:45 AM - 4:30 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
 VALUES ('2019-12-18', 'Meetup: Tech Holiday Party! An end of the year holiday event where we mingle and remember the highlights of the year! Location: Pillar Accenture, Time: 6:00 - 8:00 PM.')
@@ -119,7 +146,6 @@ VALUES ('2019-12-23', 'Pathway: Career Panels. Location: Elevate Space, Time: 5:
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
 VALUES ('2019-12-22', 'Pathway: Employer Matchmaking. Location: Elevate Space, Time: 8:30 AM - 11:30 PM.')
-
 
 -- Job Positions
 INSERT INTO positions
@@ -290,41 +316,51 @@ Values ('"If you''re walking down the right path and you''re willing to keep wal
 
 INSERT INTO users (keyword, response)
 Values ('Cover letter','You might or might not need one. It really depends on the company. <a href="https://zety.com/blog/how-to-write-a-cover-letter">Here is a link to that!</a>')
+
 INSERT INTO users (keyword, response)
 Values ('Resume', '<a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Here is a link to that!</a>')
+
 INSERT INTO users (keyword, response)
 Values ('CV', '<a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Click here!</a>')
+
 INSERT INTO users (keyword, response)
 Values ('Curriculum Vitae', '<a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Here is a link to that!</a>')
-INSERT INTO users (keyword, response)
-Values ('how get job', '<a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Follow this link!</a>')
+
 INSERT INTO users (keyword, response)
 Values ('work', '<a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Click here to find out more!</a>')
+
 INSERT INTO users (keyword, response)
 Values ('Hired', '<a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that!</a>')
+
 INSERT INTO users (keyword, response)
 Values ('Hiring', '<a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that might help with that!</a>')
+
+
 INSERT INTO users (keyword, response)
 Values ('Networking', 'I would advise you to join a meetup group related to your field and interests, and to also create a LinkedIn account!')
+
 INSERT INTO users (keyword, response)
 Values ('Network', 'I would advise you to join a meetup group related to your field and interests, and to also create a LinkedIn account!')
+
 INSERT INTO users (keyword, response)
 Values ('Recruiter', 'There are many way to contact a recruiter, I would advise you to go to join a meetup related to your field, and to also network on LinkedIn. I strongly advise you to add a note with every request you send on LinkedIn')
-INSERT INTO users (keyword, response)
-Values ('technical questions', '?')
-
 
 
 INSERT INTO users (keyword, response)
 Values ('Recruiters', 'There are many way to contact a recruiter, I would advise you to go to join a meetup related to your field, and to also network on LinkedIn. I strongly advise you to add a note with every request you send on LinkedIn')
+
 INSERT INTO users (keyword, response)
 Values ('Wear', 'Generally, you want to wear professional or business attire! <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">Here is more information on that!</a>')
+
 INSERT INTO users (keyword, response)
 Values ('dresscode', 'Generally, you want to wear professional, or business, attire! <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">Here is more information on that!</a>')
+
 INSERT INTO users (keyword, response)
 Values ('Casual', 'If the company has a casual dresscode, you still you want to wear professional, or business, attire for the interview. <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">This link maybe able to help with that.</a>')
+
 INSERT INTO users (keyword, response)
 Values ('Outfit', 'It depends on the organization. Generally, you want to wear professional or business attire! <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">Here is more information on that!</a>')
+
 INSERT INTO users (keyword, response)
 Values ('dresscode', 'It depends on the organization. Generally, you want to wear professional or business attire! <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">Here is more information on that!</a>')
 
@@ -332,18 +368,25 @@ Values ('dresscode', 'It depends on the organization. Generally, you want to wea
 
 INSERT INTO users (keyword, response)
 Values ('Salary expectations', 'I would use websites such as Glassdoor, Payscale or LinkedIn to give you a better idea of industry standards based on your experience, hope that helps!')
+
 INSERT INTO users (keyword, response)
 Values ('Starmethod', 'The STAR interview response is an interview behavioral question. Using this method of answering interview questions allows you to provide concrete examples or proof that you possess the experience and skills for the job at hand. STAR stands for Situation, Task, Action, Result') 
+
 INSERT INTO users (keyword, response)
 Values ('STAR', 'The STAR interview response is an interview behavioral question. Using this method of answering interview questions allows you to provide concrete examples or proof that you possess the experience and skills for the job at hand. STAR stands for Situation, Task, Action, Result') 
+
 INSERT INTO users (keyword, response)
 Values ('advice prepare job', 'Research the company and the individuals. LinkedIn should help with that. Have a few hard copies of your resume or portfolio. Arrive early, 20 minutes before your interview is ideal. Stay calm, be humble and confident. Regardless of the outcome, send a follow up thank you email within 24hrs. Remember: What is yours is yours!')
+
 INSERT INTO users (keyword, response)
 Values ('arrays','An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type. For a single dimensional array, a good analogy is to think of it as a row of boxes. Each box can store a single value but each value must be of the same type. Hope that helps!')
+
 INSERT INTO users (keyword, response)
 Values ('mvc','MVC stands for Model (Business logic), View (Presenatation logic), and Controller (Interacts with model to get data for View). MVC is a popular way of organizing your code. Each section of your code has a purpose, and those purposes are different. Here is a more detailed link: <a href="https://www.codecademy.com/articles/mvc">Click me!</a>')
+
 INSERT INTO users (keyword, response)
 Values ('company','?')
+
 INSERT INTO users (keyword, response)
 Values ('company info','?')
 
@@ -352,6 +395,12 @@ Values ('company info','?')
 
 INSERT INTO users (keyword, response)
 Values ('posting','?')
+INSERT INTO users (keyword, response)
+Values ('technical','?')
+INSERT INTO users (keyword, response)
+Values ('technical question','?')
+INSERT INTO users (keyword, response)
+Values ('technical interview question','?')
 INSERT INTO users (keyword, response)
 Values ('listing','?')
 INSERT INTO users (keyword, response)
@@ -366,6 +415,8 @@ INSERT INTO users (keyword, response)
 Values ('open position','?')
 INSERT INTO users (keyword, response)
 Values ('job opening','?')
+INSERT INTO users (keyword, response)
+Values ('opening','?')
 
 
 ----- INSPIRATIONAL QUOTE KEYWORDS
@@ -464,6 +515,9 @@ Values ( 'c# explain','<a href="https://docs.microsoft.com/en-us/dotnet/csharp/t
 
 INSERT INTO users (keyword, response)
 Values ('C# study','<a href="https://www.youtube.com/watch?v=gfkTfcpWqAY</a>">Click me to learn more!</a>')
+
+INSERT INTO users (keyword, response)
+Values ('TQ','?')
 
 
 
@@ -699,7 +753,7 @@ INSERT INTO users (keyword, response)
 Values ('Hi', 'Hi, How can I help you?')
 
 INSERT INTO users (keyword, response)
-Values ('have Question', 'Ask away, How can I help you?')
+Values ('Question', 'Ask away, How can I help you?')
 
 INSERT INTO users (keyword, response)
 Values ('Hey there',  'Hi, How can I help you?')
@@ -778,6 +832,15 @@ Values ('unknown','Sorry, I don''t understand what you''re asking. Try rewording
 
 
 COMMIT TRANSACTION;
+
+
+
+
+
+
+
+
+
 
 
 

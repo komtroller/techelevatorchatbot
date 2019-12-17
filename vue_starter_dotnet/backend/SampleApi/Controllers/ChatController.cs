@@ -44,7 +44,7 @@ namespace SampleApi.Controllers
                 botResponse = chatDAO.GetInterviewQuestion();
                 botResponse += "Enter 'IQ' to get another interview question";
             }
-            else if (keyword.Contains("technical") || keyword=="tq")
+            else if (keyword.Contains("technical") || keyword=="tq" || keyword == "technical questions" || keyword == "technical question")
             {
                 botResponse = chatDAO.GetTechnicalInterviewQuestion();
                 botResponse += "Enter 'TQ' to get another technical interview question";

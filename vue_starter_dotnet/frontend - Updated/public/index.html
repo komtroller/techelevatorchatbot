@@ -26,42 +26,60 @@
     </div>
     <label class="dropdown">
 
-      <div class="dd-button">
+      <div class="dd-button" id='keywordButton'>
         KEYWORD SHORTCUTS
       </div>
     
-      <input type="checkbox" class="dd-input" id="test">
-    
-      <table class="dd-menu">
+      <!-- <input type="checkbox" class="dd-input" id="test"> -->
+      <table  id ="keywordTable" class="dd-menu disappear">
         <tr class="header">
-          <th class="shortcut">Shortcut</th>
-          <th class="result">Result</th>
+          <th class="shortcut">KEYWORD SHORTCUT</th>
+          <th class="result">RESULT</th>
         </tr>
         <tr>
-          <td class="shortcut">Events</td>
+          <td class="shortcut">"Events"</td>
           <td class="result">Returns a list of upcoming meetups & Pathway events</td>
         </tr>
         <tr class="odd">
-          <td class="shortcut">IQ</td>
+          <td class="shortcut">"IQ"</td>
           <td class="result">Returns a random behavioral interview questions</td>
         </tr>
         <tr>
-          <td class="shortcut">TQ</td>
+          <td class="shortcut">"TQ"</td>
           <td class="result">Returns a random technical interview questions</td>
         </tr>
         <tr class="odd">
-          <td class="shortcut">Quote</td>
+          <td class="shortcut">"Quote"</td>
           <td class="result">Returns a random inspirtional quote</td>
         </tr>
         <tr>
-          <td class="shortcut">[insert company name] company info</td>
+          <td class="shortcut">"[insert company name] company info"</td>
           <td class="result">Returns the company information for a specific Tech Elevator hiring partner</td>
         </tr>
         <tr class="odd">
-          <td class="shortcut">[insert job title] job postings</td>
+          <td class="shortcut">"[insert job title] job postings"</td>
           <td class="result">Returns a link to job postings for a specified development position</td>
         </tr>
       </table>
+    </div>
+      <script defer>
+          let isKeywordTableOpen = false;
+          let keywordTable = document.getElementById("keywordTable");
+          let keywordButton = document.getElementById('keywordButton');
+          keywordButton.addEventListener("click", ()=>{
+              if(!isKeywordTableOpen){
+                isKeywordTableOpen = true;
+                keywordTable.classList.remove('disappear');
+                keywordButton.classList.add('keywordButtonOpen')
+              }
+              else{
+                isKeywordTableOpen = false;
+                keywordTable.classList.add('disappear');
+                keywordButton.classList.remove('keywordButtonOpen');
+              }
+              window.scrollTo(0,document.body.scrollHeight);
+          })
+        </script>
       
     </label>
   </body>

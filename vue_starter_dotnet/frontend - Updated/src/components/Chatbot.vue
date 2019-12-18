@@ -37,7 +37,7 @@ blank: ' fasfsf',
 data: () => ({
 
 message: '',
-messages: [{text:"Hello, what is your name?", author: "server"}],
+messages: [{text:"Hey there, what's your name?", author: "server"}],
 }),
 methods: {
 sendMessage() {
@@ -57,11 +57,10 @@ let query = this.message
   this.message = ''
 
   let arrayLength = this.messages.length;
-  console.log(arrayLength);
   if (arrayLength < 3)
   {  
       this.messages.push({
-      text: "Hello " + message + ", what can I do for you? ",
+      text: "Hi " + message + ", what can I do for you today? ",
       author: 'server'
   })
   }
@@ -101,6 +100,7 @@ display: flex;
 flex-direction: column;
 list-style-type: none;
 word-wrap: break-word;
+height: 65vh;
 }
 //////////////// Scroll functionality of the
 .chat-box-list-container {

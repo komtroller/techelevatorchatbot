@@ -23,11 +23,6 @@ text-transform: uppercase;
     width:70vw;
   }
 
-  .techyimg:hover{
-        box-shadow: 0 0 2px 1px rgba(7, 31, 39, 0.945);
-      
-  }
-
 /* Guide List Styling */
 .dropdown {
   display: flex;
@@ -40,34 +35,19 @@ text-transform: uppercase;
   border: 4px solid white;
   border-radius: 4px;
   padding: 10px 30px 10px 20px;
-  /*background-color:  rgb(150, 118, 58);*/
   cursor: pointer;
   white-space: nowrap;
   font-family: 'Roboto', sans-serif;
   color: white;
 }
 
-.dd-button:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  transform: translateY(-50%);
-  width: 0; 
-  height: 0; 
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid black;
-}
-
-.dd-button:hover {
+.keywordButtonOpen {
   background-color: #fff;
   color: #0991a4;
 }
-
-
-.dd-input {
-  display: none;
+.dd-button:hover {
+  background-color: #fff;
+  color: #0991a4;
 }
 
 .dd-menu {
@@ -77,45 +57,33 @@ text-transform: uppercase;
   padding: 0;
   margin-bottom: 5vh;
   margin-top: 5vh;
-  box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
   color: white;
   font-family: 'Roboto', sans-serif;
-  list-style-type: none;
 }
 
-.dd-input + .dd-menu {
+.disappear{
   display: none;
-} 
-
-.dd-input:checked + .dd-menu {
-  display: block;
-} 
-
-.dd-menu li {
-  padding: 10px 20px;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.dd-menu li a {
-  display: block;
-  margin: -10px -20px;
-  padding: 10px 20px;
-}
-
-.dd-menu li.divider{
-  padding: 0;
-  border-bottom: 1px solid #cccccc;
 }
 
 .header {
   background-color: #8fc74a;
   color: white;
-  padding: 5px;
+  font-size: 18px;
 }
-table{
+
+table {
+  border-collapse: collapse;
+}
+table, th, td{
   width: 100%;
-  background: #0991a4;
+  border: 4px solid white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
 }
 
 .shortcut{
@@ -127,8 +95,8 @@ table{
 }
 
 .odd {
-  background-color: white;
-  color: #0991a4;
+  /* background-color: white;
+  color: #0991a4; */
 }
 
 

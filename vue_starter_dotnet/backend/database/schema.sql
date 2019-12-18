@@ -65,13 +65,13 @@ CREATE TABLE co_information
 (
 	
 	company varchar(max)		not null,
-	primary key (id),
-	id int,
+	id int identity(1,1) not null,
 	location varchar(max)		not null,
 	grads_placed int		not null,
-	rating int			not null,
+	rating float			not null,
 	employee_no int			not null,
-	linkedin varchar(max)	
+	linkedin varchar(max),	
+	primary key (id)
 );
 
 
@@ -87,72 +87,34 @@ CREATE TABLE upcomingevents
 
 -- Upcoming Events
 
-INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-18', 'Meetup: Tech Holiday Party! An end of the year holiday event where we mingle and remember the highlights of the year! Location: Pillar Accenture, Time: 6:00 - 8:00 PM.')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-19', 'Pathway: Employer Showcase: Olive. Location: Elevate Space, Time: 1:00 - 2:00 PM.')
+VALUES ('2020-12-26', '<span style=''font-weight:bold; text-decoration: underline''>MEETUP: COLUMBUS MACHINE LEARNERS</span><br>Date & Time: Thur 12/26, 7-9PM <br>Location: The Forge <br><a href="https://www.meetup.com/Columbus-Machine-Learners/events/nhsxcrybccbcb/">More info</a>')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-20', 'Meetup: Ardino Enthusiasts. Location: Polaris Hub, Time: 7:00 - 9:00 PM.')
+VALUES ('2019-12-20', '<span style=''font-weight:bold; text-decoration: underline''>PATHWAY EVENT: COHORT 9 DEMOS</span><br>Date & Time: Fri 12/20, 4-6PM <br>Location: Rev1-Main CR')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-21', 'Pathway: Behavioral Mock Interview. Location: Galileo, Time: 1:35 - 2:00 PM.')
+VALUES ('2019-12-20', '<span style=''font-weight:bold; text-decoration: underline''>PATHWAY EVENT: GRADUATION CEREMONY</span><br>Date & Time: Fri 12/20, 6-7PM<br>Location: Rev1-Main CR')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-22', 'Meetup: Elixir Columbus. Location: Cover My Meds, Time: 4:00 - 6:00 PM.')
+VALUES ('2019-12-23', '<span style=''font-weight:bold; text-decoration: underline''>MEETUP: OPEN COLUMBUS</span><br>Date & Time: Mon 12/23, 6-8PM<br>Location: AEP Charge<br><a href="https://www.meetup.com/OpenColumbus/events/267219333/">More info</a>')
 
 INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-25', 'Pathway: Elevator Pitch. Location: Elevate space, Time: 1:00 - 2:00 PM.')
-
-INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-27', 'Pathway: Employer Showcase: OCLC. Location: Elevate Space, Time: 12:30 - 1:30 PM.')
-
-INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-30', 'Meetup: R-Ladies Columbus is part of a worldwide organization to promote gender diversity in the R community! Location: Rev1, Time: 4:00 - 6:00 PM.')
-
-INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-31', 'Pathway: Employer Matchmaking. Location: Main Hall, Time: 11:45 AM - 4:30 PM.')
-
-INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-18', 'Meetup: Tech Holiday Party! An end of the year holiday event where we mingle and remember the highlights of the year! Location: Pillar Accenture, Time: 6:00 - 8:00 PM.')
-
-INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-19', 'Pathway: Employer Showcase Olive. Location: Elevate Space, Time: 1:00 - 2:00 PM.')
-
-INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-20', 'Meetup: Ardino Enthusiasts. Location: Polaris Hub, Time: 7:00 - 9:00 PM.')
-
-INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-21', 'Pathway: Behavioral Mock Interview. Location: Galileo, Time: 1:35 - 2:00 PM.')
-
-INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-22', 'Meetup: Elixir Columbus. Location: Cover My Meds, Time: 4:30 - 6:30 PM.')
-
-INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-25', 'Pathway: Elevator Pitch. Location: Elevate space, Time: 1:30 - 2:30 PM.')
-
-INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-27', 'Pathway: Employer Showcase OCLC. Location: Elevate Space, Time: 12:30 - 1:30 PM.')
-
-INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-30', 'Meetup: R-Ladies Columbus is part of a worldwide organization to promote gender diversity in the R community! Location: Rev1, Time: 4:00 - 6:00 PM.')
-
-INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-24', 'Pathway: Employer Matchmaking. Location: Main Hall, Time: 11:00 AM - 4:30 PM.')
-
-INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-23', 'Pathway: Career Panels. Location: Elevate Space, Time: 5:30 PM - 6:30 PM.')
-
-INSERT INTO upcomingevents (dateOfEvent, eventDescription)
-VALUES ('2019-12-22', 'Pathway: Employer Matchmaking. Location: Elevate Space, Time: 8:30 AM - 11:30 PM.')
+VALUES ('2019-12-25', '<span style=''font-weight:bold; text-decoration: underline''>HOLIDAY: CHRISTMAS DAY</span><br>Date: Wed 12/25<br>HAPPY HOLIDAYS!!')
 
 -- Job Positions
 INSERT INTO positions
 VALUES ('software developer')
  
 INSERT INTO positions
-VALUES ('UX/IX designer') 
+VALUES ('UI designer') 
+
+INSERT INTO positions
+VALUES ('UX designer') 
+
+INSERT INTO positions
+VALUES ('UI/UX designer') 
 
 INSERT INTO positions
 VALUES ('data analyst') 
@@ -202,78 +164,74 @@ VALUES ('Javascript')
 INSERT INTO positions
 VALUES ('Web Developer') 
 
-
+--Interview Keywords
+INSERT INTO users (keyword, response)
+Values ('TQ','?')
+INSERT INTO users (keyword, response)
+Values ('interview question','?')
+INSERT INTO users (keyword, response)
+Values ('sample question','?')
+INSERT INTO users (keyword, response)
+Values ('sample questoin','?')
+INSERT INTO users (keyword, response)
+Values ('iq','?')
 
 ------ Information Table
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no,linkedin)
-VALUES ('Accenture',1,'Columbus',10,4,10500, 'https://www.linkedin.com/company/accenture/people/?facetGeoRegion=us%3A184&keywords=tech%20elevator')
+INSERT INTO co_information(company,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('Accenture','Columbus',13,3.8,492000, 'https://www.linkedin.com/company/accenture/people/?facetGeoRegion=us%3A184&keywords=tech%20elevator')
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no,linkedin)
-VALUES ('Pillar',2,'Columbus',10,4,9400, 'https://www.linkedin.com/company/pillar-technology/people/?keywords=Tech%20Elevator')
+INSERT INTO co_information(company,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('Pillar','Columbus',6,4.0,2006, 'https://www.linkedin.com/company/pillar-technology/people/?keywords=Tech%20Elevator')
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no,linkedin)
-VALUES ('JPMorgan Chase',25,'Columbus',98,4,13600, 'https://www.linkedin.com/company/jpmorganchase/people/?facetSchool=372014')
+INSERT INTO co_information(company,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('JPMorgan Chase','Columbus',98,3.9,189315, 'https://www.linkedin.com/company/jpmorganchase/people/?facetSchool=372014')
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no,linkedin)
-VALUES ('Chase',26,'Columbus',98,4,13600, 'https://www.linkedin.com/company/jpmorganchase/people/?facetSchool=372014')
+INSERT INTO co_information(company,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('Chase','Columbus',98,3.9,189315, 'https://www.linkedin.com/company/jpmorganchase/people/?facetSchool=372014')
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no,linkedin)
-VALUES ('JPMorgan',6,'Columbus',98,4,13600, 'https://www.linkedin.com/company/jpmorganchase/people/?facetSchool=372014')
+INSERT INTO co_information(company,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('JPMorgan','Columbus',98,3.9,189315, 'https://www.linkedin.com/company/jpmorganchase/people/?facetSchool=372014')
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no,linkedin)
-VALUES ('Willow Tree',7,'Columbus',10,4,420, 'https://www.linkedin.com/search/results/people/?facetCurrentCompany=%5B%221099749%22%5D&facetNetwork=%5B%22F%22%5D')
+INSERT INTO co_information(company,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('Willow Tree','Columbus',1,4,474, 'https://www.linkedin.com/company/willowtreeapps/people/?keywords=tech%20elevator')
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('BYBE',8,'Columbus',0,4,7)
+INSERT INTO co_information(company,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('Nationwide','Columbus',3,4,16500, 'https://www.linkedin.com/company/nationwide/people/?facetSchool=372014&keywords=TECH%20ELEVATOR')
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no,linkedin)
-VALUES ('Nationwide',9,'Columbus',3,4,16500, 'https://www.linkedin.com/company/nationwide/people/?facetSchool=372014&keywords=TECH%20ELEVATOR')
+INSERT INTO co_information(company,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('Olive','Columbus',13,3.9,203,'https://www.linkedin.com/company/hireolive/people/?facetSchool=372014')
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('RED HAT',10,'Columbus',2,4,18563)
+INSERT INTO co_information(company,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('Safelite AutoGlass','Dublin',5,3.5,15000, 'https://www.linkedin.com/company/safelite-autoglass/people/?keywords=tech%20elevator')
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('Olive',11,'Columbus',8,5,110)
+INSERT INTO co_information(company,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('T-CETRA','Dublin',2,4,65, 'https://www.linkedin.com/company/t-cetra-llc/people/?facetSchool=372014')
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('Safelite AutoGlass',12,'Columbus',0,3,14500)
+INSERT INTO co_information(company,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('Franklin County Data Center','Columbus',3,2.6,25,'https://www.linkedin.com/company/franklin-county-data-center/people/?keywords=tech%20elevator')
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('AWH',13,'Columbus',1,5,103)
+INSERT INTO co_information(company,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('FCDC','Columbus',3,2.6,25,'https://www.linkedin.com/company/franklin-county-data-center/people/?keywords=tech%20elevator')
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('T-CETRA',14,'Columbus',10,4,10500)
+INSERT INTO co_information(company,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('OCLC','Columbus',3,3.6,1222, 'https://www.linkedin.com/company/oclc/people/?keywords=tech%20elevator')
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('OPERS',15,'Columbus',10,4,603)
+INSERT INTO co_information(company,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('L-BRANDS','Columbus',5,3.6,47680,'https://www.linkedin.com/company/limited-brands/people/?keywords=tech%20elevator')
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('McGraw-Hill',16,'Columbus',10,4,10500)
+INSERT INTO co_information(company,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('LBRANDS','Columbus',5,3.6,47680,'https://www.linkedin.com/company/limited-brands/people/?keywords=tech%20elevator')
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('Avanade',17,'Columbus',2,5,18340)
+INSERT INTO co_information(company,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('L BRANDS','Columbus',5,3.6,47680,'https://www.linkedin.com/company/limited-brands/people/?keywords=tech%20elevator')
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('FCDC',18,'Columbus',1,5,14)
+INSERT INTO co_information(company,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('Huntington','Columbus',12,3.4,14511,'https://www.linkedin.com/company/huntington-national-bank/people/?keywords=tech%20elevator')
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('TEK SYSTEMS',19,'Columbus',1,3,10500)
+INSERT INTO co_information(company,location,grads_placed,rating,employee_no,linkedin)
+VALUES ('Script Drop','Columbus',1,4.4,71,'https://www.linkedin.com/company/scriptdrop/people/?keywords=tech%20elevator')
 
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('OPERS',20,'Columbus',1,2,10500)
-
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('McGraw-Hill',21,'Columbus',1,4,10500)
-
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('OCLC',22,'Columbus',4,5,10500)
-
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('L-BRANDS',23,'Columbus',10,5,16570)
-
-INSERT INTO co_information(company,id,location,grads_placed,rating,employee_no)
-VALUES ('Brooksource',24,'Columbus',4,3,1540)
 
 
  -------
@@ -315,54 +273,47 @@ Values ('"If you''re walking down the right path and you''re willing to keep wal
 ----- PATHWAY
 
 INSERT INTO users (keyword, response)
-Values ('Cover letter','You might or might not need one. It really depends on the company. <a href="https://zety.com/blog/how-to-write-a-cover-letter">Here is a link to that!</a>')
+Values ('Cover letter','You might or might not need one. It really depends on the company. <br><a href="https://zety.com/blog/how-to-write-a-cover-letter">Here is some advice on how to write a cover letter</a>')
 
 INSERT INTO users (keyword, response)
-Values ('Resume', '<a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Here is a link to that!</a>')
+Values ('Resume', 'Oh, getting your resume in shape is so important! <br><a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Here is a good template</a>')
 
 INSERT INTO users (keyword, response)
-Values ('CV', '<a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Click here!</a>')
+Values ('CV', 'Oh, getting your CV (or resume as we say in North America) in shape is so important! <br><a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Here is a good template</a>')
 
 INSERT INTO users (keyword, response)
-Values ('Curriculum Vitae', '<a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Here is a link to that!</a>')
+Values ('Curriculum Vitae', 'Oh, getting your CV (or resume as we say in North America) in shape is so important! <br><a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Here is a good template</a>')
 
 INSERT INTO users (keyword, response)
-Values ('work', '<a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Click here to find out more!</a>')
+Values ('Hiring', '?')
 
 INSERT INTO users (keyword, response)
-Values ('Hired', '<a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that!</a>')
+Values ('Networking', 'Go to meetups! Be yourself! Connect on LinkedIn and keep in contact!')
 
 INSERT INTO users (keyword, response)
-Values ('Hiring', '<a href="https://www.glassdoor.com/blog/guide/how-to-get-a-job/">Here is a link to that might help with that!</a>')
-
-
-INSERT INTO users (keyword, response)
-Values ('Networking', 'I would advise you to join a meetup group related to your field and interests, and to also create a LinkedIn account!')
+Values ('Network', 'Go to meetups! Be yourself! Connect on LinkedIn and keep in contact!')
 
 INSERT INTO users (keyword, response)
-Values ('Network', 'I would advise you to join a meetup group related to your field and interests, and to also create a LinkedIn account!')
-
-INSERT INTO users (keyword, response)
-Values ('Recruiter', 'There are many way to contact a recruiter, I would advise you to go to join a meetup related to your field, and to also network on LinkedIn. I strongly advise you to add a note with every request you send on LinkedIn')
+Values ('Recruiter', 'Recruiters can be very helpful in your job search. Make sure they''re not just sending blanket emails and that they don''t send your resume without permission.')
 
 
 INSERT INTO users (keyword, response)
-Values ('Recruiters', 'There are many way to contact a recruiter, I would advise you to go to join a meetup related to your field, and to also network on LinkedIn. I strongly advise you to add a note with every request you send on LinkedIn')
+Values ('Recruiters', 'Recruiters can be very helpful in your job search. Make sure they''re not just sending blanket emails and that they don''t send your resume without permission.')
 
 INSERT INTO users (keyword, response)
-Values ('Wear', 'Generally, you want to wear professional or business attire! <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">Here is more information on that!</a>')
+Values ('Wear', 'Generally, you want to wear professional or business attire! <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">Here''s a good guide.</a>')
 
 INSERT INTO users (keyword, response)
-Values ('dresscode', 'Generally, you want to wear professional, or business, attire! <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">Here is more information on that!</a>')
+Values ('dresscode', 'Generally, you want to wear professional, or business, attire! <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">Here''s a good guide.</a>')
 
 INSERT INTO users (keyword, response)
 Values ('Casual', 'If the company has a casual dresscode, you still you want to wear professional, or business, attire for the interview. <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">This link maybe able to help with that.</a>')
 
 INSERT INTO users (keyword, response)
-Values ('Outfit', 'It depends on the organization. Generally, you want to wear professional or business attire! <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">Here is more information on that!</a>')
+Values ('Outfit', 'It depends on the organization. Generally, you want to wear professional or business attire! <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">Here''s a good guide.</a>')
 
 INSERT INTO users (keyword, response)
-Values ('dresscode', 'It depends on the organization. Generally, you want to wear professional or business attire! <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">Here is more information on that!</a>')
+Values ('dresscode', 'It depends on the organization. Generally, you want to wear professional or business attire! <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">Here''s a good guide.</a>')
 
 
 
@@ -376,10 +327,10 @@ INSERT INTO users (keyword, response)
 Values ('STAR', 'The STAR interview response is an interview behavioral question. Using this method of answering interview questions allows you to provide concrete examples or proof that you possess the experience and skills for the job at hand. STAR stands for Situation, Task, Action, Result') 
 
 INSERT INTO users (keyword, response)
-Values ('advice prepare job', 'Research the company and the individuals. LinkedIn should help with that. Have a few hard copies of your resume or portfolio. Arrive early, 20 minutes before your interview is ideal. Stay calm, be humble and confident. Regardless of the outcome, send a follow up thank you email within 24hrs. Remember: What is yours is yours!')
+Values ('prepare', 'Research the company and the individuals. LinkedIn should help with that. Have a few hard copies of your resume or portfolio. Arrive early, 20 minutes before your interview is ideal. Stay calm, be humble and confident. Regardless of the outcome, send a follow up thank you email within 24hrs. Remember: What is yours is yours!')
 
 INSERT INTO users (keyword, response)
-Values ('arrays','An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type. For a single dimensional array, a good analogy is to think of it as a row of boxes. Each box can store a single value but each value must be of the same type. Hope that helps!')
+Values ('array','An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type. For a single dimensional array, a good analogy is to think of it as a row of boxes. Each box can store a single value but each value must be of the same type. Hope that helps!')
 
 INSERT INTO users (keyword, response)
 Values ('mvc','MVC stands for Model (Business logic), View (Presenatation logic), and Controller (Interacts with model to get data for View). MVC is a popular way of organizing your code. Each section of your code has a purpose, and those purposes are different. Here is a more detailed link: <a href="https://www.codecademy.com/articles/mvc">Click me!</a>')
@@ -427,17 +378,9 @@ Values ('inspirational quote','?')
 INSERT INTO users (keyword, response)
 Values ('inspire me','?')
 INSERT INTO users (keyword, response)
+Values ('inspire','?')
+INSERT INTO users (keyword, response)
 Values ('inspirational','?')
-
------ Interview Quesions
-INSERT INTO users (keyword, response)
-Values ('interview question','?')
-INSERT INTO users (keyword, response)
-Values ('sample question','?')
-INSERT INTO users (keyword, response)
-Values ('sample questoin','?')
-INSERT INTO users (keyword, response)
-Values ('iq','?')
 
 ----- Event Keywords
 INSERT INTO users (keyword, response)
@@ -453,11 +396,11 @@ Values ('meetup','?')
 INSERT INTO users (keyword, response)
 Values ('pathway meetings','?')
 INSERT INTO users (keyword, response)
-
+Values ('company meetup','?')
 
 --FOR KAEL TO ADD TO BACKEND - PATHWAY EVENTS AND MEETUPS
 
-
+INSERT INTO users (keyword, response)
 Values ('calen','?')
 INSERT INTO users (keyword, response)
 Values ('SCHEDULE','?')
@@ -484,10 +427,10 @@ INSERT INTO users (keyword, response)
 Values ('sql commands','Check out this link for <a href="https://www.codecademy.com/articles/sql-commands">SQL commands</a>')
 
 INSERT INTO users (keyword, response)
-Values ('New project MSSQL','<a href="https://docs.microsoft.com/en-us/sql/ssms/solution/create-a-project?view=sql-server-ver15</a>">Click here to learn about that!</a>')
+Values ('New project MS SQL','<a href="https://docs.microsoft.com/en-us/sql/ssms/solution/create-a-project?view=sql-server-ver15</a>">Click here to learn about that!</a>')
 
 INSERT INTO users (keyword, response)
-Values ('mssql commands','Check out this link for <a href="https://www.codecademy.com/articles/sql-commands">SQL commands</a>')
+Values ('sql commands','Check out this link for <a href="https://www.codecademy.com/articles/sql-commands">SQL commands</a>')
 
 INSERT INTO users (keyword, response)
 Values ('create project SQL','<a href="https://docs.microsoft.com/en-us/sql/ssms/solution/create-a-project?view=sql-server-ver15">Click here for more info!</a>')
@@ -499,40 +442,23 @@ INSERT INTO users (keyword, response)
 Values ('tutorial SQL','Here is my favorite tutorial on <a href="https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud">SQL!</a>')
 
 INSERT INTO users (keyword, response)
-Values (' tutorial mySQL','Here is my favorite tutorial on <a href="https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud">SQL!</a>')
-
-INSERT INTO users (keyword, response)
-Values ('Beginners SQL','Here is my favorite tutorial on <a href="https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud">SQL!</a>')
-
-INSERT INTO users (keyword, response)
-Values ('sql','SQL is a standard language for storing, manipulating and retrieving data in databases. Check this link out for <a href="https://www.w3schools.com/sql/default.asp">more information</a>')
-
-INSERT INTO users (keyword, response)
-Values ('what sql commands','Check out this link for <a href="https://www.codecademy.com/articles/sql-commands">SQL commands</a>')
+Values ('tutorial mySQL','Here is my favorite tutorial on <a href="https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud">SQL!</a>')
 
 -----
 --LEARNING C#
 
 INSERT INTO users (keyword, response)
-Values ( 'c#','<a href="https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/intro-to-csharp/</a>">Click here to learn more about that!</a>')
+Values ( 'c#','C# (C-Sharp) is a programming language developed by Microsoft that runs on the . NET Framework. C# is used to develop web apps, desktop apps, mobile apps, games and much more. <a href="https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/intro-to-csharp/</a>">Click here to learn more about that!</a>')
 
 INSERT INTO users (keyword, response)
-Values ( 'c# introduction','<a href="https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/intro-to-csharp/</a>">Click here to learn more about that!</a>')
+Values ( 'c#','C# (C-Sharp) is a programming language developed by Microsoft that runs on the . NET Framework. C# is used to develop web apps, desktop apps, mobile apps, games and much more. <a href="https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/intro-to-csharp/</a>">Click here to learn more about that!</a>')
 
 INSERT INTO users (keyword, response)
-Values ('C# TUTORIAL','<a href="https://www.youtube.com/watch?v=gfkTfcpWqAY</a>">Click here to learn more about that!</a>')
+Values ('C# TUTORIAL','Here is a good video to get started: <a href="https://www.youtube.com/watch?v=gfkTfcpWqAY</a>">Click here to learn more about that!</a>')
 
 INSERT INTO users (keyword, response)
 Values ( 'help c#','<a href="https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/intro-to-csharp/</a>">Click here to learn more about that!</a>')
 
-INSERT INTO users (keyword, response)
-Values ( 'c# explain','<a href="https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/intro-to-csharp/</a>">Here is a helpful link for that!</a>')
-
-INSERT INTO users (keyword, response)
-Values ('C# study','<a href="https://www.youtube.com/watch?v=gfkTfcpWqAY</a>">Click me to learn more!</a>')
-
-INSERT INTO users (keyword, response)
-Values ('TQ','?')
 
 
 
@@ -558,28 +484,13 @@ INSERT INTO interview_questions (question)
 Values ('Where would you like to be in your career five years from now?')
 
 INSERT INTO interview_questions (question)
-Values ('Are you willing to relocate? ')
-
-INSERT INTO interview_questions (question)
-Values ('What are your passions and goals in life?')
-
-INSERT INTO interview_questions (question)
-Values ('Do you have any questions for me?')
-
-INSERT INTO interview_questions (question)
 Values ('Can you describe a time when your work was criticized? ')
 
 INSERT INTO interview_questions (question)
 Values ('What is the most difficult decision you have made in the last two years and how did you come to that decision?')
 
 INSERT INTO interview_questions (question)
-Values ('What salary are you seeking?')
-
-INSERT INTO interview_questions (question)
-Values ('Sell me this pencil.')
-
-INSERT INTO interview_questions (question)
-Values ('Who do you consider leaders/idol and why?')
+Values ('Who do you consider leaders and why?')
 
 INSERT INTO interview_questions (question)
 Values ('How would you feel about working for someone who knows less than you? ')
@@ -587,13 +498,17 @@ Values ('How would you feel about working for someone who knows less than you? '
 INSERT INTO interview_questions (question)
 Values ('What are you most proud of? ')
 
+INSERT INTO interview_questions (question)
+Values ('How would you handle conflict with another employee?')
+
+INSERT INTO tech_questions (question)
+Values ('Why do you want to become a programmer? ')
+
+
 --TECHNICAL QUESTIONS 
 
 INSERT INTO tech_questions (question)
 Values (' Where and when do you use an Assert.AreEqual statement?')
-
-INSERT INTO tech_questions (question)
-Values (' When and how do you use reflection in your projects? ')
 
 INSERT INTO tech_questions (question)
 Values ('What’s the difference between a base class and an interface? ')
@@ -603,12 +518,6 @@ Values ('When is it beneficial to use an IoC Container ')
 
 INSERT INTO tech_questions (question)
 Values ('When and how do you use an interface? ')
-
-INSERT INTO tech_questions (question)
-Values ('What is difference between constants and readonly? ')
-
-INSERT INTO tech_questions (question)
-Values ('Why do you want to become a programmer? ')
 
 INSERT INTO tech_questions (question)
 Values (' What is object oriented programming? ')
@@ -623,10 +532,7 @@ INSERT INTO tech_questions (question)
 Values (' What is polymorphism? ')
 
 INSERT INTO tech_questions (question)
-Values (' What is better composition or inheritance? ')
-
-INSERT INTO tech_questions (question)
-Values ('Name three different types of loops? ')
+Values ('Name three different types of loops. ')
 
 INSERT INTO tech_questions (question)
 Values ('What are primitives and provide some examples? ')
@@ -650,13 +556,10 @@ INSERT INTO tech_questions (question)
 Values ('What is string interpolation? ')
 
 INSERT INTO tech_questions (question)
-Values ('In CSS what is an element? ')
+Values ('In CSS, what is an element? ')
 
 INSERT INTO tech_questions (question)
 Values ('What is the DOM? ')
-
-INSERT INTO tech_questions (question)
-Values ('What is AJAX? ')
 
 INSERT INTO tech_questions (question)
 Values ('What is a cookie? ')
@@ -668,40 +571,25 @@ INSERT INTO tech_questions (question)
 Values ('What is the difference between authentication and authorization? ')
 
 INSERT INTO tech_questions (question)
-Values ('What data structure would you use to process items as they arrive? ')
-
-INSERT INTO tech_questions (question)
 Values ('Explain dependency injection.')
 
 INSERT INTO tech_questions (question)
-Values (' What is a CORS vulnerability?')
+Values ('What is a CORS vulnerability?')
 
 INSERT INTO tech_questions (question)
 Values ('What is the difference between ExecuteScalar, ExecuteReader and ExecuteNonQuery? (Hint one takes in a single value, one takes in multiple rows/columns ')
 
 INSERT INTO tech_questions (question)
-Values ('What is JWT? ')
+Values ('What is a ''just in time'' compiler? ')
 
 INSERT INTO tech_questions (question)
 Values ('What is a hashset?')
 
 INSERT INTO tech_questions (question)
-Values (' How do you create a new tab when linking the controller to URL?')
-
-INSERT INTO tech_questions (question)
-Values ('What is a moustache and when would you use it? ')
+Values ('How open a link in a new tab within an anchor tag?')
 
 INSERT INTO tech_questions (question)
 Values ('What is managed and unmanaged code? ')
-
-INSERT INTO tech_questions (question)
-Values ('What are C# I/O classes? Which are the classes that are commonly used? ')
-
-INSERT INTO tech_questions (question)
-Values ('What is a stream? (Hint: think River of Data ')
-
-INSERT INTO tech_questions (question)
-Values ('What are Get and Set Accessor properties? ')
 
 INSERT INTO tech_questions (question)
 Values ('Explain the 3 layers present in a webpage. How CSS plays its role in it? ')
@@ -710,7 +598,7 @@ INSERT INTO tech_questions (question)
 Values ('W3C stands for World Wide Web Consortium. What can you tell me about it? ')
 
 INSERT INTO tech_questions (question)
-Values ('As a developer what ways are applied to reduce the load time of any given website? ')
+Values ('As a developer what can you do to optiize load time?')
 
 INSERT INTO tech_questions (question)
 Values ('How will you declare a 3-dimensional array in Javascript? Use syntax. ')
@@ -728,16 +616,10 @@ INSERT INTO tech_questions (question)
 Values (' What is Git? ')
 
 INSERT INTO tech_questions (question)
-Values ('What language is used in Git? ')
-
-INSERT INTO tech_questions (question)
-Values ('In Git.How can you fix a broken commit? ')
+Values ('In Git, how can you fix a broken commit? ')
 
 INSERT INTO tech_questions (question)
 Values ('What is a repository in Git? ')
-
-INSERT INTO tech_questions (question)
-Values ('Explain the binary tree conceptually? You can draw a diagram ')
 
 INSERT INTO tech_questions (question)
 Values ('What is the difference between git pull and git fetch?')
@@ -746,62 +628,62 @@ INSERT INTO tech_questions (question)
 Values ('What is the difference between ‘git remote’ and ‘git clone’? ')
 
 INSERT INTO tech_questions (question)
-Values (' What are some of the common lists that can be used when designing a page? ')
+Values ('What is Data Integrity?  ')
 
 INSERT INTO tech_questions (question)
-Values (' List out few different return types of a controller action method?')
+Values ('What is a Subquery? What are its types? ')
 
 INSERT INTO tech_questions (question)
-Values ('  What is Data Integrity?  ')
-
-INSERT INTO tech_questions (question)
-Values (' What is a Subquery? What are its types? ')
+Values ('What is big O notation?')
 
 --- GREETINGS AND NATURAL LANGUAGE UNDERSTANDING 
 INSERT INTO users (keyword, response)
-Values ('How are you', 'I am good thank you! How can I help you?')
+Values ('How are you', 'I''m great, thanks!')
 
 INSERT INTO users (keyword, response)
-Values ('HELP', 'I can help you. Please insert a question or a topic of interest.(ex interview, posting')
+Values ('HELP', 'I would be happy to help, just let me know what you need. You can use the shortcuts below the chat if you need more help finding the right answer')
 
 INSERT INTO users (keyword, response)
-Values ('Hi', 'Hi, How can I help you?')
+Values ('Hi', 'Hi there! How can I help?')
 
 INSERT INTO users (keyword, response)
-Values ('Question', 'Ask away, How can I help you?')
+Values ('Question', 'Ask away, how can I help you?')
 
 INSERT INTO users (keyword, response)
-Values ('Hey there',  'Hi, How can I help you?')
+Values ('Hey there',  'Howdy, how can I help you?')
 
 INSERT INTO users (keyword, response)
-Values ('Goodmorning', 'Hi, How can I help you?')
+Values ('Goodmorning', 'Good morning! How can I help you?')
 
 INSERT INTO users (keyword, response)
-Values ('Goodafternoon','Hi, How can I help you?')
+Values ('Good afternoon','Good afternoon! How can I help you?')
 
 INSERT INTO users (keyword, response)
-Values ('Goodevening','Hi, How can I help you?')
+Values ('Goodafternoon','Good afternoon! How can I help you?')
 
 INSERT INTO users (keyword, response)
-Values ('Hola','Hola, How can I help you?')
+Values ('Good evening','Good evening! How can I help you?')
 
 INSERT INTO users (keyword, response)
-Values ('SUP','Hollar, How can I help you?')
+Values ('Goodevening','Good evening! How can I help you?')
 
 INSERT INTO users (keyword, response)
-Values ('Thank you','You are welcome,Let me know if you have any more questions')
+Values ('Hola','Hola mi amigo! How can I help you?')
+
+INSERT INTO users (keyword, response)
+Values ('SUP','Hollar! How can I help you?')
+
+INSERT INTO users (keyword, response)
+Values ('Thank you','You are welcome. Let me know if you have any more questions')
 
 INSERT INTO users (keyword, response)
 Values ('YOU ARE SO','Ohhh Thank you!')
 
 INSERT INTO users (keyword, response)
-Values ('No,Thank you','You are welcome, Goodbye!')
-
-INSERT INTO users (keyword, response)
 Values ('Who are you?','I am a Tech Elevator chatbot! I can help you with many things')
 
 INSERT INTO users (keyword, response)
-Values ('Siri','Very funny!')
+Values ('Siri','Very funny! I think you may have me confused with someone else.')
 
 INSERT INTO users (keyword, response)
 Values ('Alexa','Cute!That is not my name though')
@@ -810,22 +692,16 @@ INSERT INTO users (keyword, response)
 Values ('Yo','Yoyoyo, How can I help?')
 
 INSERT INTO users (keyword, response)
-Values ('Ciao','Ciao, Thank you for visiting our site?')
+Values ('Ciao','Ciao, thank you for visiting our site?')
 
 INSERT INTO users (keyword, response)
 Values ('Can you help me?','I sure can! Let us get started. What would you like to ask?')
-
-INSERT INTO users (keyword, response)
-Values ('Answer me','I am just a chatbot! I can display answers but you know I can not actually talk!')
 
 INSERT INTO users (keyword, response)
 Values ('Who are you?','I am your tech elevator chatbot!')
 
 INSERT INTO users (keyword, response)
 Values ('John Fulton','He is awesome, we all know that!')
-
-INSERT INTO users (keyword, response)
-Values ('Funny','No you are')
 
 INSERT INTO users (keyword, response)
 Values ('OH','IO')
@@ -850,7 +726,7 @@ INSERT INTO users (keyword, response)
 Values ('created Chatbot','I was born at Rev1 in December of 2019! Created by the super awesome trio from Cohort 9: Hala Shiblaq, Kael OMalley, and Basal Ali')
 
 INSERT INTO users (keyword, response)
-Values ('unknown','Sorry, I don''t understand what you''re asking. Try rewording your request.')
+Values ('unknown','Sorry, I don''t understand what you''re asking. Try rewording your request. You can look at a list of keywords below the chat.')
 
 
 

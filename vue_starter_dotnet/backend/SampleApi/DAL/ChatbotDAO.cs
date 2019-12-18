@@ -238,7 +238,7 @@ namespace SampleApi.DAL
                     conn.Open();
 
 
-                    SqlCommand cmd = new SqlCommand($"SELECT eventDescription FROM upcomingevents Where DATEDIFF(dayofyear, '{today}', dateOfEvent) < 8 AND DATEDIFF(dayofyear, '{today}', dateOfEvent) > 0", conn);
+                    SqlCommand cmd = new SqlCommand($"SELECT eventDescription FROM upcomingevents Where DATEDIFF(dayofyear, '{today}', dateOfEvent) < 8 AND DATEDIFF(dayofyear, '{today}', dateOfEvent) > 0 Order by dateOfEvent", conn);
 
                     SqlDataReader reader = cmd.ExecuteReader();
 
@@ -284,7 +284,8 @@ namespace SampleApi.DAL
                         string companyName = Convert.ToString(reader["company"]).ToLower();
                         if (userInput.ToLower().Contains(companyName))
                         {
-                            companyName = "Company: " + Convert.ToString(reader["company"]);
+                            string intro = "Here's some company info for " + Convert.ToString(reader["company"]) + "&&&";
+                            companyName = intro + "<span style='font-weight:bold; text-decoration: underline;'>" + Convert.ToString(reader["company"]).ToUpper()+"</span>";
                             string companyLocation = "Location: " + Convert.ToString(reader["location"]);
                             string teGradsPlaced = "Tech Elevator Grads Placed: " + Convert.ToString(reader["grads_placed"]);
                             string teGradNames = "LinkedIn Profiles of Grads Placed: <a href=" + Convert.ToString(reader["linkedin"])+ "> Click Here </a>";
@@ -296,7 +297,7 @@ namespace SampleApi.DAL
                             companyInfoList.Add(teGradNames);
                             companyInfoList.Add(numberOfEmployees);
                             companyInfoList.Add(GlassDoorRating);
-                            companyInfo = String.Join(" &&& ", companyInfoList);
+                            companyInfo = String.Join("<br>", companyInfoList);
                             break;
                         }
                     }

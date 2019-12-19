@@ -276,7 +276,7 @@ Values ('"If you''re walking down the right path and you''re willing to keep wal
 
 
 
------ PATHWAY
+----- PATHWAY RELATED QUESTIONS
 
 INSERT INTO users (keyword, response)
 Values ('Cover letter','You might or might not need one. It really depends on the company. <br><a href="https://zety.com/blog/how-to-write-a-cover-letter">Here is some advice on how to write a cover letter</a>')
@@ -299,7 +299,6 @@ Values ('Network', 'Go to meetups! Be yourself! Connect on LinkedIn and keep in 
 INSERT INTO users (keyword, response)
 Values ('Recruiter', 'Recruiters can be very helpful in your job search. Make sure they''re not just sending blanket emails and that they don''t send your resume without permission.')
 
-
 INSERT INTO users (keyword, response)
 Values ('Recruiters', 'Recruiters can be very helpful in your job search. Make sure they''re not just sending blanket emails and that they don''t send your resume without permission.')
 
@@ -318,8 +317,6 @@ Values ('Outfit', 'It depends on the organization. Generally, you want to wear p
 INSERT INTO users (keyword, response)
 Values ('dresscode', 'It depends on the organization. Generally, you want to wear professional or business attire! <a href="https://www.thebalancecareers.com/best-interview-attire-for-every-type-of-interview-2061364">Here''s a good guide.</a>')
 
-
-
 INSERT INTO users (keyword, response)
 Values ('Salary expectations', 'I would use websites such as Glassdoor, Payscale or LinkedIn to give you a better idea of industry standards based on your experience, hope that helps!')
 
@@ -332,17 +329,64 @@ Values ('STAR', 'The STAR interview response is an interview behavioral question
 INSERT INTO users (keyword, response)
 Values ('prepare', 'Research the company and the individuals. LinkedIn should help with that. Have a few hard copies of your resume or portfolio. Arrive early, 20 minutes before your interview is ideal. Stay calm, be humble and confident. Regardless of the outcome, send a follow up thank you email within 24hrs. Remember: What is yours is yours!')
 
-INSERT INTO users (keyword, response)
-Values ('array','An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type. For a single dimensional array, a good analogy is to think of it as a row of boxes. Each box can store a single value but each value must be of the same type. Hope that helps!')
 
-INSERT INTO users (keyword, response)
-Values ('mvc','MVC stands for Model (Business logic), View (Presenatation logic), and Controller (Interacts with model to get data for View). MVC is a popular way of organizing your code. Each section of your code has a purpose, and those purposes are different. Here is a more detailed link: <a href="https://www.codecademy.com/articles/mvc">Click me!</a>')
-
+---- COMPANY INFO KEYWORDS
 INSERT INTO users (keyword, response)
 Values ('company','company info')
 
 INSERT INTO users (keyword, response)
 Values ('company info','company info')
+
+INSERT INTO users (keyword, response)
+Values ('accenture','company info')
+
+INSERT INTO users (keyword, response)
+Values ('pillar','company info')
+
+INSERT INTO users (keyword, response)
+Values ('chase','company info')
+
+INSERT INTO users (keyword, response)
+Values ('JPMorgan','company info')
+
+INSERT INTO users (keyword, response)
+Values ('JPMorgan','company info')
+
+INSERT INTO users (keyword, response)
+Values ('Willow Tree','company info')
+
+INSERT INTO users (keyword, response)
+Values ('WillowTree','company info')
+
+INSERT INTO users (keyword, response)
+Values ('nationwide','company info')
+
+INSERT INTO users (keyword, response)
+Values ('olive','company info')
+
+INSERT INTO users (keyword, response)
+Values ('safelite','company info')
+
+INSERT INTO users (keyword, response)
+Values ('t-cetra','company info')
+
+INSERT INTO users (keyword, response)
+Values ('fcdc','company info')
+
+INSERT INTO users (keyword, response)
+Values ('franklin','company info')
+
+INSERT INTO users (keyword, response)
+Values ('oclc','company info')
+
+INSERT INTO users (keyword, response)
+Values ('brands','company info')
+
+INSERT INTO users (keyword, response)
+Values ('huntington','company info')
+
+INSERT INTO users (keyword, response)
+Values ('script drop','company info')
 
 
 ----- JOB POSTING KEYWORDS
@@ -405,7 +449,7 @@ Values ('SCEDULE','events')
 
 
 
---learning sql
+--GENERAL USER QUESTIONS
 
 INSERT INTO users (keyword, response)
 Values ('tutorial SQL','Here is my favorite tutorial on <a href="https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud">SQL</a>')
@@ -440,9 +484,6 @@ Values ('tutorial SQL','Here is my favorite tutorial on <a href="https://www.you
 INSERT INTO users (keyword, response)
 Values ('tutorial mySQL','Here is my favorite tutorial on <a href="https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLTjRvDozrdlynYXGUfyyMZdrQ0Sz27aud">SQL!</a>')
 
------
---LEARNING C#
-
 INSERT INTO users (keyword, response)
 Values ( 'c#','C# (C-Sharp) is a programming language developed by Microsoft that runs on the . NET Framework. C# is used to develop web apps, desktop apps, mobile apps, games and much more. <a href="https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/intro-to-csharp/</a>">Click here to learn more about that!</a>')
 
@@ -455,8 +496,185 @@ Values ('C# TUTORIAL','Here is a good video to get started: <a href="https://www
 INSERT INTO users (keyword, response)
 Values ( 'help c#','<a href="https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/intro-to-csharp/</a>">Click here to learn more about that!</a>')
 
+INSERT INTO users (keyword, response)
+Values ('array','An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type. For a single dimensional array, a good analogy is to think of it as a row of boxes. Each box can store a single value but each value must be of the same type. Hope that helps!')
 
+INSERT INTO users (keyword, response)
+Values ('mvc','MVC stands for Model (Business logic), View (Presenatation logic), and Controller (Interacts with model to get data for View). MVC is a popular way of organizing your code. Each section of your code has a purpose, and those purposes are different. Here is a more detailed link: <a href="https://www.codecademy.com/articles/mvc">Click me!</a>')
 
+INSERT INTO users (keyword, response)
+Values ('shell','A shell is a character-based interface to the operating system. The shell is also known as the "terminal", or the "command line". You tell the operating system what to do by typing commands inside the shell. &&& The most popular shell is named bash. It is available on the OS X, Windows, and Linux operating systems, and is the shell we use at Tech Elevator.')
+
+INSERT INTO users (keyword, response)
+Values ('version control','Version control is software often used to help track the changes over time to a codebase. Version control systems are a category of software tools that help teams manage changes to source code over time. <a href=https://vimeo.com/41027679>Here''s a good video overview</a>')
+
+INSERT INTO users (keyword, response)
+Values ('git','Git is a version control system for tracking changes in computer files and coordinating work on those files among multiple people. It is primarily used for source code management in software development, but it can be used to keep track of changes in any set of files.')
+
+INSERT INTO users (keyword, response)
+Values ('github','GitHub and BitBucket offer remote repository hosting. As a developer you would update the remote repository with your code by pushing your changes to it. On the flip side, you can download new code from a remote repository, code that a teammate wrote, by pulling the changes onto your computer. &&& You''ll find that GitHub tends to be more prevalent amongst open source developer communities while BitBucket may be used more often in corporate settings. They both offer the same capability but usually have differences in pricing and how they manage public & private repositories.')
+
+INSERT INTO users (keyword, response)
+Values ('install git','FOR WINDOWS: <br> 1. Visit the Git Website and download the Git Bash for Windows client. <br> 2. Run the Git Bash for Windows installer. Leave all of the default settings as they currently are.<br> 3. Once the installation is complete, a new program called Git Bash will be installed. &&& FOR OS X: <br> 1.From a Mac OS X terminal type the command git.')
+
+INSERT INTO users (keyword, response)
+Values ('installing git','FOR WINDOWS: <br> 1. Visit the Git Website and download the Git Bash for Windows client. <br> 2. Run the Git Bash for Windows installer. Leave all of the default settings as they currently are.<br> 3. Once the installation is complete, a new program called Git Bash will be installed. &&& FOR OS X: <br> 1.From a Mac OS X terminal type the command git.')
+
+INSERT INTO users (keyword, response)
+Values ('git install','FOR WINDOWS: <br> 1. Visit the Git Website and download the Git Bash for Windows client. <br> 2. Run the Git Bash for Windows installer. Leave all of the default settings as they currently are.<br> 3. Once the installation is complete, a new program called Git Bash will be installed. &&& FOR OS X: <br> 1.From a Mac OS X terminal type the command git.')
+
+INSERT INTO users (keyword, response)
+Values ('clone','In order to begin working with an existing repository, a developer needs the remote URL so that the repository can be cloned to the computer as a local repository. A remote URL is git''s way of identifying "a place where code is stored". This URL may reference a location on GitHub, BitBucket, or another server. &&& With this URL, a new command git clone is run in the command line to download a copy of the repository.')
+
+INSERT INTO users (keyword, response)
+Values ('git procedures','GIT PUSH PROCEDURES: <br><br>1. Check for modified files: git status <br>2. Stage all files: git add -A <br>3.Commit files: commit -m"commit message goes here"<br>4.Pull: git pull origin master<br>5.Push: push origin master')
+
+INSERT INTO users (keyword, response)
+Values ('primative','In C# and Java there are two different classifications of data types: primitive(java)/value(C#) data type and reference data type. A primitive data type stores a simple value (e.g. 42, true, or ''a'') that consumes a fixed amount of memory. A reference type allows complex unknown structures of data to be created by the program.')
+
+INSERT INTO users (keyword, response)
+Values ('reference data','In C# and Java there are two different classifications of data types: primitive(java)/value(C#) data type and reference data type. A primitive data type stores a simple value (e.g. 42, true, or ''a'') that consumes a fixed amount of memory. A reference type allows complex unknown structures of data to be created by the program.')
+
+INSERT INTO users (keyword, response)
+Values ('reference type','In C# and Java there are two different classifications of data types: primitive(java)/value(C#) data type and reference data type. A primitive data type stores a simple value (e.g. 42, true, or ''a'') that consumes a fixed amount of memory. A reference type allows complex unknown structures of data to be created by the program.')
+
+INSERT INTO users (keyword, response)
+Values ('variable naming','While variable naming is an art, when it comes to creating names, there are some best practices: <br><br> -Follow camel-casing conventions: first word is lowercase, subsequent words have the first letter capitalized <br>-Use pronounceable names for variables<br>-Prefer names over single characters<br>-Use names that describe WHAT the variable does not HOW it does it<br>-Avoid creating multiple variables that are variations of the same name, this creates confusion with booleans use names that start with is, has, was, etc. and avoid using a double negative')
+
+INSERT INTO users (keyword, response)
+Values ('variable name','While variable naming is an art, when it comes to creating names, there are some best practices: <br><br> -Follow camel-casing conventions: first word is lowercase, subsequent words have the first letter capitalized <br>-Use pronounceable names for variables<br>-Prefer names over single characters<br>-Use names that describe WHAT the variable does not HOW it does it<br>-Avoid creating multiple variables that are variations of the same name, this creates confusion with booleans use names that start with is, has, was, etc. and avoid using a double negative')
+
+INSERT INTO users (keyword, response)
+Values ('expression','Expressions are statements that get evaluated and produce a single result which can then be used in another statement.')
+
+INSERT INTO users (keyword, response)
+Values ('comparison','COMPARISON OPERATORS<br><br>==	     Equal To<br>!=	     Not Equal To<br>>        	 Greater Than<br><	         Less Than<br>>=	     Greater Than or Equal To<br><=	Less Than or Equal To')
+
+INSERT INTO users (keyword, response)
+Values ('comparison operators','COMPARISON OPERATORS<br><br>==	     Equal To<br>!=	     Not Equal To<br>>        	 Greater Than<br><	         Less Than<br>>=	     Greater Than or Equal To<br><=	Less Than or Equal To')
+
+INSERT INTO users (keyword, response)
+Values ('logical operators','The comparison operators are limited in their ability to compare values between two different types. When a boolean expression needs to take two or more considerations into account to evaluate a boolean value (e.g. is the number negative AND is it even) then the logical operators are used. &&&The logical operators are: AND (&&), OR (||), XOR (^), and NOT (!). These operators work with one or more boolean operands to evaluate a boolean expression and yield true or false.')
+
+INSERT INTO users (keyword, response)
+Values ('block','Each of the sections of code that follow an if or an else statement are called blocks. Blocks use a pair of braces {..} to enclose single or multiple lines of code. While they may seem to make life hard for us early on they actually are very useful by enhancing code readability and dealing with something called variable scope.')
+
+INSERT INTO users (keyword, response)
+Values ('method','In programming, methods are used to break programs up into small repeatable units of code. They allow programmers to create blocks of code that perform a single action or calculation where the answer only changes based on the inputs provided to it.')
+
+INSERT INTO users (keyword, response)
+Values ('loops','KINDS OF LOOPS<br>For loop - used when we want code to repeat a defined number of times (e.g. one time for each element in an array)<br>While loop - used when we want to continually execute a block of code as long as a condition remains true<br>Do-while loop - used when we want to execute a block of code at least once and repeat it as long as a condition remains true')
+
+INSERT INTO users (keyword, response)
+Values ('kinds of loops','KINDS OF LOOPS<br>For loop - used when we want code to repeat a defined number of times (e.g. one time for each element in an array)<br>While loop - used when we want to continually execute a block of code as long as a condition remains true<br>Do-while loop - used when we want to execute a block of code at least once and repeat it as long as a condition remains true')
+
+INSERT INTO users (keyword, response)
+Values ('loop types','KINDS OF LOOPS<br>For loop - used when we want code to repeat a defined number of times (e.g. one time for each element in an array)<br>While loop - used when we want to continually execute a block of code as long as a condition remains true<br>Do-while loop - used when we want to execute a block of code at least once and repeat it as long as a condition remains true')
+
+INSERT INTO users (keyword, response)
+Values ('object','Object-Oriented Programming is about organizing your problem-solving into objects. An object is an in-memory data structure that combines state and behavior into a usable and useful abstraction. In other words, objects are a collection of variables and methods that make your job easier.&&&Objects make your job easier in several ways: &&&They''re modular<br>Breaking your programming into objects allows you to section off your code into pieces. You can treat these pieces as a mini-program that you can test and write separately from other parts of your application. This makes it easier to think about and plan each part of the whole.&&&They hide information<br>Most people frown upon hidden information, but in programming, it''s a good thing. Objects are used through their methods and other parts of the program that use the object don''t know, or want to know, how the object''s methods are actually coded. It doesn''t matter how getLargestNumber() is implemented; what matters is that it produces the largest number. In fact, you might find a much faster algorithm to solve getLargestNumber() and can replace all the code in it whenever you want. As long as it takes an int[] and returns a int, you can change the code within that method all day long. &&&They make it easy to reuse code<br>If you build your code using objects, reusing that code becomes easy - simply create another object. Because objects are build to be modular and handle just one small function of your application, that makes them very useful for many different purposes.&&&They are pluggable and testable<br>Because the objects are accessible via very defined methods, testing the object is just a matter of calling those methods and making sure they''re doing what you expect them to do. It is also easier to swap out one object for another in your application. To do so, write another object that has the same method signatures. Then, you have a drop-in replacement for what was already there.')
+
+INSERT INTO users (keyword, response)
+Values ('class','A class is a grouping of variables and methods in a source code file that generates objects. It''s important to know what a class is before you begin writing classes and using objects. A class is to an object like a blueprint is to a house. A class defines what an object will be like once the object is created.')
+
+INSERT INTO users (keyword, response)
+Values ('stack','When an application runs, there is a memory space set up for it called the Stack. The Stack is a set amount of memory that stores some of the basic values. When you create a new int, the system knows to reserve exactly 4 bytes (32 bits) of space for it.')
+
+INSERT INTO users (keyword, response)
+Values ('heap','The Heap is the memory space where arrays and objects go. How do you know it if an item is stored in the Heap? Because of the "new" operator. That''s the operator that reserves a new hunk of memory on the Heap. <br><br>So, an array is created on the Heap and then the memory address of it is stored in the variable numbers on the Stack. When you use the variable numbers in your code, it holds a memory address only. Then, you have to tell it to go over to the array in the Heap using either the dot operator (.) or brackets ([]).<br><br>So all variables live on the Stack, but their values might not.')
+
+INSERT INTO users (keyword, response)
+Values ('stack vs heap','Data types that keep their values on the Stack, like int and double, are called primitives or value types. <br><br>Data types that keep their values on the Heap, like arrays and objects, are called reference types.')
+
+INSERT INTO users (keyword, response)
+Values ('stack versus heap','Data types that keep their values on the Stack, like int and double, are called primitives or value types. <br><br>Data types that keep their values on the Heap, like arrays and objects, are called reference types.')
+
+INSERT INTO users (keyword, response)
+Values ('heap vs stack','Data types that keep their values on the Stack, like int and double, are called primitives or value types. <br><br>Data types that keep their values on the Heap, like arrays and objects, are called reference types.')
+
+INSERT INTO users (keyword, response)
+Values ('heap versus stack','Data types that keep their values on the Stack, like int and double, are called primitives or value types. <br><br>Data types that keep their values on the Heap, like arrays and objects, are called reference types.')
+
+INSERT INTO users (keyword, response)
+Values ('lists','The list is by far the most popular collection type used in the C# language. Like an array, a list serves as a general purpose type-safe collection, which allows it to manage any data type. Also, like an array, the values are accessed by index. What differentiates lists from arrays is the methods provided to manipulate the state of the collection.')
+
+INSERT INTO users (keyword, response)
+Values ('stack','Stacks are last-in, first-out data structures (LIFO). The idea with stacks is that you can push items onto a stack and pop them off from the top first. It might be easy to visualize a stack of pancakes. You can pile them as high as you want, but you always eat the last pancake added to the stack on the top. &&&Stacks are most often used when applications need to implement an undo feature. All of the actions the user performs are added to a stack. When the user decides to undo an operation, the most recent action is popped off the top of the stack.')
+
+INSERT INTO users (keyword, response)
+Values ('queue','Queues follow a First-In First-Out(FIFO). Each customer to the deli counter receives a number that indicates the order their request was received. As a request is processed, the employee calls for the next customer.&&&Queues are used when there''s a need for a system that manages a group of objects in the order requests are received.<br><br>1. A print queue prints documents in the order requests are made.<br>2.A Call Center phone system uses a queue to hold customers in the order they call. Service representatives take the call of the person on hold the longest.')
+
+INSERT INTO users (keyword, response)
+Values ('big o','As a programmer, your goal is to write code generically without hard-coding it to fixed collection sizes. Sometimes your solution takes 1s to execute with 1 item; sometimes it takes 10s to run with 100 items. You may not mean to, but the code you write can inadvertently create a new problem that causes the algorithm time to go up by a factor of n, n², or 2ⁿ.This is important so that you can identify a worst-case scenario when looking at your program''s algorithms.<br><br>This way of measuring algorithm complexity is called Big-O Notation.')
+
+INSERT INTO users (keyword, response)
+Values ('big-o','As a programmer, your goal is to write code generically without hard-coding it to fixed collection sizes. Sometimes your solution takes 1s to execute with 1 item; sometimes it takes 10s to run with 100 items. You may not mean to, but the code you write can inadvertently create a new problem that causes the algorithm time to go up by a factor of n, n², or 2ⁿ.This is important so that you can identify a worst-case scenario when looking at your program''s algorithms.<br><br>This way of measuring algorithm complexity is called Big-O Notation.')
+
+INSERT INTO users (keyword, response)
+Values ('algorithmic complexity','As a programmer, your goal is to write code generically without hard-coding it to fixed collection sizes. Sometimes your solution takes 1s to execute with 1 item; sometimes it takes 10s to run with 100 items. You may not mean to, but the code you write can inadvertently create a new problem that causes the algorithm time to go up by a factor of n, n², or 2ⁿ.This is important so that you can identify a worst-case scenario when looking at your program''s algorithms.<br><br>This way of measuring algorithm complexity is called Big-O Notation.')
+
+INSERT INTO users (keyword, response)
+Values ('dictionary','Arrays are fast for reading data. If you know your index, the time it takes to access the value is O(1). Linked lists are fast for inserting and removing data.<br><br>Neither are suitable when you need to quickly search for data. Because we don''t know what index holds the item we seek, we need to traverse the entire collection in a worst-case scenario.<br><br>The dictionary offers a distinct advantage over arrays and lists. Dictionaries are comprised of key/value pairs, similar to the way that arrays use indexes to locate a value. With arrays you are not allowed to defined your index and dictionaries provide you the ability to create a key of any type.')
+
+INSERT INTO users (keyword, response)
+Values ('dictionaries','Arrays are fast for reading data. If you know your index, the time it takes to access the value is O(1). Linked lists are fast for inserting and removing data.<br><br>Neither are suitable when you need to quickly search for data. Because we don''t know what index holds the item we seek, we need to traverse the entire collection in a worst-case scenario.<br><br>The dictionary offers a distinct advantage over arrays and lists. Dictionaries are comprised of key/value pairs, similar to the way that arrays use indexes to locate a value. With arrays you are not allowed to defined your index and dictionaries provide you the ability to create a key of any type.')
+
+INSERT INTO users (keyword, response)
+Values ('sets','A set is a collection that holds unique values, similar to a list, but in a way that allows you to easily and quickly determine if the object already exists in the set. In C#, it is called a hash set. <br><br>Sets don''t use indexes to store values. Instead, they hold hashcodes, which are numbers computed from the values you want to store.')
+
+INSERT INTO users (keyword, response)
+Values ('hash set','A set is a collection that holds unique values, similar to a list, but in a way that allows you to easily and quickly determine if the object already exists in the set. In C#, it is called a hash set. <br><br>Sets don''t use indexes to store values. Instead, they hold hashcodes, which are numbers computed from the values you want to store.')
+
+INSERT INTO users (keyword, response)
+Values ('constructor','A constructor is a special method of a class that initializes an object of that type. It is pretty easy to spot a constructor. All constructors have the same name as the class that they are in.')
+
+INSERT INTO users (keyword, response)
+Values ('access modifier','Access modifiers are used to control visbility to methods and properties to the rest of our program.The keywords public and private are two of the most common access modifiers in the C# language.')
+
+INSERT INTO users (keyword, response)
+Values ('overload','If we want to provide users of our class different options when they instantiate new objects or invoke our methods we can create an overloaded method or overloaded constructor.<br><br>As a programmer when you overload a method or constructor, you add flexibility to your class so that users can leverage different inputs when interacting with it.')
+
+INSERT INTO users (keyword, response)
+Values ('OOP','OBJECT ORIENTED PROGRAMMING PRINCIPALS:&&&ENCAPSULATION:<br>Breaking your programming into objects allows you to section off your code into pieces. You can treat these pieces as a mini-program that you can test and write separately from other parts of your application. This makes it easier to think about and plan each part of the whole.It also makes these pieces easier to reuse.&&&INHERITANCE<br>Another of our OOP principles is Inheritance, the act of having one class adopt the properties and methods of another class. This prevents code duplication and allows us to share code across classes while having the source code live in only one class file.&&&POLYMORPHISM<br>The word polymorphism, derived from the Greek language, means "the ability to have multiple forms".<br><br>In object-oriented programming, polymorphism is the idea that something can be assigned a different meaning or usage based on the context it is referred to as.<br><br>This specifically allows variables and objects to take on more than one form.')
+
+INSERT INTO users (keyword, response)
+Values ('OOP principals','OBJECT ORIENTED PROGRAMMING PRINCIPALS:&&&ENCAPSULATION:<br>Breaking your programming into objects allows you to section off your code into pieces. You can treat these pieces as a mini-program that you can test and write separately from other parts of your application. This makes it easier to think about and plan each part of the whole.It also makes these pieces easier to reuse.&&&INHERITANCE<br>Another of our OOP principles is Inheritance, the act of having one class adopt the properties and methods of another class. This prevents code duplication and allows us to share code across classes while having the source code live in only one class file.&&&POLYMORPHISM<br>The word polymorphism, derived from the Greek language, means "the ability to have multiple forms".<br><br>In object-oriented programming, polymorphism is the idea that something can be assigned a different meaning or usage based on the context it is referred to as.<br><br>This specifically allows variables and objects to take on more than one form.')
+
+INSERT INTO users (keyword, response)
+Values ('object oriented programming','OBJECT ORIENTED PROGRAMMING PRINCIPALS:&&&ENCAPSULATION:<br>Breaking your programming into objects allows you to section off your code into pieces. You can treat these pieces as a mini-program that you can test and write separately from other parts of your application. This makes it easier to think about and plan each part of the whole.It also makes these pieces easier to reuse.&&&INHERITANCE<br>Another of our OOP principles is Inheritance, the act of having one class adopt the properties and methods of another class. This prevents code duplication and allows us to share code across classes while having the source code live in only one class file.&&&POLYMORPHISM<br>The word polymorphism, derived from the Greek language, means "the ability to have multiple forms".<br><br>In object-oriented programming, polymorphism is the idea that something can be assigned a different meaning or usage based on the context it is referred to as.<br><br>This specifically allows variables and objects to take on more than one form.')
+
+INSERT INTO users (keyword, response)
+Values ('principals','OBJECT ORIENTED PROGRAMMING PRINCIPALS:&&&ENCAPSULATION:<br>Breaking your programming into objects allows you to section off your code into pieces. You can treat these pieces as a mini-program that you can test and write separately from other parts of your application. This makes it easier to think about and plan each part of the whole.It also makes these pieces easier to reuse.&&&INHERITANCE<br>Another of our OOP principles is Inheritance, the act of having one class adopt the properties and methods of another class. This prevents code duplication and allows us to share code across classes while having the source code live in only one class file.&&&POLYMORPHISM<br>The word polymorphism, derived from the Greek language, means "the ability to have multiple forms".<br><br>In object-oriented programming, polymorphism is the idea that something can be assigned a different meaning or usage based on the context it is referred to as.<br><br>This specifically allows variables and objects to take on more than one form.')
+
+INSERT INTO users (keyword, response)
+Values ('unit test','UNIT TESTING is a level of software testing where individual units/components of a software are tested. The purpose is to validate that each unit of the software performs as designed. A unit is the smallest testable part of any software. It usually has one or a few inputs and usually a single output')
+
+INSERT INTO users (keyword, response)
+Values ('manual test','Manual testing uses the application like a regular user would. Types data into input boxes, clicks on the buttons, etc.')
+
+INSERT INTO users (keyword, response)
+Values ('automated test','Automated tests write and run scripts using a tool that mimics what a user would do. It’s much faster than manual testing, especially for regression testing.')
+
+INSERT INTO users (keyword, response)
+Values ('exploratory test','Doesn''t follow any kind of script. Just tries things. Looks for missing features or room for improvement. Allows for creativity.')
+
+INSERT INTO users (keyword, response)
+Values ('regression','Regression testing validates that existing functionality still works. Can be automated or manual.')
+
+INSERT INTO users (keyword, response)
+Values ('integration testing','This is a test in the code. It tests that one piece of code returns data as expected to another piece of code (more on this in a later chapter).')
+
+INSERT INTO users (keyword, response)
+Values ('cookie','Cookies are data, stored in small text files, on your computer. When a web server has sent a web page to a browser, the connection is shut down, and the server forgets everything about the user.<br><br>Cookies were invented to solve the problem "how to remember information about the user". When a user visits a web page, his/her name can be stored in a cookie. Next time the user visits the page, the cookie "remembers" his/her name')
+
+INSERT INTO users (keyword, response)
+Values ('json','JSON is short for JavaScript Object Notation, and is a way to store information in an organized, easy-to-access manner. In a nutshell, it gives us a human-readable collection of data that we can access in a really logical manner.')
+
+INSERT INTO users (keyword, response)
+Values ('xml','XML stands for eXtensible Markup Language. XML plays an important role in many different IT systems. XML is often used for distributing data over the Internet. It is important for all web developers to have a good understanding of XML')
+
+INSERT INTO users (keyword, response)
+Values ('dom','The Document Object Model (DOM) is an internal data structure that browsers use to represent the structure and content of a web page. When the browser loads an HTML document, it needs to translate that into something that it can use to draw a graphical representation of the page.')
 
 
 --interview questions

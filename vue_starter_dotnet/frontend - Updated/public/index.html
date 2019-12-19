@@ -27,13 +27,13 @@
     <label class="dropdown">
 
       <div class="dd-button" id='keywordButton'>
-        KEYWORD SHORTCUTS
+        SEE KEYWORD SHORTCUTS
       </div>
     
       <!-- <input type="checkbox" class="dd-input" id="test"> -->
       <table  id ="keywordTable" class="dd-menu disappear">
         <tr class="header">
-          <th class="shortcut">KEYWORD SHORTCUT</th>
+          <th class="shortcut">KEYWORD SHORTCUTS</th>
           <th class="result">RESULT</th>
         </tr>
         <tr>
@@ -70,12 +70,14 @@
               if(!isKeywordTableOpen){
                 isKeywordTableOpen = true;
                 keywordTable.classList.remove('disappear');
-                keywordButton.classList.add('keywordButtonOpen')
+                // keywordButton.classList.add('keywordButtonOpen');
+                keywordButton.innerText = 'HIDE KEYWORD SHORTCUTS';
               }
               else{
                 isKeywordTableOpen = false;
                 keywordTable.classList.add('disappear');
-                keywordButton.classList.remove('keywordButtonOpen');
+                // keywordButton.classList.remove('keywordButtonOpen');
+                keywordButton.innerText = 'SEE KEYWORD SHORTCUTS';
               }
               window.scrollTo(0,document.body.scrollHeight);
           })

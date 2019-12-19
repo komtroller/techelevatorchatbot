@@ -861,6 +861,9 @@ INSERT INTO users (keyword, response)
 Values ('Hi', 'Hi there! How can I help?')
 
 INSERT INTO users (keyword, response)
+Values ('Hello', 'Howdy! How can I help?')
+
+INSERT INTO users (keyword, response)
 Values ('Question', 'Ask away, how can I help you?')
 
 INSERT INTO users (keyword, response)

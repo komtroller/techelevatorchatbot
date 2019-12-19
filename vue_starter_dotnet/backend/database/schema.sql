@@ -282,7 +282,7 @@ INSERT INTO users (keyword, response)
 Values ('Cover letter','You might or might not need one. It really depends on the company. <br><a href="https://zety.com/blog/how-to-write-a-cover-letter">Here is some advice on how to write a cover letter</a>')
 
 INSERT INTO users (keyword, response)
-Values ('Resume', 'Oh, getting your resume in shape is so important! <br><a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Here is a good template</a>')
+Values ('Resume', 'Oh, getting your resume in shape is so important! <a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Here is a good template</a>')
 
 INSERT INTO users (keyword, response)
 Values ('CV', 'Oh, getting your CV (or resume as we say in North America) in shape is so important! <br><a href="https://www.thebalancecareers.com/entry-level-resume-template-2063602">Here is a good template</a>')

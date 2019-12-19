@@ -32,27 +32,28 @@ namespace SampleApi.Controllers
             }
 
             string keyword = chatDAO.GetKeyword(userInput);
+            string response = chatDAO.GetBotResponse(keyword);
             //to get more quotes
-            if (keyword.Contains("quote") || keyword.Contains("inspir"))
+            if (response == "quote")
             {
                 botResponse = "Here's your inspirational quote: &&&";
                 botResponse += chatDAO.GetQuote();
                 botResponse += "&&& You can enter 'quote' to get another quote if you'd like";
             }
             //to get more interview questions
-            else if (keyword == "interview question" || keyword == "sample question" || keyword == "iq")
+            else if (response == "interview question")
             {
                 botResponse = "Here's your interview question: &&&";
                 botResponse += chatDAO.GetInterviewQuestion();
                 botResponse += "&&& You can enter 'IQ' to get another interview question";
             }
-            else if (keyword.Contains("technical") || keyword=="tq")
+            else if (response == "technical question")
             {
                 botResponse = "Here's your technical interview question: &&&";
                 botResponse += chatDAO.GetTechnicalInterviewQuestion();
                 botResponse += " &&& You can enter 'TQ' to get another technical interview question";
             }
-            else if (keyword.Contains("posting")|| keyword.Contains("listing") || keyword.Contains("opening") || keyword.Contains("position") || keyword.Contains("hiring"))
+            else if (response == "job postings")
             {
                 string jobDisplay = chatDAO.GetJobTitle(userInput);
                 string[] jobArray = jobDisplay.Split(" ");
@@ -62,18 +63,18 @@ namespace SampleApi.Controllers
                 botResponse = $"Here's a link to some <a href=\"{jobPostingURL}\" target=\"_blank\">{jobDisplay} job postings</a> in Columbus";
             }
             //event is based on a list of a series of values related to events in DB called mykeywords
-            else if (keyword.Contains("event") || keyword.Contains("meetup") || keyword == "pathway meetings" || keyword == "pathway events" || keyword.Contains("calen") || keyword == "schedule" || keyword == "scedule")
+            else if (response == "events")
             {
                 botResponse = "Here is a list of upcoming events during the next 7 days: &&&";
                 botResponse += chatDAO.GetEvents();
             }
-            else if (keyword.Contains("company"))
+            else if (response == "company info")
             {
                 botResponse = chatDAO.GetCompanyInfo(userInput);
             }
             else
             {
-                botResponse = chatDAO.GetBotResponse(keyword);
+                botResponse = response;
             }
             return botResponse;
         }
